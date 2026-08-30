@@ -1,0 +1,58 @@
+==== R environment snapshot ====
+Captured: 2026-08-23
+R version: R version 4.6.0 (2026-04-24 ucrt)
+Platform: x86_64-w64-mingw32
+
+Default libPaths:
+[1] "D:/R-4.6.0/library"
+Project user library exists: TRUE
+
+LibPaths after including project user library:
+[1] "C:/Users/黄/R/win-library/4.6" "D:/R-4.6.0/library"           
+
+Per-library package counts:
+  C:/Users/黄/R/win-library/4.6 : 184 packages
+  D:/R-4.6.0/library : 374 packages
+
+---- Key package versions (resolved across libraries) ----
+Seurat         5.5.1
+SeuratObject   5.4.0
+glmnet         5.0
+coloc          5.2.3
+TwoSampleMR    NOT INSTALLED
+data.table     1.18.4
+dplyr          1.2.1
+ggplot2        4.0.3
+devtools       2.5.2
+remotes        2.5.0
+Matrix         1.7-5
+
+---- Honesty notes ----
+Scissor    : NOT found in either library at snapshot time.
+             (Scissor outputs exist under 00_RAW_DATA/_scrna_work/scissor/;
+              install attempt recorded in _scrna_work/install_scscissor.R)
+TwoSampleMR: NOT found in either library at snapshot time.
+
+==== sessionInfo() ====
+R version 4.6.0 (2026-04-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=Chinese (Simplified)_China.utf8 
+[2] LC_CTYPE=Chinese (Simplified)_China.utf8   
+[3] LC_MONETARY=Chinese (Simplified)_China.utf8
+[4] LC_NUMERIC=C                               
+[5] LC_TIME=Chinese (Simplified)_China.utf8    
+
+time zone: Asia/Shanghai
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_4.6.0 tools_4.6.0   

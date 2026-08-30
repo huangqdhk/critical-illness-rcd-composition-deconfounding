@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv*/
+venv/
+.opengwas_token
+opengwas_token
+.DS_Store
+*.h5ad
+*.mtx
+*.mtx.gz
+_intermediate/
+00_RAW_DATA/
+R_libs/

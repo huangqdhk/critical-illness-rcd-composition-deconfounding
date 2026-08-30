@@ -1,0 +1,17 @@
+{
+  "module_count": 392,
+  "n_pcd_modes": 6,
+  "pcd_modes": [
+    "Mitoxyperilysis",
+    "Ferroptosis",
+    "Cuprotosis",
+    "Pyroptosis",
+    "Apoptosis",
+    "Necroptosis"
+  ],
+  "group_counts": {
+    "Sepsis": 266,
+    "ARDS": 82,
+    "Control": 44
+  }
+}

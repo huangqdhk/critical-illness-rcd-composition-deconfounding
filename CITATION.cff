@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "Composition deconfounding of cell-death transcriptomic signatures in critical illness: analysis code and mitoxdi"
+authors:
+  - family: Huang
+    given: Yurong
+    affiliation: Hainan General Hospital; Hainan Affiliated Hospital of Hainan Medical University
+version: 1.0.0
+date-released: "2026-08-30"
+license: MIT
+keywords:
+  - ARDS
+  - regulated cell death
+  - cellular composition
+  - deconvolution
+  - mitochondria

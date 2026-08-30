@@ -1,0 +1,182 @@
+panel,gene,note,gene_set_version,score_version
+mito_stress_oxphos,MT-CO1,13 MT-OXPHOS + 核编码 OXPHOS/线粒体生物发生代表基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,MT-CO2,13 MT-OXPHOS + 核编码 OXPHOS/线粒体生物发生代表基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,MT-CO3,13 MT-OXPHOS + 核编码 OXPHOS/线粒体生物发生代表基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,MT-CYB,13 MT-OXPHOS + 核编码 OXPHOS/线粒体生物发生代表基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,MT-ATP6,13 MT-OXPHOS + 核编码 OXPHOS/线粒体生物发生代表基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,MT-ATP8,13 MT-OXPHOS + 核编码 OXPHOS/线粒体生物发生代表基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,MT-ND1,13 MT-OXPHOS + 核编码 OXPHOS/线粒体生物发生代表基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,MT-ND2,13 MT-OXPHOS + 核编码 OXPHOS/线粒体生物发生代表基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,MT-ND3,13 MT-OXPHOS + 核编码 OXPHOS/线粒体生物发生代表基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,MT-ND4,13 MT-OXPHOS + 核编码 OXPHOS/线粒体生物发生代表基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,MT-ND4L,13 MT-OXPHOS + 核编码 OXPHOS/线粒体生物发生代表基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,MT-ND5,13 MT-OXPHOS + 核编码 OXPHOS/线粒体生物发生代表基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,MT-ND6,13 MT-OXPHOS + 核编码 OXPHOS/线粒体生物发生代表基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,NDUFS1,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,NDUFS3,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,NDUFS7,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,NDUFV1,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,SDHA,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,SDHB,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,UQCRC1,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,UQCRC2,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,COX4I1,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,COX5A,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,COX6C,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,COX7A2,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,ATP5F1A,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,ATP5F1B,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,ATP5F1C,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,ATP5MC1,核编码 OXPHOS,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,PPARGC1A,线粒体生物发生,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,TFAM,线粒体生物发生,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,TOMM20,线粒体输入,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,UCP2,线粒体应激,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,BNIP3,线粒体自噬,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,BNIP3L,线粒体自噬,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+mito_stress_oxphos,PINK1,线粒体自噬,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,ISG15,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,IFIT1,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,IFIT2,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,IFIT3,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,IFIT5,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,IFI6,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,IFI27,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,IFI44,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,IFI44L,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,MX1,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,MX2,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,OAS1,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,OAS2,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,OAS3,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,OASL,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,IRF7,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,RSAD2,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,SIGLEC1,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,USP18,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,DDX58,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,IFITM1,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,IFITM2,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,IFITM3,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,HERC5,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+interferon,CXCL10,经典 I 型干扰素刺激基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,VEGFA,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,CA9,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,SLC2A1,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,LDHA,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,PDK1,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,EGLN3,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,P4HA1,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,ANKRD37,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,NDUFA4L2,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,ADM,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,ADM2,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,DDIT4,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,LOX,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,PLOD1,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,PLOD2,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,BNIP3L,HIF-1α 靶基因（与 mito_stress 重叠如实保留）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,GYS1,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+hypoxia,ENG,HIF-1α 靶基因,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,IL1B,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,IL6,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,TNF,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,NFKBIA,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,NFKB1,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,PTGS2,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,CXCL8,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,CCL2,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,CCL3,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,CXCL1,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,LCN2,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,SAA1,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,SOCS3,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,TNFAIP3,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,ICAM1,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,VCAM1,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,S100A8,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,S100A9,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,TREM1,NF-κB/促炎,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+inflammation,IL10,抗炎对照,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,GSDMD,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,GSDME,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,CASP1,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,CASP4,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,CASP5,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,NLRP3,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,AIM2,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,NLRC4,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,PYCARD,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,MLKL,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,RIPK3,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,RIPK1,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,ZBP1,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,ACSL4,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,SLC7A11,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,GPX4,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,TFRC,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,NCOA4,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,SAT1,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,LPCAT3,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+pyroptosis_necroptosis_ferroptosis,ACSL3,三种程序性坏死执行基因合并面板,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,MKI67,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,TOP2A,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,CCNB1,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,CCNB2,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,CCNE2,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,CDK1,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,PCNA,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,MCM2,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,MCM3,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,MCM4,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,MCM5,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,MCM6,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,MCM7,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,AURKA,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,AURKB,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,PLK1,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,BIRC5,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,CDC6,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,CDC20,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,UBE2C,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,TYMS,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,RRM2,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+cell_cycle,CENPF,增殖,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,MT-CO1,13 MT 基因（mt-content 技术代理）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,MT-CO2,13 MT 基因（mt-content 技术代理）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,MT-CO3,13 MT 基因（mt-content 技术代理）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,MT-CYB,13 MT 基因（mt-content 技术代理）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,MT-ATP6,13 MT 基因（mt-content 技术代理）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,MT-ATP8,13 MT 基因（mt-content 技术代理）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,MT-ND1,13 MT 基因（mt-content 技术代理）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,MT-ND2,13 MT 基因（mt-content 技术代理）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,MT-ND3,13 MT 基因（mt-content 技术代理）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,MT-ND4,13 MT 基因（mt-content 技术代理）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,MT-ND4L,13 MT 基因（mt-content 技术代理）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,MT-ND5,13 MT 基因（mt-content 技术代理）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,MT-ND6,13 MT 基因（mt-content 技术代理）,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPL4,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPL5,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPL8,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPL10A,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPL11,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPL13,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPL18,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPL19,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPL23A,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPL27,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPL32,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPLP0,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPS3,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPS6,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPS8,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPS9,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPS12,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPS14,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPS15A,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPS18,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPS19,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPS20,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPS24,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPS27,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单
+technical_mt_ribo,RPSA,翻译/library-size 代理,p2panels_v1.0,P2 七个预注册竞争面板基因清单

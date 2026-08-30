@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "mitoxdi: Two-arm decomposition, MDI (mdi_v1.0) scoring, and composition-predicted / residual MDI for critical-illness transcriptomes"
+version: 1.0.0
+date-released: 2026-08-27
+license: MIT
+keywords:
+  - transcriptomics
+  - deconvolution
+  - regulated cell death
+  - critical illness
+  - composition confounding
+abstract: >-
+  Open tool implementing the frozen two-arm decomposition (80-gene manifest,
+  upstream-collapse 30 / execution-induction 33), the mdi_v1.0 dissociation index
+  (within-cohort ungrouped z), composition-predicted MDI from purified-cell-reference
+  NNLS deconvolution (Monaco/ABIS), and the composition-residual MDI, with the
+  prospective judgment-gate language documented in GATE.md.
+authors:
+  - name: "The Mitoxyperilysis-ARDS Project Authors"

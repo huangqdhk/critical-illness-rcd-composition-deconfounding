@@ -1,0 +1,35 @@
+{
+  "title": "Composition deconfounding of cell-death transcriptomic signatures in critical illness: analysis code and mitoxdi v1.0.0",
+  "description": "Analysis code (P0-M4 modules), the mitoxdi v1.0.0 open tool (dual-arm decomposition + mdi_v1.0 scoring + composition-predicted/residual MDI), and SHA256-audited governance artifacts (results manifest, gene manifest, frozen analysis plan, judgment-gate reports) for a manuscript under review.",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Huang, Yurong",
+      "affiliation": "Hainan General Hospital; Hainan Affiliated Hospital of Hainan Medical University"
+    }
+  ],
+  "license": "MIT",
+  "version": "v1.0.0",
+  "keywords": [
+    "ARDS",
+    "sepsis",
+    "regulated cell death",
+    "composition deconvolution",
+    "mitochondria",
+    "transcriptomics"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.17605/OSF.IO/C7RYD",
+      "relation": "documents"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/ETVMJ",
+      "relation": "documents"
+    },
+    {
+      "identifier": "10.17605/OSF.IO/98CM3",
+      "relation": "documents"
+    }
+  ]
+}

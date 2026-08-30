@@ -1,0 +1,81 @@
+﻿version,gene_symbol,hgnc_symbol,aliases,ensembl_gene_id,gene_name,module,module_size,arm,is_mt_gene,ARDS_vs_Control_log2FC,ARDS_vs_Control_padj,gene_set_version,score_version
+v1.0,CALR,CALR,,ENSG00000179218,calreticulin,mitoxy_MAM_integrity,9,upstream_collapse,0,-0.623746,7.10876e-10,Mitoxy-80_v1.0,NA
+v1.0,CANX,CANX,,ENSG00000127022,calnexin,mitoxy_MAM_integrity,9,upstream_collapse,0,-0.852254,1.35095e-15,Mitoxy-80_v1.0,NA
+v1.0,HSPA9,HSPA9,GRP75,ENSG00000113013,heat shock protein family A (Hsp70) member 9,mitoxy_MAM_integrity,9,upstream_collapse,0,-1.28177,5.7932699999999995e-25,Mitoxy-80_v1.0,NA
+v1.0,IP3R1,ITPR1,ITPR1,ENSG00000150995,"inositol 1,4,5-trisphosphate receptor type 1",mitoxy_MAM_integrity,9,upstream_collapse,0,-1.08249,1.05322e-16,Mitoxy-80_v1.0,NA
+v1.0,PACS2,PACS2,,ENSG00000179364,phosphofurin acidic cluster sorting protein 2,mitoxy_MAM_integrity,9,upstream_collapse,0,-0.682511,5.9065e-09,Mitoxy-80_v1.0,NA
+v1.0,SIGMAR1,SIGMAR1,,ENSG00000147955,sigma non-opioid intracellular receptor 1,mitoxy_MAM_integrity,9,upstream_collapse,0,-0.83672,2.12179e-15,Mitoxy-80_v1.0,NA
+v1.0,VDAC1,VDAC1,,ENSG00000213585,voltage dependent anion channel 1,mitoxy_MAM_integrity,9,upstream_collapse,0,-0.99472,1.1198800000000001e-23,Mitoxy-80_v1.0,NA
+v1.0,VDAC2,VDAC2,,ENSG00000165637,voltage dependent anion channel 2,mitoxy_MAM_integrity,9,upstream_collapse,0,-0.512447,2.42808e-14,Mitoxy-80_v1.0,NA
+v1.0,VDAC3,VDAC3,,ENSG00000078668,voltage dependent anion channel 3,mitoxy_MAM_integrity,9,upstream_collapse,0,-0.411864,1.55642e-09,Mitoxy-80_v1.0,NA
+v1.0,ATG5,ATG5,,ENSG00000057663,autophagy related 5,mitoxy_autophagy,6,not_in_dissociation_arms,0,-0.165973,0.0806904,Mitoxy-80_v1.0,NA
+v1.0,ATG7,ATG7,,ENSG00000197548,autophagy related 7,mitoxy_autophagy,6,not_in_dissociation_arms,0,0.218886,1.16442e-05,Mitoxy-80_v1.0,NA
+v1.0,BECN1,BECN1,,ENSG00000126581,beclin 1,mitoxy_autophagy,6,not_in_dissociation_arms,0,-0.22506,2.46708e-13,Mitoxy-80_v1.0,NA
+v1.0,MAP1LC3A,MAP1LC3A,,ENSG00000101460,microtubule associated protein 1 light chain 3 alpha,mitoxy_autophagy,6,not_in_dissociation_arms,0,0.282277,0.0767812,Mitoxy-80_v1.0,NA
+v1.0,MAP1LC3B,MAP1LC3B,,ENSG00000140941,microtubule associated protein 1 light chain 3 beta,mitoxy_autophagy,6,not_in_dissociation_arms,0,0.434027,1.72268e-13,Mitoxy-80_v1.0,NA
+v1.0,SQSTM1,SQSTM1,,ENSG00000161011,sequestosome 1,mitoxy_autophagy,6,not_in_dissociation_arms,0,-0.0135851,0.887787,Mitoxy-80_v1.0,NA
+v1.0,APAF1,APAF1,,ENSG00000120868,apoptotic peptidase activating factor 1,mitoxy_cell_death,13,execution_induction,0,0.257743,0.00991456,Mitoxy-80_v1.0,NA
+v1.0,CASP1,CASP1,,ENSG00000137752,caspase 1,mitoxy_cell_death,13,execution_induction,0,0.4714,2.73719e-07,Mitoxy-80_v1.0,NA
+v1.0,CASP4,CASP4,,ENSG00000196954,caspase 4,mitoxy_cell_death,13,execution_induction,0,0.53149,4.43232e-10,Mitoxy-80_v1.0,NA
+v1.0,CASP5,CASP5,,ENSG00000137757,caspase 5,mitoxy_cell_death,13,execution_induction,0,1.62385,1.31401e-18,Mitoxy-80_v1.0,NA
+v1.0,GSDMA,GSDMA,,ENSG00000167914,gasdermin A,mitoxy_cell_death,13,execution_induction,0,-0.40033,0.00231437,Mitoxy-80_v1.0,NA
+v1.0,GSDMB,GSDMB,,ENSG00000073605,gasdermin B,mitoxy_cell_death,13,execution_induction,0,-1.44247,5.54345e-21,Mitoxy-80_v1.0,NA
+v1.0,GSDMC,GSDMC,,ENSG00000147697,gasdermin C,mitoxy_cell_death,13,execution_induction,0,0.191876,0.00422948,Mitoxy-80_v1.0,NA
+v1.0,GSDMD,GSDMD,,ENSG00000104518,gasdermin D,mitoxy_cell_death,13,execution_induction,0,0.690033,6.09585e-05,Mitoxy-80_v1.0,NA
+v1.0,GSDME,GSDME,DFNA5,ENSG00000105928,gasdermin E,mitoxy_cell_death,13,execution_induction,0,-0.324871,0.000340091,Mitoxy-80_v1.0,NA
+v1.0,IL18,IL18,,ENSG00000150782,interleukin 18,mitoxy_cell_death,13,execution_induction,0,0.415571,4.93468e-06,Mitoxy-80_v1.0,NA
+v1.0,IL1B,IL1B,,ENSG00000125538,interleukin 1 beta,mitoxy_cell_death,13,execution_induction,0,0.540318,4.3453e-05,Mitoxy-80_v1.0,NA
+v1.0,NLRP3,NLRP3,,ENSG00000162711,NLR family pyrin domain containing 3,mitoxy_cell_death,13,execution_induction,0,0.427609,1.31975e-05,Mitoxy-80_v1.0,NA
+v1.0,PYCARD,PYCARD,,ENSG00000103490,PYD and CARD domain containing,mitoxy_cell_death,13,execution_induction,0,0.857564,3.65791e-08,Mitoxy-80_v1.0,NA
+v1.0,DLAT,DLAT,,ENSG00000150768,dihydrolipoamide S-acetyltransferase,mitoxy_ferroptosis_cuproptosis,11,upstream_collapse,0,-1.18324,2.8707e-19,Mitoxy-80_v1.0,NA
+v1.0,DLD,DLD,,ENSG00000091140,dihydrolipoamide dehydrogenase,mitoxy_ferroptosis_cuproptosis,11,upstream_collapse,0,-0.038372,0.639916,Mitoxy-80_v1.0,NA
+v1.0,FDX1,FDX1,,ENSG00000137714,ferredoxin 1,mitoxy_ferroptosis_cuproptosis,11,upstream_collapse,0,-0.917323,3.3029e-16,Mitoxy-80_v1.0,NA
+v1.0,LIAS,LIAS,,ENSG00000121897,lipoic acid synthetase,mitoxy_ferroptosis_cuproptosis,11,upstream_collapse,0,-1.15024,1.62565e-32,Mitoxy-80_v1.0,NA
+v1.0,LIPT1,LIPT1,,ENSG00000144182,lipoyltransferase 1,mitoxy_ferroptosis_cuproptosis,11,upstream_collapse,0,-1.10867,7.354170000000001e-18,Mitoxy-80_v1.0,NA
+v1.0,MTF1,MTF1,,ENSG00000188786,metal regulatory transcription factor 1,mitoxy_ferroptosis_cuproptosis,11,upstream_collapse,0,1.01725,4.38907e-25,Mitoxy-80_v1.0,NA
+v1.0,NADK,NADK,,ENSG00000008130,NAD kinase,mitoxy_ferroptosis_cuproptosis,11,upstream_collapse,0,0.663308,3.00992e-10,Mitoxy-80_v1.0,NA
+v1.0,NCOA4,NCOA4,,ENSG00000266412,nuclear receptor coactivator 4,mitoxy_ferroptosis_cuproptosis,11,upstream_collapse,0,-0.523195,5.21739e-05,Mitoxy-80_v1.0,NA
+v1.0,PDHA1,PDHA1,,ENSG00000131828,pyruvate dehydrogenase E1 subunit alpha 1,mitoxy_ferroptosis_cuproptosis,11,upstream_collapse,0,-0.77704,6.3800399999999995e-21,Mitoxy-80_v1.0,NA
+v1.0,PDHB,PDHB,,ENSG00000168291,pyruvate dehydrogenase E1 subunit beta,mitoxy_ferroptosis_cuproptosis,11,upstream_collapse,0,-0.792943,3.34698e-19,Mitoxy-80_v1.0,NA
+v1.0,SLC7A11,SLC7A11,,ENSG00000151012,solute carrier family 7 member 11,mitoxy_ferroptosis_cuproptosis,11,upstream_collapse,0,0.639925,1.27667e-06,Mitoxy-80_v1.0,NA
+v1.0,ACO1,ACO1,,ENSG00000122729,aconitase 1,mitoxy_iron_metabolism,9,execution_induction,0,-1.24601,7.109179999999999e-31,Mitoxy-80_v1.0,NA
+v1.0,FTH1,FTH1,,ENSG00000167996,ferritin heavy chain 1,mitoxy_iron_metabolism,9,execution_induction,0,0.562606,2.46052e-07,Mitoxy-80_v1.0,NA
+v1.0,FTL,FTL,,ENSG00000087086,ferritin light chain,mitoxy_iron_metabolism,9,execution_induction,0,0.638493,8.01198e-08,Mitoxy-80_v1.0,NA
+v1.0,IREB2,IREB2,,ENSG00000136381,iron responsive element binding protein 2,mitoxy_iron_metabolism,9,execution_induction,0,-0.450333,1.21549e-06,Mitoxy-80_v1.0,NA
+v1.0,SLC11A2,SLC11A2,DMT1,ENSG00000110911,solute carrier family 11 member 2,mitoxy_iron_metabolism,9,execution_induction,0,-0.776479,5.99341e-12,Mitoxy-80_v1.0,NA
+v1.0,SLC25A28,SLC25A28,,ENSG00000155287,solute carrier family 25 member 28,mitoxy_iron_metabolism,9,execution_induction,0,0.0982366,0.301167,Mitoxy-80_v1.0,NA
+v1.0,SLC25A37,SLC25A37,,ENSG00000147454,solute carrier family 25 member 37,mitoxy_iron_metabolism,9,execution_induction,0,0.845241,7.88747e-13,Mitoxy-80_v1.0,NA
+v1.0,SLC40A1,SLC40A1,,ENSG00000138449,solute carrier family 40 member 1,mitoxy_iron_metabolism,9,execution_induction,0,0.826439,4.92792e-15,Mitoxy-80_v1.0,NA
+v1.0,TFRC,TFRC,,ENSG00000072274,transferrin receptor,mitoxy_iron_metabolism,9,execution_induction,0,0.0232701,0.886192,Mitoxy-80_v1.0,NA
+v1.0,CYCS,CYCS,CYTC,ENSG00000172115,"cytochrome c, somatic",mitoxy_mitochondrial_function,10,upstream_collapse,0,-0.733398,5.86477e-09,Mitoxy-80_v1.0,NA
+v1.0,HSP60,HSPD1,HSPD1,ENSG00000144381,heat shock protein family D (Hsp60) member 1,mitoxy_mitochondrial_function,10,upstream_collapse,0,-0.89319,3.70562e-13,Mitoxy-80_v1.0,NA
+v1.0,MT-ATP6,MT-ATP6,,ENSG00000198899,ATP synthase F0 subunit 6,mitoxy_mitochondrial_function,10,upstream_collapse,1,-1.8811,2.40368e-24,Mitoxy-80_v1.0,NA
+v1.0,MT-ATP8,MT-ATP8,,ENSG00000228253,ATP synthase F0 subunit 8,mitoxy_mitochondrial_function,10,upstream_collapse,1,-2.73893,1.3649e-15,Mitoxy-80_v1.0,NA
+v1.0,MT-CO1,MT-CO1,,ENSG00000198804,cytochrome c oxidase subunit I,mitoxy_mitochondrial_function,10,upstream_collapse,1,-1.10487,3.75607e-18,Mitoxy-80_v1.0,NA
+v1.0,MT-CYB,MT-CYB,,ENSG00000198727,cytochrome b,mitoxy_mitochondrial_function,10,upstream_collapse,1,-1.73942,2.30818e-25,Mitoxy-80_v1.0,NA
+v1.0,MT-ND1,MT-ND1,,ENSG00000198888,NADH dehydrogenase subunit 1,mitoxy_mitochondrial_function,10,upstream_collapse,1,-1.33391,1.41802e-17,Mitoxy-80_v1.0,NA
+v1.0,MT-ND2,MT-ND2,,ENSG00000198763,NADH dehydrogenase subunit 2,mitoxy_mitochondrial_function,10,upstream_collapse,1,-1.57827,3.12642e-22,Mitoxy-80_v1.0,NA
+v1.0,TOMM20,TOMM20,,ENSG00000173726,translocase of outer mitochondrial membrane 20,mitoxy_mitochondrial_function,10,upstream_collapse,0,-0.993076,1.3227399999999995e-20,Mitoxy-80_v1.0,NA
+v1.0,TOMM40,TOMM40,,ENSG00000130204,translocase of outer mitochondrial membrane 40,mitoxy_mitochondrial_function,10,upstream_collapse,0,-0.569208,4.69499e-06,Mitoxy-80_v1.0,NA
+v1.0,CAT,CAT,,ENSG00000121691,catalase,mitoxy_oxidative_stress,11,execution_induction,0,0.0768995,0.51397,Mitoxy-80_v1.0,NA
+v1.0,GCLC,GCLC,,ENSG00000001084,glutamate-cysteine ligase catalytic subunit,mitoxy_oxidative_stress,11,execution_induction,0,-0.709671,9.82012e-07,Mitoxy-80_v1.0,NA
+v1.0,GCLM,GCLM,,ENSG00000023909,glutamate-cysteine ligase modifier subunit,mitoxy_oxidative_stress,11,execution_induction,0,0.441485,7.22256e-05,Mitoxy-80_v1.0,NA
+v1.0,GPX4,GPX4,,ENSG00000167468,glutathione peroxidase 4,mitoxy_oxidative_stress,11,execution_induction,0,-0.156419,0.205938,Mitoxy-80_v1.0,NA
+v1.0,GSR,GSR,,ENSG00000104687,glutathione-disulfide reductase,mitoxy_oxidative_stress,11,execution_induction,0,0.278161,3.27754e-05,Mitoxy-80_v1.0,NA
+v1.0,HMOX1,HMOX1,,ENSG00000100292,heme oxygenase 1,mitoxy_oxidative_stress,11,execution_induction,0,0.523468,7.11545e-05,Mitoxy-80_v1.0,NA
+v1.0,NQO1,NQO1,,ENSG00000181019,NAD(P)H quinone dehydrogenase 1,mitoxy_oxidative_stress,11,execution_induction,0,-0.554369,1.61279e-09,Mitoxy-80_v1.0,NA
+v1.0,PRDX3,PRDX3,,ENSG00000165672,peroxiredoxin 3,mitoxy_oxidative_stress,11,execution_induction,0,0.159562,0.018725,Mitoxy-80_v1.0,NA
+v1.0,SOD2,SOD2,,ENSG00000112096,,mitoxy_oxidative_stress,11,execution_induction,0,0.0802526,0.488787,Mitoxy-80_v1.0,NA
+v1.0,TXN,TXN,,ENSG00000136810,thioredoxin,mitoxy_oxidative_stress,11,execution_induction,0,1.78187,4.33303e-25,Mitoxy-80_v1.0,NA
+v1.0,TXNRD2,TXNRD2,,ENSG00000184470,thioredoxin reductase 2,mitoxy_oxidative_stress,11,execution_induction,0,-0.279653,0.00452746,Mitoxy-80_v1.0,NA
+v1.0,ATF4,ATF4,,ENSG00000128272,activating transcription factor 4,mitoxy_transcription_factors,11,not_in_dissociation_arms,0,0.250632,0.00132194,Mitoxy-80_v1.0,NA
+v1.0,CEBPB,CEBPB,,ENSG00000172216,CCAAT enhancer binding protein beta,mitoxy_transcription_factors,11,not_in_dissociation_arms,0,1.48096,2.02475e-29,Mitoxy-80_v1.0,NA
+v1.0,DDIT3,DDIT3,,ENSG00000175197,DNA damage inducible transcript 3,mitoxy_transcription_factors,11,not_in_dissociation_arms,0,0.677284,5.22193e-10,Mitoxy-80_v1.0,NA
+v1.0,FOXO3,FOXO3,,ENSG00000118689,forkhead box O3,mitoxy_transcription_factors,11,not_in_dissociation_arms,0,0.365893,0.000657561,Mitoxy-80_v1.0,NA
+v1.0,HIF1A,HIF1A,,ENSG00000100644,hypoxia inducible factor 1 subunit alpha,mitoxy_transcription_factors,11,not_in_dissociation_arms,0,0.264334,0.022232,Mitoxy-80_v1.0,NA
+v1.0,NFE2L2,NFE2L2,,ENSG00000116044,NFE2 like bZIP transcription factor 2,mitoxy_transcription_factors,11,not_in_dissociation_arms,0,0.192783,0.00051154,Mitoxy-80_v1.0,NA
+v1.0,NFKB1,NFKB1,,ENSG00000109320,nuclear factor kappa B subunit 1,mitoxy_transcription_factors,11,not_in_dissociation_arms,0,-0.0140257,0.792881,Mitoxy-80_v1.0,NA
+v1.0,NFKB2,NFKB2,,ENSG00000077150,nuclear factor kappa B subunit 2,mitoxy_transcription_factors,11,not_in_dissociation_arms,0,0.214627,0.0361306,Mitoxy-80_v1.0,NA
+v1.0,NRF1,NRF1,,ENSG00000106459,nuclear respiratory factor 1,mitoxy_transcription_factors,11,not_in_dissociation_arms,0,-0.493749,7.417659999999999e-20,Mitoxy-80_v1.0,NA
+v1.0,PPARG,PPARG,,ENSG00000132170,peroxisome proliferator activated receptor gamma,mitoxy_transcription_factors,11,not_in_dissociation_arms,0,1.68037,1.12034e-25,Mitoxy-80_v1.0,NA
+v1.0,RELA,RELA,,ENSG00000173039,"RELA proto-oncogene, NF-kB subunit",mitoxy_transcription_factors,11,not_in_dissociation_arms,0,-0.152426,0.0329362,Mitoxy-80_v1.0,NA
