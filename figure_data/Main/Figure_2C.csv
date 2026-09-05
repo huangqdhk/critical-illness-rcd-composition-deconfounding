@@ -1,0 +1,17 @@
+﻿Gene,Protein,Functional_Category,pLI,LOEUF,pLoF_o/e_(95%CI),Missense_Z,Constraint_Conclusion,gene_set_version,score_version
+BAX,BAX,Apoptosis Executioners,0.32,0.75,0.24 (0.10-0.75),0.30,Weakly constrained,Mitoxy-80_v1.0,NA
+BAK1,BAK,Apoptosis Executioners,0.00,1.37,0.79 (0.47-1.37),0.99,LoF tolerant,Mitoxy-80_v1.0,NA
+BID,BID,Apoptosis Executioners,0.00,1.92,1.46 (0.94-1.92),0.10,LoF tolerant,Mitoxy-80_v1.0,NA
+BCL2L11,BIM,BH3-only Activators,0.89,0.42,0.00 (0.00-0.42),0.12,Moderate constraint,Mitoxy-80_v1.0,NA
+BBC3,PUMA,BH3-only Activators,0.00,1.59,0.73 (0.36-1.59),0.15,LoF tolerant,Mitoxy-80_v1.0,NA
+BAD,BAD,BH3-only Activators,0.00,1.53,0.69 (0.34-1.53),-0.55,LoF tolerant,Mitoxy-80_v1.0,NA
+PMAIP1,NOXA,BH3-only Activators,0.00,1.03,0.69 (0.47-1.03),0.58,LoF tolerant,Mitoxy-80_v1.0,NA
+ITPR1,IP3R1,ER-Mitochondria Contact Sites,1.00,0.13,0.08 (0.05-0.13),5.60,Strongly LoF intolerant: essential gene; extreme missense constraint (Z=5.60),Mitoxy-80_v1.0,NA
+CANX,Calnexin,ER-Mitochondria Contact Sites,0.87,0.36,0.18 (0.10-0.36),1.58,Moderate constraint,Mitoxy-80_v1.0,NA
+VDAC1,VDAC1,ER-Mitochondria Contact Sites,0.97,0.31,0.06 (0.02-0.31),1.33,Strongly LoF intolerant: essential gene,Mitoxy-80_v1.0,NA
+HSPA9,GRP75/mtHsp70,ER-Mitochondria Contact Sites,0.97,0.32,0.16 (0.09-0.32),1.04,Strongly LoF intolerant: essential gene,Mitoxy-80_v1.0,NA
+MCU,MCU,ER-Mitochondria Contact Sites,0.83,0.41,0.16 (0.07-0.41),1.83,Moderate constraint,Mitoxy-80_v1.0,NA
+BCL2,BCL-2,Anti-apoptotic Guardians,0.56,0.71,0.15 (0.05-0.71),1.40,Moderate constraint,Mitoxy-80_v1.0,NA
+BCL2L1,BCL-xL,Anti-apoptotic Guardians,0.94,0.34,0.00 (0.00-0.34),1.62,Strongly LoF intolerant: essential gene,Mitoxy-80_v1.0,NA
+MCL1,MCL-1,Anti-apoptotic Guardians,0.96,0.29,0.00 (0.00-0.29),-0.36,Strongly LoF intolerant: essential gene,Mitoxy-80_v1.0,NA
+BCL2L2,BCL-W,Anti-apoptotic Guardians,0.47,0.83,0.17 (0.06-0.83),1.05,Weakly constrained,Mitoxy-80_v1.0,NA

@@ -1,0 +1,6 @@
+metric,value,gene_set_version,score_version
+AUC_base(age+sex+subtype),0.637009903177116,Mitoxy-80_v1.0,mdi_v1.0
+AUC_plus_MDI,0.6370872142252328,Mitoxy-80_v1.0,mdi_v1.0
+delta_AUC,7.731104811681266e-05,Mitoxy-80_v1.0,mdi_v1.0
+IDI,-3.2158862581233016e-06,Mitoxy-80_v1.0,mdi_v1.0
+category_NRI,-0.0070021720723042,Mitoxy-80_v1.0,mdi_v1.0

@@ -1,0 +1,144 @@
+﻿panel,package_file,source_file(01_RESULTS_TABLES),figure_title,panel_content,suggested_plot,notes
+Figure_1A,Main/Figure_1A.csv,SAMPLE_MANIFEST_v1.0.csv,研究设计与数据流程总览,924样本×8数据集逐行登记(GSM→样本→条件),CONSORT式流程图/桑基图,含13个非样本型外部数据源摘要行
+Figure_1B,Main/Figure_1B.csv,GSE185263_groups.csv,研究设计与数据流程总览,GSE185263全血队列392例分组(44对照/266脓毒症/82 Sepsis_COVID),堆叠条形图,
+Figure_1C,Main/Figure_1C.csv,Table_S50_D1b_GSE32707_Groups.csv,研究设计与数据流程总览,GSE32707外部验证队列144样本分组(d0/d7×对照/SIRS/脓毒症/ARDS),堆叠条形图,
+Figure_1D,Main/Figure_1D.csv,Mitoxyperilysis_Gene_Manifest_v1.0.csv,研究设计与数据流程总览,80基因×8模块×双臂(MAM 9/线粒体10/铁9/氧化11/死亡13/铜铁11/TF11/自噬6;上游30/执行33/调节17),通路框架示意图/旭日图,canonical唯一定义源;含别名与arm列
+Figure_1F,Main/Figure_1F.csv,Table_S1_Mitoxyperilysis_Score_by_CellType_Summary.csv,研究设计与数据流程总览,Mitoxyperilysis综合评分按细胞类型×状态(=正文表1数据源),排序条形图/气泡热图,分数据集独立评分score_genes_v1
+Figure_2A,Main/Figure_2A.csv,Bridge_Test_Result.csv,多组学证据汇聚于MAM–铁上游节点,模块级五维收敛得分(铁0.473/MAM 0.443 vs 执行0.207),分组条形图(按module聚合convergence),主口径+两种敏感性口径同文件列(conv_fullcov等)
+Figure_2B,Main/Figure_2B.csv,Bridge_Test_Result.csv,多组学证据汇聚于MAM–铁上游节点,基因级收敛得分排序(CANX/SLC40A1 0.681居首),棒棒糖图/点图,与2A同源的基因视图
+Figure_2C,Main/Figure_2C.csv,Table_S40_gnomAD_Constraint_Publication.csv,多组学证据汇聚于MAM–铁上游节点,16基因pLI/LOEUF/Missense_Z逐基因约束(ITPR1 pLI=1.00),散点(pLI×LOEUF)/热图,
+Figure_2F,Main/Figure_2F.csv,Table_S12b_Mitoxyperilysis_Upstream_TF.csv,多组学证据汇聚于MAM–铁上游节点,上游TF超几何富集(NFE2L2 padj=2.57e-7居首/BACH1第3),富集点图(-log10padj×Overlap),注意TXNRD1为例外登记
+Figure_2G,Main/Figure_2G.csv,Table_S19c_Mitoxy_Gene_GWAS_Detail.csv,多组学证据汇聚于MAM–铁上游节点,FinnGen ARDS逐基因GWAS证据分级(PRDX3 Bonferroni通过/TFRC Suggestive),分级散点/条形图,常见变异证据整体薄弱(如实呈现)
+Figure_2H,Main/Figure_2H.csv,Table_S20c_TF_Perturbation_Impact.csv,多组学证据汇聚于MAM–铁上游节点,GRN组合影响评分CIS(MYC +3.87/NFE2L2 −0.747),双向条形图,网络传播排序非独立因果
+Figure_2I,Main/Figure_2I.csv,Table_S2b_scRNA_DEG_80genes.csv,呼吸链/MAM塌陷为跨平台最可重复的转录发现,单细胞80基因DEG(BALF/PBMC/合并三口径Δ与BH),模块热图(基因×平台),MT-CO1 −0.79等
+Figure_2K,Main/Figure_2K.csv,Table_S8b_80gene_ThreePlatform_Meta.csv,呼吸链/MAM塌陷为跨平台最可重复的转录发现,三平台Fisher Meta(33共识基因:20下调/13上调),方向一致性热图/UpSet,呼吸链为下调一致性最高模块
+Figure_2L,Main/Figure_2L.csv,Table_S46a_Circulating_Mitoxy_Genes_GSE185263.csv,呼吸链/MAM塌陷为跨平台最可重复的转录发现,同队列独立口径t检验+FDR(30基因检出86.7% FDR<0.05),森林图(log2FC±CI),
+Figure_2M,Main/Figure_2M.csv,Table_S51_D1b_GSE32707_Module_ssGSEA.csv,呼吸链/MAM塌陷为跨平台最可重复的转录发现,D1b外部验证模块Δz(A1线粒体模块Δz=−1.00 q=0.021;8模块全负),森林图(Δz+bootstrap CI),预注册判定R4部分信号
+Figure_2O,Main/Figure_2O.csv,Table_S53_D1b_Three_Anchor_Consistency.csv,呼吸链/MAM塌陷为跨平台最可重复的转录发现,三锚点一致性(GSE32707×GSE185263 ρ=+0.477;×GSE212865 ρ=−0.282),两两散点+符号一致率,
+Figure_2P,Main/Figure_2P.csv,Table_S54_D1b_GSE32707_Sensitivity.csv,呼吸链/MAM塌陷为跨平台最可重复的转录发现,D1b敏感性(β三档Δz=−0.90/−0.92/−0.93;对照塌陷34→22),折线/点图(敏感性×Δz),
+Figure_3A,Main/Figure_3A.csv,Table_S2_DEGs_Analysis.csv,模块级解离:上游塌陷与执行诱导并存,双臂bulk log2FC(上游30基因mean −0.83/仅10%上调;执行33基因+0.18/70%上调),分臂箱线/脊线图,取is_pathway_gene==TRUE子集按arm聚合
+Figure_3B,Main/Figure_3B.csv,Table_S5b_Mitoxy_80gene_Module_ssGSEA.csv,模块级解离:上游塌陷与执行诱导并存,模块ssGSEA谱(上游3模块Δz全负:−0.90/−0.86/−0.84;执行3模块全正:+1.59/+0.56/+0.54),双向条形图(按arm着色),
+Figure_3C,Main/Figure_3C.csv,Table_S48_Dissociation_singlecell_correlation.csv,模块级解离:上游塌陷与执行诱导并存,单细胞解离检验(全体ρ=−0.116→mt回归+0.01→去MT* +0.079;分细胞类型|ρ|≤0.10),分面散点/森林图(ρ+CI),解离存在于区室层面而非同一细胞内
+Figure_3D,Main/Figure_3D.csv,Table_S5_PCD_Scores.csv,模块级解离:上游塌陷与执行诱导并存,6种PCD逐样本z评分(Cuproptosis +0.95/Pyroptosis +0.77/Apoptosis −1.41;复合分Δz=−0.44 p=2.9e-3),分组箱线/小提琴图,列名Cuprotosis为既有拼写(沿用源表)
+Figure_3E,Main/Figure_3E.csv,Table_S5c_Mitoxyperilysis_sensitivity.csv,模块级解离:上游塌陷与执行诱导并存,复合评分方法依赖性(β=0.25/0.75/1.0:Δz=−0.44/−0.10/−0.01;均值锚点−0.98;gseapy +1.07弃用),点线图(方法×Δz±boot95),复合分方向为方法依赖的次级观察
+Figure_3F,Main/Figure_3F.csv,Table_S51_D1b_GSE32707_Module_ssGSEA.csv,模块级解离:上游塌陷与执行诱导并存,D1b双臂判别(上游半签名复现;执行臂3模块Δz亦全负未复现),按arm分面条形图,与3E同源不同视图
+Figure_S9A,Supplementary/Figure_S9A.csv,Table_S6_Scissor_CellType_Composition.csv,髓系细胞为主要效应载体,Scissor±细胞组成(NK 12.74%/T 10.57%/巨噬1.92%且全部7个来自重症),堆叠条形图,表型锚=Sepsis_COVID-vs-对照非ARDS
+Figure_S9B,Supplementary/Figure_S9B.csv,Table_S6_Scissor_Score_Summary.csv,髓系细胞为主要效应载体,Scissor±评分分布汇总(逐类型×状态),箱线/小提琴图,
+Figure_S9C,Supplementary/Figure_S9C.csv,Table_S6_Scissor_Feature_Genes.csv,髓系细胞为主要效应载体,Scissor特征基因系数(FTL/SOD2/FTH1上调),双向条形图(按coef),
+Figure_S9E,Supplementary/Figure_S9E.csv,Table_S17b_CellType_Composition_DA.csv,髓系细胞为主要效应载体,细胞类型比例DA(逐类型log2FC/FDR/reliable),棒棒糖图,
+Figure_S9F,Supplementary/Figure_S9F.csv,Table_S16_Immune_Infiltration_Fractions.csv,髓系细胞为主要效应载体,CIBERSORTx 392例×22免疫组分(M2沿组递增0.030→0.050),堆叠条形图+分组箱线,M2组间检验FDR=0.26仅作描述性趋势
+Figure_S9G,Supplementary/Figure_S9G.csv,Table_S16c_Immune_Group_Comparison.csv,髓系细胞为主要效应载体,免疫细胞组间正式检验(B naïve FDR=2.2e-5等),火山/条形图,
+Figure_S9H,Supplementary/Figure_S9H.csv,Table_S16b_Immune_Mitoxy_Correlation.csv,髓系细胞为主要效应载体,Mitoxy评分×免疫细胞相关(活化DC r=−0.28 FDR=3.6e-7),气泡热图,
+Figure_S10A,Supplementary/Figure_S10A.csv,Table_S7a_Top50_LR_Interactions.csv,细胞通讯与髓系调控驱动,Top50配体-受体互作(MIF-CD74居首),弦图/气泡图底表,
+Figure_S10B,Supplementary/Figure_S10B.csv,Table_S7c_CellPair_Communication_Strength.csv,细胞通讯与髓系调控驱动,细胞对通讯强度(巨噬自分泌80.83/双向枢纽),网络图/热图底表,
+Figure_S10C,Supplementary/Figure_S10C.csv,Table_S7h_Mitoxyperilysis_Specific_LR.csv,细胞通讯与髓系调控驱动,通路特异LR=TNFSF13B-TFRC轴(接收者限于巨噬/Mono_c14),聚焦弦图,
+Figure_S10D,Supplementary/Figure_S10D.csv,Table_S11_SCENIC_TF_Activity.csv,细胞通讯与髓系调控驱动,SCENIC RSS逐细胞类型排名(NR1H3巨噬居首2.8153),热图(TF×细胞类型RSS),
+Figure_S10E,Supplementary/Figure_S10E.csv,Table_S7l_Pseudotime_By_CellType.csv,细胞通讯与髓系调控驱动,velocity伪时间逐类型汇总,条形图,
+Figure_S10F,Supplementary/Figure_S10F.csv,Table_S7n_Pseudotime_By_CellType_Condition.csv,细胞通讯与髓系调控驱动,伪时间×状态,分组箱线底表,
+Figure_S10G,Supplementary/Figure_S10G.csv,Table_S7q_Mitoxyperilysis_Trajectory_Correlation.csv,细胞通讯与髓系调控驱动,Mitoxy评分×伪时间相关(巨噬−0.179/上皮−0.214),条形图(逐类型ρ),
+Figure_S11A,Supplementary/Figure_S11A.csv,Table_S22_S23_Integrated_Drug_Ranking.csv,可成药节点与药物重定位,scFOCAL+CMap整合排名(Deferasirox第1 0.4435),排序条形图(双源分),双源一致仅Deferasirox单点
+Figure_S11B,Supplementary/Figure_S11B.csv,Table_S22_scFOCAL_IC50.csv,可成药节点与药物重定位,scFOCAL 23药物评分(Deferasirox 81.60/Elamipretide 81.40),条形图(按integrated_drug_score),
+Figure_S11C,Supplementary/Figure_S11C.csv,Table_S23_CMap_Drugs.csv,可成药节点与药物重定位,CMap 19药物连接性(Deferasirox −0.362/Pirfenidone −0.328治疗方向),双向条形图,CMap逆转不显著需如实标注
+Figure_S11E,Supplementary/Figure_S11E.csv,Table_S36c_Target_Protein_Info.csv,可成药节点与药物重定位,靶蛋白结构来源(5H5Q 1.1Å等;SLC40A1为AlphaFold pLDDT=80.25),结构质量标注表,支撑7D的可靠性脚注
+Figure_S12A,Supplementary/Figure_S12A.csv,Table_S9_Model_Performance.csv,风险预测与计算因果线索,ML性能(主任务LASSO嵌套CV AUC 0.9917;外部0.705),条形图(AUC±CI),内部乐观偏倚需标注
+Figure_S12B,Supplementary/Figure_S12B.csv,Table_S9_Risk_Model_Features.csv,风险预测与计算因果线索,特征重要性(SLC7A11/MT-ATP8/APAF1前列),双向条形图(lasso系数×RF重要性),
+Figure_S12D,Supplementary/Figure_S12D.csv,Table_S15b_MR_FinnGenARDS_Results.csv,风险预测与计算因果线索,MR-ARDS结局(15基因IVW全部p>0.19;IP3R1方向反转),森林图,ARDS阴性如实呈现
+Figure_S12E,Supplementary/Figure_S12E.csv,Table_S15c_coloc_FinnGenARDS_Results.csv,风险预测与计算因果线索,共定位阴性(PP.H4=0.057/0.031;主导PP.H1≈0.88-0.90),堆叠条形图(PP.H0-H4),
+Figure_S12F,Supplementary/Figure_S12F.csv,Table_S38_Geneformer_Perturbations.csv,风险预测与计算因果线索,Geneformer扰动(仅VDAC1 KO/OE均显著),散点(KO×OE余弦距离),
+Figure_S12G,Supplementary/Figure_S12G.csv,Table_S27b_Group_Comparison.csv,风险预测与计算因果线索,表观时钟三组比较(PhenoAge加速+5.376岁;DunedinPACE P=8.9e-16),分组条形图,ARDS vs ICU非ARDS几乎无差异(+5.38 vs +4.58)
+Figure_S12H,Supplementary/Figure_S12H.csv,Table_S27_Epigenetic_Clocks.csv,风险预测与计算因果线索,144例逐样本时钟指标(5种算法),分组箱线/相关矩阵底表,
+Figure_S1A,Supplementary/Figure_S1A.csv,Table_S1_Mitoxyperilysis_Score_by_CellType.csv,单细胞评分与组成补充,逐数据集×类型×状态完整评分表(47K),全量热图,
+Figure_S1B,Supplementary/Figure_S1B.csv,Table_S2_QC_Metrics.csv,单细胞评分与组成补充,单细胞QC指标,QC小提琴底表,
+Figure_S1C,Supplementary/Figure_S1C.csv,Table_S3_Cell_Type_Composition_GSE158055_metadata.csv,单细胞评分与组成补充,GSE158055高分辨率64亚群注释,树状/旭日图,
+Figure_S1D,Supplementary/Figure_S1D.csv,Table_S17c_Sample_CellType_Proportions.csv,单细胞评分与组成补充,逐样本细胞类型比例,箱线图,
+Figure_S1E,Supplementary/Figure_S1E.csv,Table_S17d_Sample_CellType_Counts.csv,单细胞评分与组成补充,逐样本细胞类型计数,箱线图,
+Figure_S2A,Supplementary/Figure_S2A.csv,Table_S49_WGCNA_Modules.csv,WGCNA/hdWGCNA共表达网络,Bulk WGCNA模块归属(v2重跑),模块-基因热图底表,
+Figure_S2B,Supplementary/Figure_S2B.csv,Table_S4_Hub_Genes.csv,WGCNA/hdWGCNA共表达网络,枢纽基因MM/GS(|MM|>0.80且|GS|>0.20),散点(MM×GS),
+Figure_S2C,Supplementary/Figure_S2C.csv,Table_S4c_Enrichment_ORA_sig.csv,WGCNA/hdWGCNA共表达网络,枢纽基因ORA显著富集,富集点图,
+Figure_S2D,Supplementary/Figure_S2D.csv,Table_S44b_hdWGCNA_ModuleTraitCorr.csv,WGCNA/hdWGCNA共表达网络,hdWGCNA模块-性状相关(black×Mitochondrial_Oxidative r=0.634),相关热图,
+Figure_S2E,Supplementary/Figure_S2E.csv,Table_S45_hdWGCNA_Hubs.csv,WGCNA/hdWGCNA共表达网络,hdWGCNA枢纽kME,条形图,
+Figure_S2F,Supplementary/Figure_S2F.csv,WGCNA_intermediate_SFT_curve.csv,WGCNA/hdWGCNA共表达网络,软阈值曲线(power=6选择),双轴折线,
+Figure_S3A,Supplementary/Figure_S3A.csv,Table_S24_Pathway_Factor_Scores.csv,探索性因子分析(EFA),逐样本10因子得分,分组箱线,
+Figure_S3B,Supplementary/Figure_S3B.csv,Table_S24b_Pathway_Factor_TopFeatures.csv,探索性因子分析(EFA),因子Top负荷(F3=MT-ND1/CYB/ND2专属),分面条形图,
+Figure_S3C,Supplementary/Figure_S3C.csv,Table_S24c_Pathway_Factor_VarianceExplained.csv,探索性因子分析(EFA),方差解释率(FA vs PCA),条形图,
+Figure_S3D,Supplementary/Figure_S3D.csv,Table_S24d_Pathway_Factor_FactorPhenotype.csv,探索性因子分析(EFA),因子-表型关联(ANOVA/相关),气泡热图,
+Figure_S4A,Supplementary/Figure_S4A.csv,Table_S26g_Mitoxyperilysis_ATAC_ByCluster.csv,染色质可及性与表观调控,scATAC逐聚类模块可及性(MAM阳性率61.0%),热图,4例健康供体基线
+Figure_S4B,Supplementary/Figure_S4B.csv,Table_S26h_Mitoxyperilysis_ATAC_ByCellType.csv,染色质可及性与表观调控,逐细胞类型ATAC模块评分,条形图,
+Figure_S4C,Supplementary/Figure_S4C.csv,Table_S30_Motif_Enrichment.csv,染色质可及性与表观调控,JASPAR motif富集(58 motif×16聚类),热图(zscore),
+Figure_S4D,Supplementary/Figure_S4D.csv,Table_S31b_TF_Ranking_Mitoxyperilysis.csv,染色质可及性与表观调控,SCENIC+ TF排名(MYC调控潜力11.68居首),条形图,
+Figure_S4E,Supplementary/Figure_S4E.csv,Table_S32_TF_Binding_Predictions.csv,染色质可及性与表观调控,TF结合位点四维评分(仅MYC→TXN Strong 0.824),散点/热图底表,
+Figure_S4F,Supplementary/Figure_S4F.csv,Table_S33_Diff_TF_Binding.csv,染色质可及性与表观调控,聚类间TF结合差异(56 TF全部FDR>0.05描述性),火山图,理论最小p=0.1需标注
+Figure_S4G,Supplementary/Figure_S4G.csv,Table_S41b_DTU_Gene_Summary.csv,染色质可及性与表观调控,DTU逐基因汇总(未检出异构体转换),条形图(阴性如实),
+Figure_S4H,Supplementary/Figure_S4H.csv,Table_S41f_Transcript_Diversity_Index.csv,染色质可及性与表观调控,转录本多样性指数,分组箱线,
+Figure_S5B,Supplementary/Figure_S5B.csv,Table_S15a_MR_Sepsis_cisonly_Sensitivity.csv,MR与共定位补充,MR敏感性(mean F统计),条形图,
+Figure_S5C,Supplementary/Figure_S5C.csv,Table_S15b_MR_FinnGenARDS_Sensitivity.csv,MR与共定位补充,ARDS-MR敏感性,条形图,
+Figure_S5D,Supplementary/Figure_S5D.csv,Table_S15d_cis_trans_classification.csv,MR与共定位补充,cis/trans分类(剔除13个trans),标注表,
+Figure_S5E,Supplementary/Figure_S5E.csv,Table_S15c_coloc_IP3R1_snp_pp.csv,MR与共定位补充,IP3R1逐SNP后验概率(lead±100kb),locus zoom式散点,
+Figure_S5F,Supplementary/Figure_S5F.csv,Table_S15c_coloc_CANX_snp_pp.csv,MR与共定位补充,CANX逐SNP后验概率,locus zoom式散点,
+Figure_S5G,Supplementary/Figure_S5G.csv,Table_S19f_GWAS_Loci.csv,MR与共定位补充,FinnGen ARDS全基因组位点,曼哈顿图底表,
+Figure_S5H,Supplementary/Figure_S5H.csv,Table_S19g_Mitoxy_Loci.csv,MR与共定位补充,通路基因座标注,曼哈顿图高亮,
+Figure_S5I,Supplementary/Figure_S5I.csv,Table_S19e_Death_Mode_Comparison.csv,MR与共定位补充,6种死亡模式GWAS证据对比,条形图,
+Figure_S6A,Supplementary/Figure_S6A.csv,Table_S7b_Significant_LR_Interactions.csv,细胞通讯补充,全部显著LR对(p<0.05),气泡图底表,
+Figure_S6B,Supplementary/Figure_S6B.csv,Table_S7d_Sender_Role.csv,细胞通讯补充,发送者角色强度,条形图,
+Figure_S6C,Supplementary/Figure_S6C.csv,Table_S7e_Receiver_Role.csv,细胞通讯补充,接收者角色强度,条形图,
+Figure_S6D,Supplementary/Figure_S6D.csv,Table_S7f_Ligand_Contribution.csv,细胞通讯补充,配体贡献度,条形图,
+Figure_S6E,Supplementary/Figure_S6E.csv,Table_S7p_Trajectory_Cell_Transitions.csv,细胞通讯补充,马尔可夫转移概率,转移热图,
+Figure_S6F,Supplementary/Figure_S6F.csv,Table_S7r_Mitoxy_By_TrajectoryPhase.csv,细胞通讯补充,Mitoxy评分×轨迹相位,箱线图,
+Figure_S7A,Supplementary/Figure_S7A.csv,Table_S22_S23_Drug_Database.csv,药物与扰动补充,候选药物数据库(类别/MoA/临床期),标注表,
+Figure_S7B,Supplementary/Figure_S7B.csv,Table_S36b_Ligand_Properties.csv,药物与扰动补充,5种配体理化性质,标注表,
+Figure_S7C,Supplementary/Figure_S7C.csv,Table_S37_MD_Trajectories.csv,药物与扰动补充,MD模拟状态表(35对全部Pending),状态表(诚实披露),
+Figure_S7D,Supplementary/Figure_S7D.csv,Table_S21_Combinatorial_Perturbation_Synergy.csv,药物与扰动补充,153对TF组合协同/拮抗,散点(synergy×permutation p),
+Figure_S7E,Supplementary/Figure_S7E.csv,Table_S13_ScTenifoldKnk_KO_Summary.csv,药物与扰动补充,ScTenifoldKnk 12基因KO汇总(每次936 DR基因),条形图(pct_affected),
+Figure_S7F,Supplementary/Figure_S7F.csv,Table_S20g_GRN_scTenifoldKnk_Validation.csv,药物与扰动补充,GRN×ScTenifoldKnk交叉验证,散点,
+Figure_S7G,Supplementary/Figure_S7G.csv,Table_S38b_Geneformer_Perturbations_Detail.csv,药物与扰动补充,Geneformer扰动细节,散点,
+Figure_S7H,Supplementary/Figure_S7H.csv,Table_S39_CrossSpecies_Validation.csv,药物与扰动补充,跨物种验证(6/7小鼠直系同源可定位),标注表,
+Figure_S8A,Supplementary/Figure_S8A.csv,Table_S46b_Circulating_Mitoxy_Genes_GSE212865.csv,循环转录组与免疫补充,GSE212865逐基因三组比较(SDRA层信号消失),热图,跨平台梯度证据
+Figure_S8B,Supplementary/Figure_S8B.csv,Table_S46e_Mitoxy_Gene_Blood_Summary.csv,循环转录组与免疫补充,血液可测性汇总(18/38 vs 74/80),标注表,
+Figure_S8C,Supplementary/Figure_S8C.csv,Table_S16d_Immune_Mitoxy_All_Correlations.csv,循环转录组与免疫补充,免疫-Mitoxy全量相关(132对),热图,
+Figure_S8D,Supplementary/Figure_S8D.csv,Table_S16g_Immune_By_Condition_Summary.csv,循环转录组与免疫补充,免疫细胞逐条件均值,热图,
+Figure_S8E,Supplementary/Figure_S8E.csv,Table_S47a_Circulating_Immune_Fractions_Blood.csv,循环转录组与免疫补充,全血免疫组分(186例),堆叠条形图,
+Figure_S8F,Supplementary/Figure_S8F.csv,Table_S16e_Sample_Condition_Info.csv,循环转录组与免疫补充,样本条件信息,登记表,
+Figure_S8G,Supplementary/Figure_S8G.csv,Table_S17e_GSE158055_Only_CellType_DA.csv,循环转录组与免疫补充,GSE158055单独DA敏感性,条形图,
+Figure_4A,Main/Figure_4A.csv,Table_S56_M2_PerSample_Scores.csv,MDI临床化与跨疾病复制(M2),六队列4888样本UCS/EIS/MDI逐组分布统计(n/mean/sd/median/q25/q75),分面箱线/小提琴图(按cohort×group×score),预注册判定R2;mdi_v1.0
+Figure_4B,Main/Figure_4B.csv,Table_S57_M2_CrossDisease_Contrasts_Meta.csv,MDI临床化与跨疾病复制(M2),跨队列meta森林图数据(MDI合并g=+1.85 p=0.005;UCS g=-0.96;EIS g=+0.85),森林图(g±1.96SE含合并行),DerSimonian-Laird随机效应
+Figure_4C,Main/Figure_4C.csv,Table_S58_M2_Outcome_Association.csv,MDI临床化与跨疾病复制(M2),结局关联(脓毒症28天OR=1.063 p=0.218;Cox HR=0.933;CAP OR=1.030 p=0.918;四分位Q4 OR=1.40 p=0.016),森林图/柱状图(死亡率×四分位),连续口径为主判定;四分位为探索性
+Figure_4D,Main/Figure_4D.csv,Table_S58_M2_Outcome_Association.csv,MDI临床化与跨疾病复制(M2),增量价值(基线AUC 0.6370→+MDI 0.6371;ΔAUC=+0.0001;IDI<0.001;NRI=-0.007),点线图(模型×AUC),基线=年龄+性别+C1-C4分子亚型
+Figure_4E,Main/Figure_4E.csv,Table_S56_M2_PerSample_Scores.csv,MDI临床化与跨疾病复制(M2),UCS/EIS四象限内型(分布/IGP 0.81-0.96/结局梯度),象限散点+结局热图,中位数切分;命名预注册固定
+Figure_5A,Main/Figure_5A.csv,Table_S59a_M4_Protein_Transcript_Consistency.csv,生化层补证(M4),蛋白-转录双口径方向一致(全血33%/BALF 49%;上游臂蛋白反向升高),双向散点/方向一致热图,口径A=GSE185263全血log2FC;口径B=BALF d_mean;判定<60%阈值
+Figure_5B,Main/Figure_5B.csv,Table_S59b_M4_Lung_Iron_Axis_Proteins.csv,生化层补证(M4),"尸检肺铁轴蛋白定量(TFRC/HMOX1/FTH1/FTL/SLC40A1/SLC25A28↑,NQO1↓)",C/N比值条形图(带显著性),mmc3原始矩阵19N/19C;mmc4官方统计并注
+Figure_5C,Main/Figure_5C.csv,Table_S59c_M4_Lipid_Class_Shift.csv,生化层补证(M4),血清脂质类别占比 SEVERE vs MILD(无显著类别;CE名义p=0.043),类别偏移条形图,MTBLS6844 FIA-MS 53样本
+Figure_5D,Main/Figure_5D.csv,Table_S60_M4_GEM_Flux_Comparison.csv,生化层补证(M4),GEM容量组间比较(38反应无一BH<0.05;铁失衡p=0.34),火山图/森林图,m4gem_v1.1;饱和反应标注;v1.0退化见03_LOGS审计记录
+Figure_S12I,Supplementary/Figure_S12I.csv,Table_S15e_pQTL_MR_Results.csv,风险预测、因果线索与深度扰动（M3 增补）,pQTL-MR（deCODE+UKB-PPP cis-pQTL 工具 × IEU 脓毒症/FinnGen ARDS）逐暴露-结局 IVW/Wald/加权中位数/Egger OR 与 BH（全阴：ITPR1 脓毒症 OR=1.142 p=0.406；TFRC ARDS UKB-PPP OR=1.207 p=0.188 为最小 p）,森林图（暴露×结局，OR±95%CI）,M3 (2026-08-18)；score_version=m3pqtl_v1.0；覆盖度 3/8 基因（ITPR1/SOD2/TFRC）
+Figure_S12J,Supplementary/Figure_S12J.csv,Table_S15f_SMR_HEIDI_Results.csv,风险预测、因果线索与深度扰动（M3 增补）,SMR/HEIDI（eQTLGen 全血 72 基因 + GTEx v8 肺 30 基因 × FinnGen ARDS；102 检验全阴，min p=0.018）+ TWAS（GTEx v8 肺/全血权重 107 best-CV 检验；SLC7A11 全血 z=+5.13 BH=6.9e-5 但 top1 不印证、弥散模型驱动；MAP1LC3B 肺 z=-3.29、SLC40A1 全血 z=+3.22 名义未过 BH）,双面板：SMR p 值排序点图（HEIDI 通过标记）+ TWAS 森林/点图（z±SE，BH 着色）,M3 (2026-08-18)；score_version=m3smr_v1.0;m3twas_v1.0
+Figure_1E,Main/Figure_1E.csv,Table_S3_Cell_Type_Composition.csv,研究设计与数据流程总览,单细胞138941细胞×8主要类型组成(逐样本逐细胞类型计数),堆叠条形图/旭日图,GSE145926+GSE158055合并;Harmony批次校正
+Figure_2D,Main/Figure_2D.csv,Table_S40_gnomAD_Constraint_Summary.csv,多组学证据汇聚于MAM–铁上游节点,gnomAD约束分层(Tier 3 MAM钙轴平均pLI=0.93/LOEUF=0.31;为凋亡执行者层级pLI=0.11的8.5倍),分层条形图(pLI×LOEUF),ITPR1 pLI=1.00 Missense Z=5.60
+Figure_2E,Main/Figure_2E.csv,Table_S18_AlphaMissense_Main.csv,多组学证据汇聚于MAM–铁上游节点,AlphaMissense预测错义变体有害性逐基因(MAM模块居首;TOMM20均值0.7024为唯一过「可能致病」阈值基因;10,614个预测有害错义变异),分模块条形图/点图,预测有害性空间不等同致病负荷;构成披露见正文§4.9
+Figure_2J,Main/Figure_2J.csv,Table_S2_DEGs_Analysis.csv,呼吸链/MAM塌陷为跨平台最可重复的转录发现,Bulk火山图底表(全基因+通路基因高亮;MT-ATP8 log2FC=−2.74全通路最甚),火山图,is_pathway_gene==TRUE高亮
+Figure_2N,Main/Figure_2N.csv,Table_S52_D1b_GSE32707_Gene_log2FC.csv,呼吸链/MAM塌陷为跨平台最可重复的转录发现,GSE32707逐基因火山(A1;14基因BH q<0.05;IP3R1/VDAC1/TOMM20显著;GSDMB唯一显著上调),火山图(log2FC×−log10 BH_q),74/80基因在场
+Figure_5E,Main/Figure_5E.csv,Table_S59e_M4_Subcellular_Annotation.csv,生化层补证(M4),80基因UniProt亚细胞定位核验(上游臂27/30具线粒体/ER注释vs执行臂13/33),条形图(逐臂定位占比),HPA汇入口径;例外NADK/NCOA4/SLC7A11
+Figure_6A,Main/Figure_6A.csv,_intermediate/P0_meta_pooled.csv,预注册统计单位重算与实验锚定验证(P0),来源互斥meta k=16数据集层森林图数据(REML+Hartung-Knapp:UCS g=−0.94/EIS g=+1.02/MDI g=+1.50/MDI_nomt g=+1.49;LOSO全部方向稳定),森林图(g±1.96SE含合并行),OSF osf.io/3e92j;数据集层效应见P0_dataset_effects.csv;LOSO见P0_meta_loso.csv
+Figure_6B,Main/Figure_6B.csv,_intermediate/P0_cosmx_patient_level_moran.csv,预注册统计单位重算与实验锚定验证(P0),CosMx患者级统计(18 Case逐患者炎症小体模块Moran's I与置换p;Case均值+0.0228;Wilcoxon符号秩p=5.3e-5),逐患者点图(Moran's I×置换p),有效n=18例而非32 FOV
+Figure_6C,Main/Figure_6C.csv,_intermediate/P0_cosmx_patient_level_permutation.csv,预注册统计单位重算与实验锚定验证(P0),CosMx患者阻断置换汇总(每Case内打乱999次;p<0.001)与Wilcoxon符号秩检验,直方图(零分布+观测值),患者级统计单位下原FOV级聚集结论成立
+Figure_6D,Main/Figure_6D.csv,_intermediate/P1_loro_summary.csv,预注册统计单位重算与实验锚定验证(P1),实验锚定签名IIAMD v1.0稳定性(LORO 12次方向保持100%;FDR保持93.0-95.6%→STABLE)与随机匹配基因集检验(500次三项统计量单侧p=0.002),折线/条形图(逐次方向保持与FDR),GSE235046 β3交互;匹配基因集明细见P1_matched_gene_set_test.csv
+Figure_6E,Main/Figure_6E.csv,_intermediate/P2_gate2_scores_GSE32707.csv,预注册统计单位重算与实验锚定验证(P2),人类迁移头对头bulk两层(GSE32707真ARDS:IIAMD_up g=−0.65未调整q=0.123/髓系组成调整OLS p=0.0128;GSE185263发现层g=−1.98调整后p=0.499),双面板条形图(7竞争面板×2层),Gate 2未通过;两口径并存如实报告;GSE185263层见P2_gate2_scores_GSE185263.csv
+Figure_6F,Main/Figure_6F.csv,_intermediate/P2_gate2_scRNA_localization.csv,预注册统计单位重算与实验锚定验证(P2),scRNA供者级定位(7合格细胞类型×3评分全部q≥0.235;无髓系定位),热图(细胞类型×评分×q),Gate 2第3层未通过
+Figure_S5A,Supplementary/Figure_S5A.csv,Table_S15a_MR_Sepsis_cisonly_Instruments.csv,MR与共定位补充,eQTLGen cis-eQTL工具变量(34工具/15基因;LD clumping r²<0.001;F>10),标注表,cis-only过滤后
+Figure_S9D,Supplementary/Figure_S9D.csv,Table_S17_Cell_Composition_DA.csv,髓系为主要效应载体补充,MiloR邻域DA(27个FDR<0.05邻域集中于Mono_c14与T细胞;T/NK重症减少),蜂群图/散点,3000邻域k=21
+Figure_S9I,Supplementary/Figure_S9I.csv,Table_S47b_Circulating_Mitoxy_Immune_Correlations.csv,髓系为主要效应载体补充,循环免疫关联(36/126对显著;Ferroptosis×静息肥大细胞r=−0.44最强;MAM×活化DC r=−0.37;Pyroptosis×单核细胞r=+0.36),相关热图(6维度×22细胞),BH over 126 computable tests
+Figure_S11D,Supplementary/Figure_S11D.csv,Table_S36_Docking_Results.csv,可成药节点与药物重定位,分子对接热图底表(7靶×5配体=35对;最优SLC40A1-Liproxstatin-1 −7.711 kcal/mol),热图(靶×配体×结合能),AutoDock Vina v1.2.7 exhaustiveness=32;≤−7.0强结合
+Figure_S12C,Supplementary/Figure_S12C.csv,Table_S15a_MR_Sepsis_cisonly_Results.csv,风险预测、因果线索与深度扰动,MR脓毒症森林图(IP3R1名义显著IVW OR=1.106 p=0.0095未过Bonferroni 0.0028;加权中位数/Egger不显著),森林图(基因×OR±95%CI),单SNP rs2322800驱动;Q p=0.014异质性
+Figure_8A,Main/Figure_8A.csv,_intermediate/M11M12_step2_h1_cohort.csv,时间序（M11，前瞻注册）,H1 主检验1逐队列β1_std（基线UCS→随访EIS，患者随机截距混合模型）+REML/HK合并,森林图,单侧β1<0；GSE215865 −0.344/GSE54514 −0.734/GSE148871 +0.019；合并−0.280[−1.159,+0.598]单侧p=0.152；BH族6检验
+Figure_8B,Main/Figure_8B.csv,_intermediate/M11M12_step2_h2_cohort.csv,时间序（M11，前瞻注册）,H2 主检验2 RI-CLPM滞后交叉路径β_L（UCS(t−1)→EIS(t)）逐队列+合并,森林图,单侧βL<0；3/3负向；合并−0.137[−0.360,+0.086]单侧p=0.059；I²=0%
+Figure_8C,Main/Figure_8C.csv,_intermediate/M11M12_step2_zero_h1.csv,时间序（M11，前瞻注册）,零模型（表达量匹配随机集B=10000）与敏感性（GSE212865两波、GSE54514作者中性粒）,直方图/点图,seed=0；H1/H2逐队列obs vs null
+Figure_8D,Main/Figure_8D.csv,_intermediate/M11M12_step2_h1_loso_subject.csv,时间序（M11，前瞻注册）,LOSO方向一致性（队列内leave-one-subject-out + meta leave-one-cohort-out）,条形图,H2 LOSO 100%/97%/100%；H1 GSE148871 81%
+Figure_9A,Main/Figure_9A.csv,_intermediate/M11M12_step3_gse106878_arm_tests.csv,干预响应（M12，前瞻注册）,GSE106878 d_res臂间MWU（单侧less）与组内Wilcoxon（单侧）+BH族,点图/条形图,臂间p=0.1231（q=0.1231阴性）；组内HC p=0.00032（q=0.00065）；P(d_res<0)=79%
+Figure_9B,Main/Figure_9B.csv,_intermediate/M11M12_step3_composition_coreport.csv,干预响应（M12，前瞻注册）,强制组成同报（ΔNeut/ΔMono逐臂）+H4描述（ΔMDI_obs vs ΔMDI_comp）,双面板条形图,确认性未显著→H4仅描述；HC Δcomp与Δobs反向
+Figure_9C,Main/Figure_9C.csv,_intermediate/M11M12_step3_gse148871_replication.csv,干预响应（M12，前瞻注册）,GSE148871 NEMI臂复现层：d_obs锚点（−0.489,p=0.0045）vs d_res（+0.031,p=0.707）与归因,点图/条形图,同向份额+2.184→组成回退（披露的注册前观察，不进BH族）
+Figure_7A,Main/Figure_7A.csv,_intermediate/M10A_r2_comparison.csv,组成枢纽检验（M10，前瞻注册）,检验A 组成预测逐队列 R²（Monaco|NNLS 主口径+四套口径）,条形图/散点,逐队列 0.389–0.760、合并样本 R²=0.419；5/6 队列≥0.5
+Figure_7B,Main/Figure_7B.csv,_intermediate/M10A_residual_layer_effects.csv,组成枢纽检验（M10，前瞻注册）,残差 MDI k=16 层效应+合并（观测锚点 g=+1.504 vs 残差 g=+0.588）,森林图,75% 层方向一致、LOSO 16/16；I²=93%、PI 跨 0 如实报告
+Figure_7C,Main/Figure_7C.csv,_intermediate/M10B_myeloid_UCS_layers.csv,组成枢纽检验（M10，前瞻注册）,检验B 髓系 UCS 层效应（4 队列单核/巨噬+中性粒对照）+合并,森林图,合并 g=−1.003 单侧 p=0.0041、I²=0%；中性粒 +0.32/+0.52 相反格局
+Figure_7D,Main/Figure_7D.csv,_intermediate/M13_catalog.csv,去混淆审计（M13，前瞻注册）,249 签名混淆度目录（g ~ 执行臂占比/髓系基因占比）,散点图,髓系 β=+2.309 p=6.3e-11、零模型校准 p=0.0005；执行臂 β=+0.719 未达显著
+Figure_7E,Main/Figure_7E.csv,_intermediate/M14_gate2_core_scores_GSE32707.csv,扰动三角化（M14 腿2，前瞻注册）,IIAMD core Gate 2 三层头对头（GSE32707/GSE185263/scRNA 供者级）,森林图/条形图,core 仍不迁移→Gate 2 结论稳健；真 ARDS 层未校正 q=0.038 为登记的部分收益
+Figure_7F,Main/Figure_7F.csv,_intermediate/M14_Torin_reversal_permutation.csv,扰动三角化（M14 腿1，前瞻注册）,"Torin 方向逆转率 vs baseMean 匹配零分布（B=2,000）",直方图+观测线,core-up 79.5% vs 零分布 56.9%，四套单侧 p=0.0005
+Figure_7G,Main/Figure_7G.csv,_intermediate/M10C_sputum_blood.csv,组成枢纽检验（M10 检验C，前瞻注册）,区室对照（痰/血、TA/PBMC、BALF/PBMC）,条形图/点图,MDI 痰>血 Δ=+0.562 p=6.7e-7 完全由执行臂承载；描述性不设硬判定
+Table_4,Table4_criteria_verdicts.csv,111文稿_v5_英文版.md / 111文稿_v5.md Table 4,证伪级联的预设判定标准与判决,17 条预设判定标准×结果×判决（含预注册出处与注册状态两列溯源信息）,表格（无需绘图）,判定标准列已按预注册文件原文校正（P13 溯源）；行 1–2 非 OSF 注册（内部冻结方案），行 9 预注册主检验为执行臂系数

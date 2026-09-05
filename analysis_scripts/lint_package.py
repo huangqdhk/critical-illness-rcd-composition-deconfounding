@@ -31,7 +31,8 @@ ROOT = Path(__file__).resolve().parent
 GOV = ROOT / ("04_AUDIT_GOVERNANCE")
 TAB = ROOT / ("02_SUPPLEMENTARY_TABLES") / "SUPPLEMENTARY_Tables_CSV"
 NOTES = ROOT / ("02_SUPPLEMENTARY_TABLES") / "Supplementary_Notes"
-ARCH = ROOT / ("archive")
+# 2026-09-04 归档区统一：原 archive/（用户建）并入导师建的 归档/，规则随之指向 归档/
+ARCH = ROOT / ("归档")
 MANIFEST = GOV / "RESULTS_MANIFEST_v2.0.csv"  # M2（2026-08-17）起升 v2.0（v1.0 冻结保留）
 
 # 受管目录（顶层文件必须全部登记 canonical；manifest 自身除外）
@@ -39,7 +40,7 @@ MANAGED_DIRS = {
     "04_AUDIT_GOVERNANCE": GOV,
     "02_SUPPLEMENTARY_TABLES/SUPPLEMENTARY_Tables_CSV": TAB,
     "02_SUPPLEMENTARY_TABLES/Supplementary_Notes": NOTES,
-    "archive": ARCH,
+    "归档": ARCH,
 }
 # 2026-08-16 目录重组：登记在册但本地不随包的文件（附理由，逐项登记）
 MISSING_OK = {
@@ -84,6 +85,15 @@ M1X_NO_VERSION_STAMP = {
     "Table_S83_M10D_CrossSpecies_Contrasts.csv",  # 2026-08-27 M10D 次终点执行批次
     "Table_S83b_M10D_Pig_Ensembl_Sensitivity.csv",  # 2026-08-27 M10D 补做批次（猪同源敏感性）
     "Table_S87_M10D_Pandisease_k20_LayerEffects.csv",  # 2026-08-27 M10D 补做批次（k≥20 泛疾病）
+    # 2026-08-31 M16 力学边界模块批次（导出设计无内嵌版本列，manifest 记 NA）
+    "Table_S88_M16_Mechanosensing_Module_v10.csv",
+    "Table_S89_M16_VILI_Contrasts.csv",
+    "Table_S90_M16_GSE2411_Interaction.csv",
+    "Table_S91_M16_Bridge_Correlations.csv",
+    "Table_S92_M16_Ortholog_Coverage_Audit.csv",
+    "Figure_11A.csv",
+    "Figure_11B.csv",
+    "Figure_11C.csv",
     "Table_S87b_M10D_Pandisease_k20_Meta.csv",
     "Table_S87c_M10D_Pandisease_k20_LOSO.csv",
     "Figure_7A.csv", "Figure_7B.csv", "Figure_7C.csv", "Figure_7D.csv",
@@ -346,17 +356,18 @@ def check_manifest():
         fail(f"[manifest] 登记在册但本地不存在: {sorted(absent)}")
     else:
         ok(f"[manifest] 登记在册文件全部存在（MISSING_OK 白名单 {len(MISSING_OK)} 项）")
-    # archive/ 内容与登记一致（MISSING_OK 内的 archived 留痕文件不要求实体存在）
+    # 归档区内容与登记一致（MISSING_OK 内的 archived 留痕文件不要求实体存在）
     # 2026-08-21：archive 重组为子目录（R1_table_backups/M1_check_debug 等），改为递归比对
+    # 2026-09-04：archive/ 并入 归档/（归档区统一），规则指向 归档/
     disk_arch = set()
     for dirpath, _dirs, files in os.walk(ARCH):
         for f in files:
             disk_arch.add(f)
     exp_arch = set(man_arch) - set(MISSING_OK)
     if disk_arch != exp_arch:
-        fail(f"[manifest] archive/ 与登记不一致: 多出 {sorted(disk_arch - exp_arch)[:5]}, 缺少 {sorted(exp_arch - disk_arch)[:5]}")
+        fail(f"[manifest] 归档/ 与登记不一致: 多出 {sorted(disk_arch - exp_arch)[:5]}, 缺少 {sorted(exp_arch - disk_arch)[:5]}")
     else:
-        ok(f"[manifest] archive/ {len(disk_arch)} 个归档文件（含子目录）与登记一致")
+        ok(f"[manifest] 归档/ {len(disk_arch)} 个归档文件（含子目录）与登记一致")
 
     # 校验和 + 尺寸
     n_hash = 0

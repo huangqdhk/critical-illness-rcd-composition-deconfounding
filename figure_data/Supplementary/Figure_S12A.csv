@@ -1,0 +1,9 @@
+﻿task,model_name,is_best,nested_cv_auc_mean,nested_cv_auc_std,nested_cv_auc_ci_lo,nested_cv_auc_ci_hi,permutation_p,external_auc,external_auc_ci,n_external,n_features_selected,note,gene_set_version,score_version
+Sepsis_COVID_vs_Control,LASSO,False,0.9932,0.006,0.9862,1.0,0.005,0.3962,0.274-0.516,85,18,"原任务;平凡可分,AUC≈1.0为任务天花板;仅作透明对照",Mitoxy-80_v1.0,NA
+Sepsis_COVID_vs_Control,ElasticNet,True,0.9959,0.0055,0.9868,1.0,0.005,0.3962,0.274-0.516,85,18,"原任务;平凡可分,AUC≈1.0为任务天花板;仅作透明对照",Mitoxy-80_v1.0,NA
+Sepsis_COVID_vs_Control,RandomForest,False,0.9904,0.0103,0.9737,1.0,0.005,0.3962,0.274-0.516,85,18,"原任务;平凡可分,AUC≈1.0为任务天花板;仅作透明对照",Mitoxy-80_v1.0,NA
+Sepsis_COVID_vs_Control,Stacking,False,0.9911,0.0102,0.974,1.0,0.005,0.3962,0.274-0.516,85,18,"原任务;平凡可分,AUC≈1.0为任务天花板;仅作透明对照",Mitoxy-80_v1.0,NA
+Sepsis_vs_Sepsis_COVID,LASSO,True,0.9917,0.0099,0.9744,0.9996,0.005,0.7048,0.582-0.818,86,65,"主任务;区分脓毒症是否合并COVID-19(sepcv,R1正名);具临床意义",Mitoxy-80_v1.0,NA
+Sepsis_vs_Sepsis_COVID,ElasticNet,False,0.9915,0.0103,0.9735,0.9997,0.005,0.7048,0.582-0.818,86,65,"主任务;区分脓毒症是否合并COVID-19(sepcv,R1正名);具临床意义",Mitoxy-80_v1.0,NA
+Sepsis_vs_Sepsis_COVID,RandomForest,False,0.9696,0.0193,0.9397,0.9869,0.005,0.7048,0.582-0.818,86,65,"主任务;区分脓毒症是否合并COVID-19(sepcv,R1正名);具临床意义",Mitoxy-80_v1.0,NA
+Sepsis_vs_Sepsis_COVID,Stacking,False,0.9696,0.0206,0.9393,0.988,0.005,0.7048,0.582-0.818,86,65,"主任务;区分脓毒症是否合并COVID-19(sepcv,R1正名);具临床意义",Mitoxy-80_v1.0,NA

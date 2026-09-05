@@ -1,0 +1,11 @@
+# Note: Group comparisons include all samples (n=144). # KS123 (Excluded_data_error) was removed from final analysis per sample QC. # KS050 (Notable_biological_extreme) was retained.
+Clock_Metric,Healthy,ICU,ARDS,H,p,significant,gene_set_version,score_version
+horvath_acceleration,-1.1141,-1.3563,-1.5638,0.0717,0.9648,No,NA,NA
+horvath_residual,0.6594,0.4329,-1.3398,2.3183,0.3138,No,NA,NA
+hannum_acceleration,3.7076,8.1326,9.6012,16.9649,0.0002,Yes,NA,NA
+hannum_residual,-3.4953,0.9451,0.8712,18.84,0.0001,Yes,NA,NA
+phenoage_acceleration,-8.4823,4.5836,5.3761,42.5541,0.0,Yes,NA,NA
+phenoage_residual,-10.1023,2.9809,2.0386,46.0387,0.0,Yes,NA,NA
+skin_acceleration,-4.1234,-3.6931,-3.8507,0.3856,0.8246,No,NA,NA
+skin_residual,0.0287,0.4713,-0.9285,1.5194,0.4678,No,NA,NA
+dunedinpace,0.7233,1.1124,1.1796,61.6608,0.0,Yes,NA,NA

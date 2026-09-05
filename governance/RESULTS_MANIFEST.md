@@ -6,6 +6,8 @@
 
 **2026-08-21 v2.1 变更记录（投稿前硬阻断项收尾批次）**：RESULTS_MANIFEST_v2.0.csv 以 v1.0（279 行，2026-08-17 冻结）为基底重建为 591 行（重建脚本 `P0_rebuild_manifest_v2.py`；v2.0 曾因修复脚本写回异常被截断，重建以磁盘为权威重算全部 canonical 文件 SHA256，v1.0 文件保留历史冻结链）。本批次变更：① 修正 M2/M3/M4 批次引入的版本戳漂移（manifest 空串 vs 冻结 CSV 'NA'，164 行）；② 5 个 CSV 补版本列（Figure_10D、S15e Instruments/LeaveOneOut/Sensitivity、S60）+ 4 个 Figure CSV（1B/1C/2E/S2F）；③ N22 s_number 归一（S15e/f/g→S15、S19i→S19）；④ archive 子目录重组后 location 修正（R1_table_backups/M1_check_debug/R1_artifacts）；⑤ 补登记 P0/P1/P2 系列与 2026-08-21 新增治理文件（P0-8、查新 v1.1/重跑日志、参考文献核实报告、manuscript-to-source 报告、软件快照、pip freeze×2、P1-4 报告等）；⑥ lint 同步更新（FDR_NULL_OK 增 M4 蛋白层 4 表与 Figure_5I；版本戳多值 ';' 集合语义；archive 递归比对）；**lint 全绿：74 项通过 / 0 失败**（2026-08-21）。
 
+**2026-08-31 M16 力学边界模块批次**：新增第九条候选边界（力学边界）全套产物——5 个附表（S88 mech_v1.0 模块 23 基因三层+PMID 活验溯源 / S89 四套 VILI 同口径对比+合并 / S90 GSE2411 力学×LPS 2×2 互作 / S91 人体桥接+Visium 空间 / S92 同源映射覆盖审计）+ 3 个主图数据（Figure_11A/B/C）+ 2 个治理文件（GEO 核验、执行报告）；预注册 M16_pre_registration_20260831.md 按 M1/M2/M10 纪律不入册（根目录治理文档）；8 个 CSV 按 M10–M15 导出设计登记为无内嵌版本列（manifest 记 NA，lint 白名单 M1X_NO_VERSION_STAMP 同步补登）；双版文稿（v5 中文/英文版）同步更新：数据集表 +4 行、方法 4.28、结果第 17 节、讨论四向→五向边界、图 11 注、参考文献 59–66（Vancouver，PMID 全经 eutils 活验）、数据可得性。**lint 全绿：74 项通过 / 0 失败**（2026-08-31）。判据裁定：A 阴性、B 形式未达（直接增强显著）、C 阴性/混合、D 达提示级——阴性/部分结果如实界定，不升级措辞。
+
 **变更记录（References 落盘批次，2026-08-29）**：本批次变更：① P0_References_1to64_Verification_Report.md 修订（11 条待确认条目裁定记录 + round5 系列检索留痕 + GB/T→Vancouver 落盘与 README 退役记录），manifest 同步 size/sha256（8861→16653）；② 补登记 2 个治理文件：P0_Manuscript_Source_Check_Report_v2.md（§四-2 扩展终检 13/13 PASS，含 References 完整性断言）、P0_Novelty_Search_Rerun_Log_20260829.md（§四-1 查新重跑，空白维持）；修订方式为行级精确写入（非 pandas 往返，规避 B1 批次误伤模式）。**lint 全绿：74 项通过 / 0 失败**（2026-08-29）。
 
 **冻结日期**：2026-08-15

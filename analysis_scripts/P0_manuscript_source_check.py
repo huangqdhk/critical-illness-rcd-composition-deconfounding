@@ -12,8 +12,10 @@ import pandas as pd
 import numpy as np
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-ROOT = r"E:\SCI\SCI论文1黄裕荣_Mitoxyperilysis_ARDS"
-MS = os.path.join(ROOT, "111文稿_v5.md")
+# 2026-09-04 维护：ROOT 改为脚本自身所在目录（跨机可移植，消除 E:\ 绝对路径依赖）；
+# 中文稿 111文稿_v5.md 已移入 归档/（2026-09-04 起弃用，仅作冻结对照）。
+ROOT = os.path.dirname(os.path.abspath(__file__))
+MS = os.path.join(ROOT, "归档", "111文稿_v5.md")
 INTER = os.path.join(ROOT, "_intermediate")
 OUT = os.path.join(ROOT, "04_AUDIT_GOVERNANCE", "P0_Manuscript_Source_Check_Report.md")
 

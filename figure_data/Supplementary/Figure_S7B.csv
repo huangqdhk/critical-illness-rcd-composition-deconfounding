@@ -1,0 +1,6 @@
+﻿Drug,CID,MW_g_mol,LogP,HBD,HBA,Rotatable_Bonds,Heavy_Atoms,Mechanism,Primary_Targets,gene_set_version,score_version
+Ferrostatin-1,4068248,262.35299999999995,3.1901,2,4,5,41,Lipid peroxidation inhibitor (ferroptosis inhibitor),GPX4,Mitoxy-80_v1.0,NA
+Liproxstatin-1,8803940,354.4059999999997,3.530660000000001,2,4,5,48,Potent ferroptosis inhibitor (spiroquinoxaline),GPX4,Mitoxy-80_v1.0,NA
+Deferoxamine,2973,560.6930000000024,0.9221000000000056,6,9,27,87,Iron chelator (binds free Fe2+/Fe3+),"FTL, TFRC, SLC40A1",Mitoxy-80_v1.0,NA
+alpha-Tocopherol,14985,430.7169999999993,8.840260000000002,1,2,13,81,Lipid-soluble antioxidant (vitamin E),"GPX4, SOD2",Mitoxy-80_v1.0,NA
+Erastin,11212629,432.44900000000007,3.5760000000000014,2,6,5,43,System xc- inhibitor (ferroptosis inducer),"GPX4, VDAC1",Mitoxy-80_v1.0,NA

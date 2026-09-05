@@ -15,7 +15,7 @@ correction across 4 independent single-cell cohorts.
 
 | Directory | Contents |
 |---|---|
-| `analysis_scripts/` | 116 analysis/QC scripts (P0 frozen-plan core re-analysis, M1 spatial, M2 clinical MDI, M3 causal four-layer pQTL-MR/SMR/TWAS, M4 biochemical, composition-hub/temporal/intervention modules, package lint) |
+| `analysis_scripts/` | 98 analysis/QC scripts (P0 frozen-plan core re-analysis, M1 spatial, M2 clinical MDI, M3 causal four-layer pQTL-MR/SMR/TWAS, M4 biochemical, composition-hub/temporal/intervention modules, package lint) |
 | `mitoxdi_tool/` | **mitoxdi v1.0.0** — standalone MIT-licensed tool: dual-arm decomposition + `mdi_v1.0` scoring + composition-predicted / composition-residual MDI (own README, LICENSE, demos, 11-cohort regression tests, gate document `GATE.md`) |
 | `governance/` | RESULTS_MANIFEST v2.0 (SHA256-audited inventory), gene manifest v1.0 (single source of the 80-gene/arm definitions), sample manifest, frozen analysis plan, judgment-gate reports, audit reports, novelty-search logs, software snapshot |
 | `figure_data/` | Per-panel CSV data behind all main figures |

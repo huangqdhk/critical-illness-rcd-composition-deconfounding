@@ -1,0 +1,20 @@
+﻿drug_name,scfocal_score,cmap_score,integrated_score,integrated_rank,gene_set_version,score_version
+Deferasirox,52.5,-0.362,0.4435,1,Mitoxy-80_v1.0,NA
+MitoQ,62.9,0.5945,0.3145,2,Mitoxy-80_v1.0,NA
+Pirfenidone,28.9,-0.3284,0.3087,3,Mitoxy-80_v1.0,NA
+Dexamethasone,59.0,0.0124,0.295,4,Mitoxy-80_v1.0,NA
+Disulfiram,56.1,0.0478,0.2805,5,Mitoxy-80_v1.0,NA
+Deferoxamine,54.4,0.0799,0.272,6,Mitoxy-80_v1.0,NA
+Ferrostatin-1,54.3,0.2092,0.27149999999999996,7,Mitoxy-80_v1.0,NA
+Elamipretide,53.4,0.7704,0.267,8,Mitoxy-80_v1.0,NA
+Fluvoxamine,53.3,0.7269,0.26649999999999996,9,Mitoxy-80_v1.0,NA
+RSL3,51.7,0.0759,0.2585,10,Mitoxy-80_v1.0,NA
+Erastin,50.6,0.0012,0.253,11,Mitoxy-80_v1.0,NA
+MitoTEMPO,49.9,0.5674,0.2495,12,Mitoxy-80_v1.0,NA
+Metformin,47.0,0.4088,0.235,13,Mitoxy-80_v1.0,NA
+Baricitinib,46.0,0.1392,0.23,14,Mitoxy-80_v1.0,NA
+Liproxstatin-1,45.5,0.5014,0.2275,15,Mitoxy-80_v1.0,NA
+MCC950,45.3,0.4052,0.22649999999999998,16,Mitoxy-80_v1.0,NA
+Dapansutrile,45.2,0.1684,0.226,17,Mitoxy-80_v1.0,NA
+N-Acetylcysteine,42.1,0.2649,0.21050000000000002,18,Mitoxy-80_v1.0,NA
+Dimethyl Fumarate,39.6,0.2009,0.198,19,Mitoxy-80_v1.0,NA

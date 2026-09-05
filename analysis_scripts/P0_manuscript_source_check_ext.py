@@ -14,8 +14,9 @@ import numpy as np
 from scipy.stats import norm
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-ROOT = r"E:\SCI\SCI论文1黄裕荣_Mitoxyperilysis_ARDS"
-MS = os.path.join(ROOT, "111文稿_v5.md")
+# 2026-09-04 维护：ROOT 改为脚本自身所在目录（跨机可移植）；中文稿已移 归档/（弃用，冻结对照）。
+ROOT = os.path.dirname(os.path.abspath(__file__))
+MS = os.path.join(ROOT, "归档", "111文稿_v5.md")
 MSE = os.path.join(ROOT, "111文稿_v5_英文版.md")
 INTER = os.path.join(ROOT, "_intermediate")
 ST = os.path.join(ROOT, "02_SUPPLEMENTARY_TABLES", "SUPPLEMENTARY_Tables_CSV")
@@ -105,10 +106,21 @@ ok = not bad
 add("Table1-eight", "文稿 Table 1：健康对照八细胞类型分值（分数据集评分后合并细胞池均值）0.4568/0.4204/0.3728/0.3717/0.3397/0.3161/0.3154/0.3050",
     "PASS" if ok else "MISMATCH", "八类型 n_cells 加权合并全部吻合" if ok else f"不符：{bad}")
 
-# ================= References 完整性（2026-08-29 插入后合并复核） =================
+# ================= References 完整性（2026-08-29 插入后合并复核；v2.1 2026-09-04 维护） =================
+# 2026-09-04 维护（两项，均有留痕）：
+#   (a) 条数/覆盖范围改按实际计数 N——P13 批（2026-09-01）文献 58→66 后，原硬编码 58 恒为 False；
+#   (b) 标记豁免 4 位年份——2026-09-03 英文稿填入伦理批件号 "Yi Lun Yan [2024] No. 322"，
+#       其 [2024] 被原正则误判为引用标记（中文稿无此串 → 序列假性不一致）。
+# 注：中文稿自 2026-09-04 起弃用（归档/，今后不再使用），本检查仍以归档件为冻结对照记录；
+#     英文 v5 为唯一投稿稿。
+def _is_year_mark(m):
+    parts = [p.strip() for p in m[1:-1].replace("-", ",").split(",") if p.strip()]
+    return bool(parts) and all(p.isdigit() and 1900 <= int(p) <= 2100 for p in parts)
+
 def ref_profile(text):
     body = text.split("# References")[0]
-    marks = [m for m in re.findall(r"\[[\d,\-\s]+\]", body) if m.strip() != "[0,1]"]
+    marks = [m for m in re.findall(r"\[[\d,\-\s]+\]", body)
+             if m.strip() != "[0,1]" and not _is_year_mark(m)]
     expand = set()
     for m in marks:
         for part in m[1:-1].split(","):
@@ -122,9 +134,10 @@ def ref_profile(text):
 
 mz, ez, nz = ref_profile(ms)
 me, ee, ne = ref_profile(mse)
-ok = nz == 58 and ne == 58 and ez == set(range(1, 59)) and ee == set(range(1, 59)) and mz == me
-add("REF-integrity", "References 插入后完整性：双版各 58 条、正文标记展开覆盖 1..58、双版标记序列一致",
-    "PASS" if ok else "MISMATCH", f"中文 {nz} 条/英文 {ne} 条；覆盖一致={ez == ee == set(range(1,59))}；标记序列一致={mz == me}")
+full = set(range(1, nz + 1)) if nz == ne else None
+ok = full is not None and ez == full and ee == full and mz == me
+add("REF-integrity", "References 完整性：双版条数一致（N=实际计数）、正文标记展开覆盖 1..N、双版标记序列一致（v2.1 2026-09-04：豁免伦理批件年份 [2024]）",
+    "PASS" if ok else "MISMATCH", f"中文 {nz} 条/英文 {ne} 条；覆盖一致={full is not None and ez == ee == full}；标记序列一致={mz == me}")
 
 # ================= 文稿侧包含性（关键数字串必须在正文出现） =================
 needles = ["0.6508", "0.752", "0.0225", "6.33", "9.36", "4.04", "0.4568", "0.3050", "33%", "49%",

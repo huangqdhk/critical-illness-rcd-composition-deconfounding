@@ -1,0 +1,9 @@
+target,total_in,n_sources,mean_lr,gene_set_version,score_version
+Macrophage,409.4599,8,0.8012914,NA,NA
+DC,352.4589,8,0.6924536,NA,NA
+Mono_c14,302.8293,8,0.7422287,NA,NA
+NK,296.67102,8,0.8150303,NA,NA
+Epithelial,214.44894,8,0.5628581,NA,NA
+B_cell,162.22163,8,0.86749536,NA,NA
+T_cell,154.2811,8,0.6537335,NA,NA
+Club,56.57017,8,0.7749339,NA,NA

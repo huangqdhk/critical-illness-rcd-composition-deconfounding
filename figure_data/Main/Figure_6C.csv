@@ -1,0 +1,9 @@
+﻿statistic,value,gene_set_version,score_version
+patient_mean_I,0.022760026130451,Mitoxy-80_v1.0,score_genes_v1_spatial
+patient_mean_I_perm_null_mean,-0.0001777163515012,Mitoxy-80_v1.0,score_genes_v1_spatial
+patient_mean_I_perm_null_sd,0.0018970679880689,Mitoxy-80_v1.0,score_genes_v1_spatial
+patient_blocked_p_twotail,0.0,Mitoxy-80_v1.0,score_genes_v1_spatial
+wilcoxon_stat,4.0,Mitoxy-80_v1.0,score_genes_v1_spatial
+wilcoxon_p,5.340576171875e-05,Mitoxy-80_v1.0,score_genes_v1_spatial
+n_cases,18.0,Mitoxy-80_v1.0,score_genes_v1_spatial
+n_perm,999.0,Mitoxy-80_v1.0,score_genes_v1_spatial

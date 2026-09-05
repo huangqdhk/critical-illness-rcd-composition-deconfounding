@@ -88,6 +88,12 @@ Result (2026-08-27): **254 family-level checks across the 11 cohorts, 254/254 PA
 (cohort-level 17/17); largest family max |Δ| = 3.77×10⁻¹³ (machine precision)**;
 the packaged scoring core is bit-identical to the project's shared `mdi_lib` on the
 same matrix (max |Δ| = 0).
+Re-verified (2026-09-05, pre-release rerun): 254/254 PASS (17/17); largest
+max |Δ| = 5.03×10⁻¹³. In the re-run summary CSV the Pearson `r` of two constant
+b0/b1 columns (GSE215865 b0, GSE148871 b1) reads −1 instead of +1: r is evaluated
+on the float-roundoff spread (≤10⁻¹⁶) of an otherwise constant column, so its sign
+is arbitrary across environments; the values themselves agree to <10⁻¹⁵ and the
+PASS verdict (based on max |Δ|) is unaffected.
 Summary tables: `_intermediate/M15_regression_summary.csv` (per family max |Δ|) and
 `M15_regression_cohort_summary.csv`.
 
@@ -107,6 +113,31 @@ M15_tool/
 ├── LICENSE             # MIT
 └── requirements.txt
 ```
+
+## The 249-signature confusability catalog
+
+`data/signature_confusability_catalog_249.csv` ships the field-scale audit catalog:
+249 de-duplicated published PCD/mitochondria-related signatures (MSigDB v7.5.1), each
+scored in critical-illness whole blood (GSE185263 primary layer; GSE32707 sensitivity
+layer) with the two de-circularized exposure metrics:
+
+| column | meaning |
+|---|---|
+| `signature` | MSigDB signature name |
+| `n_genes` / `n_measured` | signature size / genes measurable in the scoring layer |
+| `execution_share_ext` | fraction of genes in the external-ontology death-execution arm (GO/REACTOME, de-circularized) |
+| `myeloid_share` | fraction of genes whose Monaco 29-type argmax is a myeloid type — the signature's exposure to the composition artifact |
+| `g_185` / `g_327` | disease effect (Hedges' g) in GSE185263 / GSE32707 |
+| `r_UCS` / `r_EIS` | correlation of the signature score with the study's infrastructure (UCS) / execution (EIS) arms |
+| `dominant_arm` | arm with the larger absolute correlation |
+
+**How to use it.** Before reporting any whole-blood RCD signature in critical illness,
+look the signature up in this catalog: a high `myeloid_share` means the composition-only
+null — not healthy controls — is the relevant comparator, and the result should be
+reported against the composition-predicted readout (see Quick start). Signatures not yet
+in the catalog can be screened by computing the same two shares with any myeloid
+reference and the external GO/REACTOME arm definitions used here (audit provenance:
+`M13_Confounding_Audit_Report.md`, OSF ETVMJ).
 
 ## Input conventions
 

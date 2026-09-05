@@ -1,0 +1,7 @@
+death_mode,n_genes_in_set,n_mapped,n_bonf_sig,n_suggestive,mean_neg_log10_p,fisher_enrichment_p,gene_set_version,score_version
+Ferroptosis,10,10,0,3,2.658,1.0,Mitoxy-80_v1.0,NA
+Necroptosis,5,5,0,1,2.602,1.0,Mitoxy-80_v1.0,NA
+Pyroptosis,12,11,0,4,2.584,1.0,Mitoxy-80_v1.0,NA
+Mitoxyperilysis,37,30,1,6,2.55,1.0,Mitoxy-80_v1.0,NA
+Apoptosis,10,10,0,1,2.455,1.0,Mitoxy-80_v1.0,NA
+Cuproptosis,10,9,0,0,2.144,1.0,Mitoxy-80_v1.0,NA
