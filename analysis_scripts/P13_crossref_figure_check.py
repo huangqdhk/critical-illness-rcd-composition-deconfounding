@@ -16,8 +16,9 @@ from collections import OrderedDict
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 ROOT = os.path.dirname(os.path.abspath(__file__))
 EN = io.open(os.path.join(ROOT, "111文稿_v5_英文版.md"), encoding="utf-8").read()
-CN = io.open(os.path.join(ROOT, "111文稿_v5.md"), encoding="utf-8").read()
-OUT = os.path.join(ROOT, "03_LOGS", "P13_crossref_figure_check_20260901.md")
+# 2026-09-05：中文稿已随 2026-09-04 归档批次移入 归档/（弃用只读），路径同步；输出加日期不覆盖 09-01 报告
+CN = io.open(os.path.join(ROOT, "归档", "111文稿_v5.md"), encoding="utf-8").read()
+OUT = os.path.join(ROOT, "03_LOGS", "P13_crossref_figure_check_20260905.md")
 rep = []
 def log(s=""): rep.append(s); print(s)
 

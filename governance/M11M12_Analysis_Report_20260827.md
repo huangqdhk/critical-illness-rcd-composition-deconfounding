@@ -1,6 +1,6 @@
 # M11/M12 时间序与干预响应 分析报告（2026-08-27）
 
-- 前瞻注册：M11_M12_pre_registration_20260827_draft.md（第二次独立注册：osf.io/98cm3；与 osf.io/ETVMJ 并列）
+- 前瞻注册：M11_M12_pre_registration_20260827.md（第二次独立注册：osf.io/98cm3；与 osf.io/ETVMJ 并列）
 - 数据：GSE215865（1,326 day 级样本/508 受试者）、GSE54514（163/54 ID）、GSE148871（血 168/49 例）、GSE212865（137）、GSE106878（94=47×2）
 - 脚本：M11M12_step1_scores_deconv.py / M11M12_step2_temporal.py / M11M12_step3_intervention.py / M11M12_step4_export.py；日志 03_LOGS/M11M12_step{1,2,3}_log.txt
 

@@ -157,7 +157,7 @@ gate_row = gate[gate["test"] == "verdict"]
 m11_v = gate_row["verdict"].iloc[0] if len(gate_row) else "见 gate 表"
 rep = []
 rep.append("# M11/M12 时间序与干预响应 分析报告（2026-08-27）\n")
-rep.append("- 前瞻注册：M11_M12_pre_registration_20260827_draft.md（第二次独立注册：osf.io/98cm3；与 osf.io/ETVMJ 并列）")
+rep.append("- 前瞻注册：M11_M12_pre_registration_20260827.md（第二次独立注册：osf.io/98cm3；与 osf.io/ETVMJ 并列）")
 rep.append("- 数据：GSE215865（1,326 day 级样本/508 受试者）、GSE54514（163/54 ID）、GSE148871（血 168/49 例）、GSE212865（137）、GSE106878（94=47×2）")
 rep.append("- 脚本：M11M12_step1_scores_deconv.py / M11M12_step2_temporal.py / M11M12_step3_intervention.py / M11M12_step4_export.py；日志 03_LOGS/M11M12_step{1,2,3}_log.txt\n")
 rep.append("## 1. M11 时间序（判据 ii）\n")

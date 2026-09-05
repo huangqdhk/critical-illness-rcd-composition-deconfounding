@@ -2,7 +2,7 @@
 """
 M11M12_step3_intervention.py — M12 干预响应（判据 iii）
 =======================================================
-前瞻注册：M11_M12_pre_registration_20260827_draft.md §2（H3/H4 主检验、判定门 M12 方案 A）
+前瞻注册：M11_M12_pre_registration_20260827.md §2（H3/H4 主检验、判定门 M12 方案 A）
 - H3（确认性，GSE106878，注册后首次触碰）：
     每患者 d_res = MDI_resid(post) − MDI_resid(pre)。
     主检验 = 臂间单侧 Mann-Whitney（氢化可的松 vs 安慰剂；H1: HC d_res < PL d_res）；
