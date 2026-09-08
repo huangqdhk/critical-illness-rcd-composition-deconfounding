@@ -1,73 +1,23 @@
-module,trait,correlation,p_value,gene_set_version,score_version
-blue,Mitoxyperilysis_Score,0.0667,0,Mitoxy-80_v1.0,NA
-blue,MAM_Integrity,0.1597,0,Mitoxy-80_v1.0,NA
-blue,Cell_Death_Markers,0.0194,0.096497,Mitoxy-80_v1.0,NA
-blue,Mitochondrial_Iron,-0.1479,0,Mitoxy-80_v1.0,NA
-blue,Mitochondrial_Oxidative,0.2417,0,Mitoxy-80_v1.0,NA
-blue,Mitochondrial_Respiratory,0.0069,0.552759,Mitoxy-80_v1.0,NA
-greenyellow,Mitoxyperilysis_Score,-0.0593,0,Mitoxy-80_v1.0,NA
-greenyellow,MAM_Integrity,0.0119,0.306342,Mitoxy-80_v1.0,NA
-greenyellow,Cell_Death_Markers,-0.0544,3e-06,Mitoxy-80_v1.0,NA
-greenyellow,Mitochondrial_Iron,-0.0577,1e-06,Mitoxy-80_v1.0,NA
-greenyellow,Mitochondrial_Oxidative,0.1827,0,Mitoxy-80_v1.0,NA
-greenyellow,Mitochondrial_Respiratory,-0.0777,0,Mitoxy-80_v1.0,NA
-green,Mitoxyperilysis_Score,-0.1488,0,Mitoxy-80_v1.0,NA
-green,MAM_Integrity,-0.1001,0,Mitoxy-80_v1.0,NA
-green,Cell_Death_Markers,0.0097,0.405015,Mitoxy-80_v1.0,NA
-green,Mitochondrial_Iron,-0.1728,0,Mitoxy-80_v1.0,NA
-green,Mitochondrial_Oxidative,-0.4078,0,Mitoxy-80_v1.0,NA
-green,Mitochondrial_Respiratory,0.1633,0,Mitoxy-80_v1.0,NA
-pink,Mitoxyperilysis_Score,-0.3364,0,Mitoxy-80_v1.0,NA
-pink,MAM_Integrity,-0.0031,0.789125,Mitoxy-80_v1.0,NA
-pink,Cell_Death_Markers,0.001,0.930637,Mitoxy-80_v1.0,NA
-pink,Mitochondrial_Iron,-0.2988,0,Mitoxy-80_v1.0,NA
-pink,Mitochondrial_Oxidative,-0.4213,0,Mitoxy-80_v1.0,NA
-pink,Mitochondrial_Respiratory,-0.0129,0.268668,Mitoxy-80_v1.0,NA
-red,Mitoxyperilysis_Score,-0.2964,0,Mitoxy-80_v1.0,NA
-red,MAM_Integrity,-0.0857,0,Mitoxy-80_v1.0,NA
-red,Cell_Death_Markers,0.0223,0.055794,Mitoxy-80_v1.0,NA
-red,Mitochondrial_Iron,-0.2673,0,Mitoxy-80_v1.0,NA
-red,Mitochondrial_Oxidative,-0.566,0,Mitoxy-80_v1.0,NA
-red,Mitochondrial_Respiratory,0.13,0,Mitoxy-80_v1.0,NA
-purple,Mitoxyperilysis_Score,0.2044,0,Mitoxy-80_v1.0,NA
-purple,MAM_Integrity,0.0939,0,Mitoxy-80_v1.0,NA
-purple,Cell_Death_Markers,0.011,0.343926,Mitoxy-80_v1.0,NA
-purple,Mitochondrial_Iron,0.2749,0,Mitoxy-80_v1.0,NA
-purple,Mitochondrial_Oxidative,0.2068,0,Mitoxy-80_v1.0,NA
-purple,Mitochondrial_Respiratory,-0.1019,0,Mitoxy-80_v1.0,NA
-brown,Mitoxyperilysis_Score,-0.0485,3.1e-05,Mitoxy-80_v1.0,NA
-brown,MAM_Integrity,0.0016,0.891481,Mitoxy-80_v1.0,NA
-brown,Cell_Death_Markers,0.1256,0,Mitoxy-80_v1.0,NA
-brown,Mitochondrial_Iron,-0.2201,0,Mitoxy-80_v1.0,NA
-brown,Mitochondrial_Oxidative,-0.2283,0,Mitoxy-80_v1.0,NA
-brown,Mitochondrial_Respiratory,0.1478,0,Mitoxy-80_v1.0,NA
-magenta,Mitoxyperilysis_Score,0.1455,0,Mitoxy-80_v1.0,NA
-magenta,MAM_Integrity,0.0816,0,Mitoxy-80_v1.0,NA
-magenta,Cell_Death_Markers,0.0424,0.000277,Mitoxy-80_v1.0,NA
-magenta,Mitochondrial_Iron,0.0399,0.000624,Mitoxy-80_v1.0,NA
-magenta,Mitochondrial_Oxidative,0.1047,0,Mitoxy-80_v1.0,NA
-magenta,Mitochondrial_Respiratory,-0.1876,0,Mitoxy-80_v1.0,NA
-black,Mitoxyperilysis_Score,0.3101,0,Mitoxy-80_v1.0,NA
-black,MAM_Integrity,0.2795,0,Mitoxy-80_v1.0,NA
-black,Cell_Death_Markers,-0.0343,0.003226,Mitoxy-80_v1.0,NA
-black,Mitochondrial_Iron,0.0813,0,Mitoxy-80_v1.0,NA
-black,Mitochondrial_Oxidative,0.6344,0,Mitoxy-80_v1.0,NA
-black,Mitochondrial_Respiratory,-0.3788,0,Mitoxy-80_v1.0,NA
-turquoise,Mitoxyperilysis_Score,0.2827,0,Mitoxy-80_v1.0,NA
-turquoise,MAM_Integrity,0.2405,0,Mitoxy-80_v1.0,NA
-turquoise,Cell_Death_Markers,-0.0052,0.652745,Mitoxy-80_v1.0,NA
-turquoise,Mitochondrial_Iron,0.1023,0,Mitoxy-80_v1.0,NA
-turquoise,Mitochondrial_Oxidative,0.4757,0,Mitoxy-80_v1.0,NA
-turquoise,Mitochondrial_Respiratory,-0.4319,0,Mitoxy-80_v1.0,NA
-grey,Mitoxyperilysis_Score,0.0082,0.48381,Mitoxy-80_v1.0,NA
-grey,MAM_Integrity,0.366,0,Mitoxy-80_v1.0,NA
-grey,Cell_Death_Markers,0.0894,0,Mitoxy-80_v1.0,NA
-grey,Mitochondrial_Iron,-0.3625,0,Mitoxy-80_v1.0,NA
-grey,Mitochondrial_Oxidative,0.0934,0,Mitoxy-80_v1.0,NA
-grey,Mitochondrial_Respiratory,-0.3522,0,Mitoxy-80_v1.0,NA
-yellow,Mitoxyperilysis_Score,-0.0937,0,Mitoxy-80_v1.0,NA
-yellow,MAM_Integrity,0.17,0,Mitoxy-80_v1.0,NA
-yellow,Cell_Death_Markers,-5e-04,0.962952,Mitoxy-80_v1.0,NA
-yellow,Mitochondrial_Iron,-0.2058,0,Mitoxy-80_v1.0,NA
-yellow,Mitochondrial_Oxidative,-0.1316,0,Mitoxy-80_v1.0,NA
-yellow,Mitochondrial_Respiratory,-0.2995,0,Mitoxy-80_v1.0,NA
+,Healthy_Control_Mean,Sepsis_Mean,Sepsis_COVID_Mean,gene_set_version,score_version
+B cells naive,0.022843500087696776,0.008399769646577826,0.004921959667674359,NA,NA
+B cells memory,0.05090383850554565,0.030989790022350836,0.033788958492577396,NA,NA
+Plasma cells,0.014067377741032972,0.03279117585030416,0.03440692201280832,NA,NA
+T cells CD8,0.13279941149430208,0.1322954985765578,0.11970963702058607,NA,NA
+T cells CD4 naive,0.10168062423017718,0.05683981018435559,0.06615179239761233,NA,NA
+T cells CD4 memory rest,0.13499285584229168,0.12932733446993674,0.12328102009987318,NA,NA
+T cells CD4 memory act,0.0,0.005607807576718913,0.001293174774369301,NA,NA
+T cells foll helper,0.0,0.0002317405643246656,0.0004302790626750952,NA,NA
+T cells regulatory,0.0,0.0004976549698513139,0.0005357800262103026,NA,NA
+T cells gamma delta,0.000742276284771548,7.499086815070206e-05,0.0,NA,NA
+NK cells resting,0.14096696986678056,0.15656919163172375,0.1545677481864252,NA,NA
+NK cells activated,0.0,3.6549580284690306e-05,0.0,NA,NA
+Monocytes,0.16101191479934868,0.17607716260187953,0.17620330942069343,NA,NA
+Macrophages M0,0.05391301214417757,0.017233275747904724,0.01714105912431309,NA,NA
+Macrophages M1,0.0,0.0003369782655537447,0.0,NA,NA
+Macrophages M2,0.029551536103765944,0.03342070240091444,0.049839106150760884,NA,NA
+Dendritic cells resting,0.013184799480964694,0.004848737386943384,0.001817407941538609,NA,NA
+Dendritic cells act,0.0,0.006280318154242752,0.0036375786454988907,NA,NA
+Mast cells resting,0.03428814179687822,0.03510718195106959,0.010308243888314902,NA,NA
+Mast cells activated,0.0013231794851029778,0.003265439982157764,0.01023556273623125,NA,NA
+Eosinophils,0.02575501444429232,0.0183850840394501,0.014938427361888456,NA,NA
+Neutrophils,0.08197554769287117,0.15138380552874697,0.1767920329899489,NA,NA

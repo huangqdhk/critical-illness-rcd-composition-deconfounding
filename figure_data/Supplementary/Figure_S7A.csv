@@ -1,24 +1,51 @@
-,drug_name,drug_class,moa,pathway,clinical_phase,ards_relevance,n_targets_total,n_targets_found,mean_expression_all_ct,max_expression_ct,max_expression_celltype,cell_type_specificity,mitoxy_overlap_count,integrated_drug_score,sensitivity_category,gene_set_version,score_version
-1,Deferasirox,Iron Chelator,Oral iron chelator; tridentate iron binding,Iron Metabolism,FDA Approved,Medium,4,4,142.2843,165.7118,Mast,1.1600,4,81.6000,Highly Sensitive,Mitoxy-80_v1.0,NA
-2,Elamipretide,Mitochondrial Protective Peptide,Binds cardiolipin; stabilizes cristae; reduces cyt c release,Mitochondrial Function,Phase II/III,Medium,7,7,14.8692,16.9538,B,1.1400,7,81.4000,Highly Sensitive,Mitoxy-80_v1.0,NA
-3,VBIT-4,VDAC1 Inhibitor,VDAC1 oligomerization inhibitor; prevents mitochondrial Ca2+ overload,MAM Integrity,Preclinical,High,6,6,2.6780,3.0561,B,1.1400,6,81.4000,Highly Sensitive,Mitoxy-80_v1.0,NA
-4,MitoTEMPO,Mitochondria-Targeted SOD Mimetic,Superoxide dismutase mimetic; mitochondrial-specific ROS scavenger,Mitochondrial Function,Preclinical,High,6,6,20.2147,21.8925,B,1.0800,6,80.8000,Highly Sensitive,Mitoxy-80_v1.0,NA
-5,MitoQ,Mitochondria-Targeted Antioxidant,TPP+-conjugated ubiquinone; accumulates in mitochondria; reduces mtROS,Mitochondrial Function,Phase II,High,7,7,19.5015,21.7245,B,1.1100,6,76.9000,Highly Sensitive,Mitoxy-80_v1.0,NA
-6,Fluvoxamine,SSRI / Sigma-1R Agonist,Sigma-1 receptor agonist; stabilizes MAM; anti-inflammatory,MAM Integrity,FDA Approved (OCD),High,6,6,2.6568,3.1061,CD8,1.1700,5,76.7000,Highly Sensitive,Mitoxy-80_v1.0,NA
-7,Dimethyl Fumarate,NRF2 Activator,Activates NRF2/NFE2L2 pathway; upregulates antioxidant genes,Oxidative Stress,FDA Approved (MS),High,7,7,8.5820,9.5040,Plasma,1.1100,5,72.5000,Highly Sensitive,Mitoxy-80_v1.0,NA
-8,N-Acetylcysteine,Antioxidant,GSH precursor; ROS scavenger; mucolytic,Oxidative Stress,FDA Approved,High,7,7,7.8108,8.1347,Neu,1.0400,5,71.8000,Highly Sensitive,Mitoxy-80_v1.0,NA
-9,Erastin,Ferroptosis Inducer,Inhibits SLC7A11; blocks cystine import; depletes GSH,Ferroptosis,Research tool,Research only,5,5,4.4348,4.8217,B,1.0900,3,68.9000,Highly Sensitive,Mitoxy-80_v1.0,NA
-10,Deferoxamine,Iron Chelator,Iron chelation; reduces labile iron pool; inhibits Fenton reaction,Iron Metabolism,FDA Approved (iron overload),High,7,7,83.5528,96.8587,Mast,1.1600,4,68.7000,Highly Sensitive,Mitoxy-80_v1.0,NA
-11,Ferrostatin-1,Ferroptosis Inhibitor,Lipid ROS scavenger; inhibits lipid peroxidation,Ferroptosis,Preclinical,High,6,6,96.3759,111.7072,Mast,1.1600,3,66.6000,Highly Sensitive,Mitoxy-80_v1.0,NA
-12,Metformin,Biguanide / Complex I Inhibitor,Mild mitochondrial complex I inhibitor; AMPK activator,Mitochondrial Function,FDA Approved (T2DM),Medium,8,8,10.0683,11.0669,Neu,1.1000,4,66.0000,Highly Sensitive,Mitoxy-80_v1.0,NA
-13,Liproxstatin-1,Ferroptosis Inhibitor,Radical-trapping antioxidant; GPX4-independent ferroptosis inhibition,Ferroptosis,Preclinical,High,3,2,6.0703,6.4129,Plasma,1.0600,1,62.2000,Highly Sensitive,Mitoxy-80_v1.0,NA
-14,RSL3,Ferroptosis Inducer,Covalent GPX4 inhibitor; induces ferroptosis,Ferroptosis,Research tool,Research only,3,3,4.9065,5.2210,Plasma,1.0600,1,60.6000,Highly Sensitive,Mitoxy-80_v1.0,NA
-15,Disulfiram,Aldehyde Dehydrogenase Inhibitor,Cu2+ ionophore; induces cuproptosis; inhibits NF-kB,Cuproptosis,FDA Approved (Alcoholism),Medium,6,6,6.9648,7.3920,Neu,1.0600,2,60.6000,Highly Sensitive,Mitoxy-80_v1.0,NA
-16,Dapansutrile,NLRP3 Inhibitor,Oral NLRP3 inflammasome inhibitor; reduces IL-1beta,Inflammation,Phase II/III,High,6,6,5.5892,8.2977,Mast,1.4800,0,54.8000,Highly Sensitive,Mitoxy-80_v1.0,NA
-17,MCC950,NLRP3 Inflammasome Inhibitor,Selective NLRP3 inhibitor; blocks ASC oligomerization,Inflammation,Phase II,High,7,7,5.1503,7.3266,Mast,1.4200,0,54.2000,Highly Sensitive,Mitoxy-80_v1.0,NA
-18,Methylprednisolone,Corticosteroid,Glucocorticoid receptor agonist; inhibits phospholipase A2,Inflammation,FDA Approved,High,6,6,8.7279,11.8750,Mast,1.3600,0,53.6000,Highly Sensitive,Mitoxy-80_v1.0,NA
-19,Dexamethasone,Corticosteroid,Glucocorticoid receptor agonist; broad anti-inflammatory,Inflammation,FDA Approved,High,7,7,7.8062,10.3690,Mast,1.3300,0,53.3000,Highly Sensitive,Mitoxy-80_v1.0,NA
-20,Pirfenidone,Anti-fibrotic,Anti-fibrotic; TGF-beta inhibition + antioxidant,Fibrosis,FDA Approved (IPF),Medium,4,4,2.6323,3.1567,Neu,1.2100,0,52.1000,Highly Sensitive,Mitoxy-80_v1.0,NA
-21,Fingolimod,S1P Receptor Modulator,S1PR1 functional antagonist; reduces endothelial permeability,Endothelial Barrier,FDA Approved (MS),Medium,4,4,1.6485,1.8320,DC,1.1700,0,51.7000,Highly Sensitive,Mitoxy-80_v1.0,NA
-22,Baricitinib,JAK1/JAK2 Inhibitor,Selective JAK1/2 inhibitor; blocks cytokine signaling,Inflammation,"FDA Approved (RA, COVID-19)",High,6,6,2.4683,2.8176,CD8,1.1400,0,51.4000,Highly Sensitive,Mitoxy-80_v1.0,NA
-23,Masitinib,Tyrosine Kinase Inhibitor,c-Kit/PDGFR/Lyn inhibitor; reduces mast cell-mediated inflammation,Inflammation,Phase III,Medium,6,6,2.5368,2.6523,DC,1.0700,0,50.7000,Highly Sensitive,Mitoxy-80_v1.0,NA
+source,target,ligand,ligand_complex,receptor,receptor_complex,lr_mean,lr_max,lr_min,n_databases,pval_min,lr_rank,significant,gene_set_version,score_version
+Macrophage,B_cell,MIF,MIF,CD74,CD74,2.8956282,2.8956282,2.8956282,1,0.0,1.0,True,NA,NA
+NK,B_cell,MIF,MIF,CD74,CD74,2.7632966,2.7632966,2.7632966,1,0.0,2.0,True,NA,NA
+T_cell,B_cell,MIF,MIF,CD74,CD74,2.7497988,2.7497988,2.7497988,1,0.0,3.0,True,NA,NA
+Macrophage,DC,MIF,MIF,CD74,CD74,2.7113853,2.7113853,2.7113853,1,0.0,4.0,True,NA,NA
+Epithelial,B_cell,MIF,MIF,CD74,CD74,2.7011085,2.7011085,2.7011085,1,0.0,5.0,True,NA,NA
+Club,B_cell,MIF,MIF,CD74,CD74,2.6916862,2.6916862,2.6916862,1,0.0,6.0,True,NA,NA
+DC,B_cell,MIF,MIF,CD74,CD74,2.677382,2.677382,2.677382,1,0.0,7.0,True,NA,NA
+B_cell,B_cell,MIF,MIF,CD74,CD74,2.6488142,2.6488142,2.6488142,1,0.0,8.0,True,NA,NA
+Mono_c14,B_cell,MIF,MIF,CD74,CD74,2.579337,2.579337,2.579337,1,0.0,9.0,True,NA,NA
+NK,DC,MIF,MIF,CD74,CD74,2.5790536,2.5790536,2.5790536,1,0.0,10.0,True,NA,NA
+T_cell,DC,MIF,MIF,CD74,CD74,2.5655556,2.5655556,2.5655556,1,0.0,11.0,True,NA,NA
+Epithelial,DC,MIF,MIF,CD74,CD74,2.5168655,2.5168655,2.5168655,1,0.0,12.0,True,NA,NA
+Club,DC,MIF,MIF,CD74,CD74,2.5074432,2.5074432,2.5074432,1,0.0,13.0,True,NA,NA
+DC,DC,MIF,MIF,CD74,CD74,2.4931388,2.4931388,2.4931388,1,0.0,14.0,True,NA,NA
+B_cell,DC,MIF,MIF,CD74,CD74,2.4645712,2.4645712,2.4645712,1,0.0,15.0,True,NA,NA
+Epithelial,B_cell,APP,APP,CD74,CD74,2.4081428,2.4081428,2.4081428,1,0.0,16.0,True,NA,NA
+T_cell,Macrophage,RPS19,RPS19,C5AR1,C5AR1,2.4059787,2.4059787,2.4059787,1,0.0,17.0,True,NA,NA
+Mono_c14,DC,MIF,MIF,CD74,CD74,2.3950937,2.3950937,2.3950937,1,0.0,18.0,True,NA,NA
+Macrophage,Mono_c14,MIF,MIF,CD74,CD74,2.3902574,2.3902574,2.3902574,1,0.0,19.0,True,NA,NA
+B_cell,Macrophage,RPS19,RPS19,C5AR1,C5AR1,2.38991,2.38991,2.38991,1,0.0,20.0,True,NA,NA
+Macrophage,B_cell,COPA,COPA,CD74,CD74,2.3399117,2.3399117,2.3399117,1,0.0,21.0,True,NA,NA
+NK,Macrophage,RPS19,RPS19,C5AR1,C5AR1,2.3289402,2.3289402,2.3289402,1,0.0,22.0,True,NA,NA
+Macrophage,B_cell,APP,APP,CD74,CD74,2.2828887,2.2828887,2.2828887,1,0.0,23.0,True,NA,NA
+Macrophage,Macrophage,MIF,MIF,CD74,CD74,2.2786925,2.2786925,2.2786925,1,0.0,24.0,True,NA,NA
+NK,Mono_c14,MIF,MIF,CD74,CD74,2.257926,2.257926,2.257926,1,0.0,25.0,True,NA,NA
+T_cell,Mono_c14,MIF,MIF,CD74,CD74,2.2444277,2.2444277,2.2444277,1,0.0,26.0,True,NA,NA
+DC,B_cell,APP,APP,CD74,CD74,2.242919,2.242919,2.242919,1,0.0,27.0,True,NA,NA
+DC,B_cell,COPA,COPA,CD74,CD74,2.242631,2.242631,2.242631,1,0.0,28.0,True,NA,NA
+Epithelial,DC,APP,APP,CD74,CD74,2.2238996,2.2238996,2.2238996,1,0.0,29.0,True,NA,NA
+DC,DC,TNFSF13B,TNFSF13B,HLA-DPB1,HLA-DPB1,2.211269,2.211269,2.211269,1,0.0,30.0,True,NA,NA
+Epithelial,B_cell,COPA,COPA,CD74,CD74,2.2089498,2.2089498,2.2089498,1,0.0,31.0,True,NA,NA
+NK,Macrophage,CCL5,CCL5,CCR1,CCR1,2.1987772,2.1987772,2.1987772,1,0.0,32.0,True,NA,NA
+Epithelial,Mono_c14,MIF,MIF,CD74,CD74,2.1957378,2.1957378,2.1957378,1,0.0,33.0,True,NA,NA
+Mono_c14,B_cell,COPA,COPA,CD74,CD74,2.1923728,2.1923728,2.1923728,1,0.0,34.0,True,NA,NA
+B_cell,B_cell,COPA,COPA,CD74,CD74,2.1887956,2.1887956,2.1887956,1,0.0,35.0,True,NA,NA
+Club,Mono_c14,MIF,MIF,CD74,CD74,2.1863153,2.1863153,2.1863153,1,0.0,36.0,True,NA,NA
+DC,Mono_c14,MIF,MIF,CD74,CD74,2.172011,2.172011,2.172011,1,0.0,37.0,True,NA,NA
+Mono_c14,DC,TNFSF13B,TNFSF13B,HLA-DPB1,HLA-DPB1,2.160741,2.160741,2.160741,1,0.0,38.0,True,NA,NA
+NK,DC,TNFSF13B,TNFSF13B,HLA-DPB1,HLA-DPB1,2.1599221,2.1599221,2.1599221,1,0.0,39.0,True,NA,NA
+Macrophage,DC,COPA,COPA,CD74,CD74,2.1556687,2.1556687,2.1556687,1,0.0,40.0,True,NA,NA
+NK,B_cell,COPA,COPA,CD74,CD74,2.1499305,2.1499305,2.1499305,1,0.0,41.0,True,NA,NA
+T_cell,B_cell,COPA,COPA,CD74,CD74,2.1468256,2.1468256,2.1468256,1,0.0,42.0,True,NA,NA
+NK,Macrophage,MIF,MIF,CD74,CD74,2.1463609,2.1463609,2.1463609,1,0.005,43.0,True,NA,NA
+Mono_c14,B_cell,APP,APP,CD74,CD74,2.1445422,2.1445422,2.1445422,1,0.0,44.0,True,NA,NA
+B_cell,Mono_c14,MIF,MIF,CD74,CD74,2.1434433,2.1434433,2.1434433,1,0.0,45.0,True,NA,NA
+T_cell,Macrophage,MIF,MIF,CD74,CD74,2.1328628,2.1328628,2.1328628,1,0.005,46.0,True,NA,NA
+T_cell,Mono_c14,RPS19,RPS19,C5AR1,C5AR1,2.119903,2.119903,2.119903,1,0.0,47.0,True,NA,NA
+Macrophage,DC,TNFSF13B,TNFSF13B,HLA-DPB1,HLA-DPB1,2.105525,2.105525,2.105525,1,0.0,48.0,True,NA,NA
+B_cell,Mono_c14,RPS19,RPS19,C5AR1,C5AR1,2.1038344,2.1038344,2.1038344,1,0.0,49.0,True,NA,NA
+Macrophage,DC,APP,APP,CD74,CD74,2.0986454,2.0986454,2.0986454,1,0.0,50.0,True,NA,NA

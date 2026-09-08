@@ -1,56 +1,8 @@
-Gene_Symbol,Functional_Module,Mean_AM_Pathogenicity,Max_AM_Pathogenicity,Min_AM_Pathogenicity,Std_AM_Pathogenicity,Median_AM_Pathogenicity,Pathogenicity_Class,N_Transcripts_Matched,ClinVar_Total_Variants,ClinVar_Pathogenic,ClinVar_Likely_Pathogenic,N_Variants,N_Pathogenic,N_Benign,Pathogenic_Ratio,Status,gene_set_version,score_version
-TOMM20,Mitochondrial Respiratory Chain,0.7024,0.9999,0.0351,0.3284,0.8624,Likely Pathogenic,1,0,0,0,943,577,183,0.6119,Analyzed,Mitoxy-80_v1.0,NA
-ITPR1,MAM Integrity,0.6632,1.0,0.0411,0.3496,0.8296,Ambiguous,1,2447,0,0,18395,10614,4531,0.577,Analyzed,Mitoxy-80_v1.0,NA
-FTH1,Mitochondrial Iron Metabolism,0.6496,0.9988,0.0487,0.3239,0.7505,Ambiguous,1,104,0,0,1223,650,277,0.5315,Analyzed,Mitoxy-80_v1.0,NA
-HSPD1,Cell Death Markers,0.6451,0.9999,0.0443,0.3381,0.7608,Ambiguous,1,402,0,0,3743,2003,908,0.5351,Analyzed,Mitoxy-80_v1.0,NA
-VDAC2,MAM Integrity,0.6244,0.9996,0.0486,0.3411,0.7295,Ambiguous,1,72,0,0,1912,994,511,0.5199,Analyzed,Mitoxy-80_v1.0,NA
-HSPA9,MAM Integrity,0.6088,0.9999,0.0372,0.3583,0.7056,Ambiguous,1,148,0,0,4455,2241,1352,0.503,Analyzed,Mitoxy-80_v1.0,NA
-TOMM40,Mitochondrial Respiratory Chain,0.5943,0.9996,0.0473,0.3625,0.6818,Ambiguous,1,67,0,0,2334,1149,759,0.4923,Analyzed,Mitoxy-80_v1.0,NA
-VDAC1,MAM Integrity,0.5791,0.9993,0.0481,0.3338,0.6207,Ambiguous,1,58,0,0,1834,839,548,0.4575,Analyzed,Mitoxy-80_v1.0,NA
-C2CD5,Additional (WGCNA/Risk Model),0.5731,1.0,0.0458,0.3618,0.6245,Ambiguous,1,173,0,0,6554,3021,2231,0.4609,Analyzed,Mitoxy-80_v1.0,NA
-TXN,Mitochondrial Oxidative Damage,0.5724,0.9994,0.0503,0.3441,0.5934,Ambiguous,1,48,0,0,702,311,221,0.443,Analyzed,Mitoxy-80_v1.0,NA
-PRDX4,Additional (WGCNA/Risk Model),0.5594,0.9997,0.0426,0.3674,0.6039,Ambiguous,1,254,0,0,1730,784,634,0.4532,Analyzed,Mitoxy-80_v1.0,NA
-SIGMAR1,MAM Integrity,0.5486,0.9987,0.0439,0.3456,0.5321,Ambiguous,1,311,0,0,1418,587,489,0.414,Analyzed,Mitoxy-80_v1.0,NA
-SLC25A37,Mitochondrial Iron Metabolism,0.5448,0.9996,0.0519,0.3631,0.5098,Ambiguous,1,148,0,0,2219,941,854,0.4241,Analyzed,Mitoxy-80_v1.0,NA
-SLC25A28,Mitochondrial Iron Metabolism,0.5443,0.9997,0.0365,0.372,0.5205,Ambiguous,1,58,0,0,2351,1018,926,0.433,Analyzed,Mitoxy-80_v1.0,NA
-VDAC3,MAM Integrity,0.5359,0.9988,0.0391,0.3327,0.5419,Ambiguous,1,99,0,0,1853,741,642,0.3999,Analyzed,Mitoxy-80_v1.0,NA
-TOMM70A,Mitochondrial Respiratory Chain,0.5356,1.0,0.0457,0.3672,0.5034,Ambiguous,1,0,0,0,4015,1667,1625,0.4152,Analyzed,Mitoxy-80_v1.0,NA
-SLC11A2,Mitochondrial Iron Metabolism,0.5338,0.9997,0.0387,0.3747,0.5091,Ambiguous,1,198,0,0,3683,1563,1480,0.4244,Analyzed,Mitoxy-80_v1.0,NA
-TOP2A,Additional (WGCNA/Risk Model),0.5207,1.0,0.0322,0.3822,0.4594,Ambiguous,1,170,0,0,10237,4241,4413,0.4143,Analyzed,Mitoxy-80_v1.0,NA
-ACO1,Mitochondrial Iron Metabolism,0.5119,0.9998,0.0417,0.354,0.454,Ambiguous,1,231,0,0,5846,2255,2408,0.3857,Analyzed,Mitoxy-80_v1.0,NA
-SOD2,Mitochondrial Oxidative Damage,0.5081,0.9988,0.0528,0.3448,0.4503,Ambiguous,1,115,0,0,1460,538,592,0.3685,Analyzed,Mitoxy-80_v1.0,NA
-AKR1B1,Additional (WGCNA/Risk Model),0.503,0.9979,0.0453,0.3346,0.4411,Ambiguous,1,0,0,0,2102,747,846,0.3554,Analyzed,Mitoxy-80_v1.0,NA
-FTL,Mitochondrial Iron Metabolism,0.4989,0.9846,0.0577,0.2911,0.4806,Ambiguous,1,258,0,0,1159,364,394,0.3141,Analyzed,Mitoxy-80_v1.0,NA
-CAT,Mitochondrial Oxidative Damage,0.4936,0.9989,0.0443,0.3487,0.4325,Ambiguous,1,0,0,0,3522,1278,1492,0.3629,Analyzed,Mitoxy-80_v1.0,NA
-MYO10,Additional (WGCNA/Risk Model),0.4928,0.9998,0.0404,0.3404,0.4191,Ambiguous,1,512,0,0,13681,4836,5652,0.3535,Analyzed,Mitoxy-80_v1.0,NA
-PRDX3,Mitochondrial Oxidative Damage,0.4924,0.9991,0.0453,0.3679,0.41,Ambiguous,1,107,0,0,1668,618,749,0.3705,Analyzed,Mitoxy-80_v1.0,NA
-CALR,MAM Integrity,0.4874,0.9999,0.0432,0.3576,0.3889,Ambiguous,1,0,0,0,2830,1003,1241,0.3544,Analyzed,Mitoxy-80_v1.0,NA
-OPLAH,Additional (WGCNA/Risk Model),0.4778,0.9989,0.0435,0.3487,0.3845,Ambiguous,1,715,0,0,8282,2888,3727,0.3487,Analyzed,Mitoxy-80_v1.0,NA
-PACS2,MAM Integrity,0.4776,0.9999,0.0388,0.3475,0.3804,Ambiguous,1,1403,0,0,5843,1968,2543,0.3368,Analyzed,Mitoxy-80_v1.0,NA
-GSR,Mitochondrial Oxidative Damage,0.4728,0.9997,0.0415,0.3628,0.3345,Ambiguous,1,326,0,0,3412,1199,1625,0.3514,Analyzed,Mitoxy-80_v1.0,NA
-SLC11A1,Additional (WGCNA/Risk Model),0.4654,0.9994,0.0316,0.357,0.3477,Ambiguous,1,167,0,0,3546,1232,1678,0.3474,Analyzed,Mitoxy-80_v1.0,NA
-SLC40A1,Mitochondrial Iron Metabolism,0.4654,0.9996,0.041,0.3721,0.3401,Ambiguous,1,372,0,0,3708,1303,1773,0.3514,Analyzed,Mitoxy-80_v1.0,NA
-CANX,MAM Integrity,0.4526,0.9999,0.0461,0.3561,0.3091,Ambiguous,1,0,0,0,3959,1263,1949,0.319,Analyzed,Mitoxy-80_v1.0,NA
-TLR7,Additional (WGCNA/Risk Model),0.3628,0.9976,0.0279,0.3107,0.2148,Ambiguous,1,0,0,0,6984,1499,4119,0.2146,Analyzed,Mitoxy-80_v1.0,NA
-APAF1,Cell Death Markers,0.3592,0.9989,0.0259,0.2971,0.2309,Ambiguous,1,0,0,0,8301,1591,4793,0.1917,Analyzed,Mitoxy-80_v1.0,NA
-IREB2,Mitochondrial Iron Metabolism,0.3589,0.9986,0.0483,0.3005,0.2298,Ambiguous,1,324,0,0,6256,1209,3601,0.1933,Analyzed,Mitoxy-80_v1.0,NA
-TFRC,Mitochondrial Iron Metabolism,0.3463,0.9978,0.0391,0.2998,0.2039,Ambiguous,1,840,0,0,5013,927,3063,0.1849,Analyzed,Mitoxy-80_v1.0,NA
-F5,Additional (WGCNA/Risk Model),0.3216,0.9991,0.0394,0.2868,0.1775,Ambiguous,1,1491,0,0,14814,2405,9568,0.1623,Analyzed,Mitoxy-80_v1.0,NA
-CD2AP,Additional (WGCNA/Risk Model),0.3198,0.9996,0.0385,0.311,0.1592,Ambiguous,1,478,0,0,4168,741,2753,0.1778,Analyzed,Mitoxy-80_v1.0,NA
-CD81,Additional (WGCNA/Risk Model),0.3065,0.991,0.0297,0.2437,0.1995,Ambiguous,1,369,0,0,3602,409,2338,0.1135,Analyzed,Mitoxy-80_v1.0,NA
-PARM1,Additional (WGCNA/Risk Model),0.2559,0.9984,0.0324,0.2972,0.1054,Likely Benign,1,78,0,0,1962,275,1508,0.1402,Analyzed,Mitoxy-80_v1.0,NA
-CLEC4D,Additional (WGCNA/Risk Model),0.232,0.9366,0.0394,0.2088,0.1422,Likely Benign,1,90,0,0,1441,88,1106,0.0611,Analyzed,Mitoxy-80_v1.0,NA
-CENPC,Additional (WGCNA/Risk Model),0.2136,0.9979,0.0401,0.233,0.1138,Likely Benign,1,188,0,0,6236,500,5135,0.0802,Analyzed,Mitoxy-80_v1.0,NA
-FAM157C,Additional (WGCNA/Risk Model),,,,,,Not Available,0,0,0,0,0,0,0,0.0,Not Available (MT-encoded),Mitoxy-80_v1.0,NA
-LINC01550,Additional (WGCNA/Risk Model),,,,,,Not Available,0,0,0,0,0,0,0,0.0,Not Available (MT-encoded),Mitoxy-80_v1.0,NA
-GPX4,Mitochondrial Oxidative Damage,,,,,,Selenoprotein (Not Covered),0,0,0,0,0,0,0,0.0,Selenoprotein (Not Covered by AM),Mitoxy-80_v1.0,NA
-CYCS,Cell Death Markers,,,,,,Not Available,0,0,0,0,0,0,0,0.0,Not Available (No AM Data),Mitoxy-80_v1.0,NA
-MT-ND2,Mitochondrial Respiratory Chain,,,,,,Not Available,0,0,0,0,0,0,0,0.0,Not Available (MT-encoded),Mitoxy-80_v1.0,NA
-PRSS23,Additional (WGCNA/Risk Model),,,,,,Not Available,0,546,0,0,0,0,0,0.0,Not Available (No AM Data),Mitoxy-80_v1.0,NA
-MT-CO1,Mitochondrial Respiratory Chain,,,,,,Not Available,0,0,0,0,0,0,0,0.0,Not Available (MT-encoded),Mitoxy-80_v1.0,NA
-MT-ATP6,Mitochondrial Respiratory Chain,,,,,,Not Available,0,0,0,0,0,0,0,0.0,Not Available (MT-encoded),Mitoxy-80_v1.0,NA
-MT-ATP8,Mitochondrial Respiratory Chain,,,,,,Not Available,0,0,0,0,0,0,0,0.0,Not Available (MT-encoded),Mitoxy-80_v1.0,NA
-MT-CYB,Mitochondrial Respiratory Chain,,,,,,Not Available,0,0,0,0,0,0,0,0.0,Not Available (MT-encoded),Mitoxy-80_v1.0,NA
-MT-ND1,Mitochondrial Respiratory Chain,,,,,,Not Available,0,0,0,0,0,0,0,0.0,Not Available (MT-encoded),Mitoxy-80_v1.0,NA
-TRAV12-3,Additional (WGCNA/Risk Model),,,,,,Not Available,0,0,0,0,0,0,0,0.0,Not Available (MT-encoded),Mitoxy-80_v1.0,NA
-TXNRD2,Mitochondrial Oxidative Damage,,,,,,Selenoprotein (Not Covered),0,0,0,0,0,0,0,0.0,Selenoprotein (Not Covered by AM),Mitoxy-80_v1.0,NA
+﻿gene_set,method,beta,Control_z,Sepsis_COVID_z,Sepsis_z,delta_Sepsis_COVID_vs_Control,Cohen_d,MW_p,boot95_lo,boot95_hi,gene_set_version,score_version
+Mitoxyperilysis(80gene),running-sum ssGSEA,β=0.25,0.19349608454757375,-0.24147504460513772,0.04243280427643032,-0.43497112915271147,-0.4837227960978177,0.0029221572439903044,-0.7597987229041314,-0.11794247168113636,Mitoxy-80_v1.0,ssGSEA_v1
+Mitoxyperilysis(80gene),running-sum ssGSEA,β=0.75,-0.027063271320873564,-0.12346075268199412,0.04253596112047101,-0.09639748136112056,-0.11057291313128725,0.39702763973168953,-0.40097415484877624,0.21260969909331118,Mitoxy-80_v1.0,ssGSEA_v1
+Mitoxyperilysis(80gene),running-sum ssGSEA,β=1.0,-0.020049165045479163,-0.025817077947425934,0.011275051329657879,-0.005767912901946771,-0.006192844503120821,0.9571475249961271,-0.36444444093307304,0.3341255943399766,Mitoxy-80_v1.0,ssGSEA_v1
+Mitoxyperilysis(38gene upstream-core),running-sum ssGSEA,β=0.25,-0.5551513590231002,-0.016352461572212196,0.0968705325035196,0.538798897450888,0.7043383200470682,0.00024573065191490443,0.2474167020102552,0.8235495147404953,Mitoxy-80_v1.0,ssGSEA_v1
+Mitoxyperilysis(80gene),mean log2(CPM+1) [anchor],equal-weight,0.7888736564472435,-0.19535539531929103,-0.07026803935148791,-0.9842290517665345,-1.2000802791771548,6.927503837079486e-11,-1.217398876586569,-0.7503146490977773,Mitoxy-80_v1.0,ssGSEA_v1
+Mitoxyperilysis(38gene upstream-core),mean log2(CPM+1) [anchor],equal-weight,1.1268435245359794,-0.4716186673645732,-0.04100896374319031,-1.5984621919005526,-2.2403603460387957,1.3597247108772509e-17,-1.8074756261469092,-1.390906074080711,Mitoxy-80_v1.0,ssGSEA_v1
+Mitoxyperilysis(80gene),gseapy 1.3.1 multi-set,weight=0.25,-0.5620004224410006,0.5099114625752362,-0.06422827572844883,1.0719118850162368,1.4398341357156528,3.4826551306163427e-11,0.7864841608394395,1.378834644741474,Mitoxy-80_v1.0,ssGSEA_v1

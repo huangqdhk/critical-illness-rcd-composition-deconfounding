@@ -1,0 +1,103 @@
+﻿panel,row_id,arm,GSE32707_ARDS_d0_vs_Control,GSE32707_ARDS_d0_vs_Control_BH_q,GSE32707_Sepsis_d0_vs_Control,GSE185263_Sepsis_COVID_vs_Control,GSE212865_SDRA_vs_Control,flag,note,gene_set_version,score_version
+A_module,MAM_integrity,upstream_collapse,-0.8160645866752007,0.1999464994895463,-0.3824175860667699,-0.9018602983233056,,,concordant,Mitoxy-80_v1.0,ssGSEA_v1
+A_module,autophagy,not_in_dissociation_arms,-0.36514971858195333,0.3417075896947982,0.24898523181893017,-0.2118208717497522,,,concordant,Mitoxy-80_v1.0,ssGSEA_v1
+A_module,cell_death,execution_induction,-0.03556614947275877,0.9463268424954125,0.6779580739263867,0.5633130499333929,,,discordant,Mitoxy-80_v1.0,ssGSEA_v1
+A_module,ferroptosis_cuproptosis,upstream_collapse,-0.08416995404688732,0.9463268424954125,-0.44647988851947956,-0.8401187624238591,,,concordant,Mitoxy-80_v1.0,ssGSEA_v1
+A_module,iron_metabolism,execution_induction,-0.5775294811101073,0.3901661306460239,-0.12242131828540624,1.592655961371913,,,discordant,Mitoxy-80_v1.0,ssGSEA_v1
+A_module,mitochondrial_function,upstream_collapse,-0.9988987220787753,0.020689131181725297,-0.8077745468804003,-0.8550478883633265,,,concordant,Mitoxy-80_v1.0,ssGSEA_v1
+A_module,oxidative_stress,execution_induction,-0.49557042227266346,0.3901661306460239,-0.02421112900221603,0.5417026087087655,,,discordant,Mitoxy-80_v1.0,ssGSEA_v1
+A_module,transcription_factors,not_in_dissociation_arms,-0.8031198226908782,0.3901661306460239,-0.1785101648435785,-0.2522548094579153,,,concordant,Mitoxy-80_v1.0,ssGSEA_v1
+A_module,Mitoxyperilysis_composite,composite,-0.8991125251460328,0.3376521576034109,-0.28569406217100657,-0.4349711291527114,,,GSE185263 参照 = Table_S5c running-sum β=0.25 Δz,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,ACO1,execution_induction,-0.5213255773101331,0.04703562115104938,,-0.5371523390919315,0.049984091855646,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,APAF1,execution_induction,0.006171053152177919,0.7238725380843416,,0.0496014855075208,0.0123777160278888,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,ATF4,not_in_dissociation_arms,-0.7878591411346587,0.220394948285458,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,ATG5,not_in_dissociation_arms,-0.14453984464748793,0.12077865420393233,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,ATG7,not_in_dissociation_arms,0.0985482712308201,0.1739255466899928,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,BECN1,not_in_dissociation_arms,-0.030354689353057296,0.9098887678379101,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,CALR,upstream_collapse,-0.7071817115133587,0.29164462980872274,,-0.1144196884484824,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,CANX,upstream_collapse,0.04965763855197203,0.5203697676968665,,-0.1521155971479277,-0.0015999437725486,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,CASP1,execution_induction,0.37904489988079426,0.3414542081789887,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,CASP4,execution_induction,0.2702749797416466,0.4010040787195246,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,CASP5,execution_induction,0.45820479291431937,0.17213865299626444,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,CAT,execution_induction,-0.11611129546019505,0.688970473768469,,0.0138608933314996,0.0062265273449533,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,CEBPB,not_in_dissociation_arms,-0.18118435741625305,0.293249043414586,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,CYCS,upstream_collapse,-0.33417773401364315,0.04703562115104938,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,DDIT3,not_in_dissociation_arms,0.0903130509412522,0.4010040787195246,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,DLAT,upstream_collapse,-0.26625794266149416,0.20609894335514556,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,DLD,upstream_collapse,-0.37387018126985083,0.04703562115104938,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,FDX1,upstream_collapse,-0.005751695599420792,0.8093510833526365,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,FOXO3,not_in_dissociation_arms,0.5631835419379918,0.4179009369013864,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,FTH1,execution_induction,-0.952092820766687,0.005171819319596333,,0.0705966021652884,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,FTL,execution_induction,-0.19593181263682524,0.199224180304901,,0.0816398646656413,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,GCLC,execution_induction,0.27428299145479507,0.992326732326043,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,GCLM,execution_induction,0.14930638189979462,0.572011070174122,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,GPX4,execution_induction,-0.9157731867918315,0.199224180304901,,-0.0366310818204218,0.0338926548605185,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,GSDMA,execution_induction,0.07589617738053889,0.8132804324857502,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,GSDMB,execution_induction,0.8884341858903779,0.04703562115104938,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,GSDMC,execution_induction,-0.0444860828970679,0.07565585110553116,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,GSDMD,execution_induction,0.39454374185926966,0.293249043414586,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,GSDME,execution_induction,-1.0531542132451488,0.022665722476045362,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,GSR,execution_induction,0.1500702380486203,0.258906688567878,,0.0608622966346508,-0.0334002322404392,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,HIF1A,not_in_dissociation_arms,-0.510585899823508,0.14588980869077495,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,HMOX1,execution_induction,0.2368102155331755,0.39156075864531176,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,HSP60,upstream_collapse,-0.9700014644647421,0.022665722476045362,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,HSPA9,upstream_collapse,-1.1770721216252653,0.0980270737739437,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,IL18,execution_induction,-0.670713849445141,0.8093510833526365,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,IL1B,execution_induction,0.6803174111848858,0.199224180304901,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,IP3R1,upstream_collapse,-0.5431186198588183,0.005171819319596333,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,IREB2,execution_induction,-0.20355668027647766,0.04703562115104938,,-0.1026355718259641,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,LIAS,upstream_collapse,0.4331255282220088,0.992326732326043,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,LIPT1,upstream_collapse,-0.1538648683729429,0.0980270737739437,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,MAP1LC3A,not_in_dissociation_arms,0.6089096281819852,0.193076417760063,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,MAP1LC3B,not_in_dissociation_arms,0.26081663876793115,0.08170786371820446,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,MTF1,upstream_collapse,0.776934132863655,0.06515664480654772,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,NADK,upstream_collapse,0.625959306053975,0.17213865299626444,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,NCOA4,upstream_collapse,0.06453874357357137,0.4834385850969974,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,NFE2L2,not_in_dissociation_arms,-0.4685556368757364,0.17213865299626444,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,NFKB1,not_in_dissociation_arms,-0.012549763895156829,0.5771400829850082,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,NFKB2,not_in_dissociation_arms,0.10842720339590528,0.32203390279485805,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,NLRP3,execution_induction,0.46757739086026184,0.293249043414586,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,NQO1,execution_induction,-1.0613536847122624,0.199224180304901,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,NRF1,not_in_dissociation_arms,-0.07724291346129597,0.3316398462931598,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,PACS2,upstream_collapse,-0.1785403944796693,0.0621997627216908,,-0.2139061079945396,-0.007030188236639,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,PDHA1,upstream_collapse,-0.8420421359193835,0.5152586039398561,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,PDHB,upstream_collapse,-0.7297110417473451,0.022665722476045362,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,PPARG,not_in_dissociation_arms,-0.32042299624192605,0.199224180304901,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,PRDX3,execution_induction,-0.6610643157671863,0.010162280818073622,,0.0380263776407079,-0.042046696930202,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,PYCARD,execution_induction,1.362236122956162,0.07565585110553116,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,RELA,not_in_dissociation_arms,0.1714134584684377,0.10591973384116911,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,SIGMAR1,upstream_collapse,-0.8821675085068001,0.08823301056811247,,-0.307262873666432,0.0284145185462509,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,SLC11A2,execution_induction,-0.7528139510728922,0.199224180304901,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,SLC25A28,execution_induction,-0.09626339012728202,0.20913933262063306,,0.0280745885109765,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,SLC25A37,execution_induction,0.6297797895495663,0.572011070174122,,0.1085724770593818,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,SLC40A1,execution_induction,0.9572822300579666,0.10920910976396421,,0.15865802772776,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,SLC7A11,upstream_collapse,-0.23206827414551423,0.19093163258056783,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,SOD2,execution_induction,0.31311077598894066,0.059547286957016575,,,-0.0124210539239411,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,SQSTM1,not_in_dissociation_arms,-0.4969286883735151,0.42273219153507285,,,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,TFRC,execution_induction,-0.8877738894618794,0.4784610343853258,,0.0065089827423432,-0.0479923150938788,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,TOMM20,upstream_collapse,-1.2881551723120879,0.007109245926323387,,-0.2503817139219655,,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,TOMM40,upstream_collapse,-1.093398133124932,0.04703562115104938,,-0.2181405843500095,0.0075491472163058,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,TXN,execution_induction,-0.19007934223851386,0.688970473768469,,0.4687761825901053,-0.0886142726358509,TXN/VDAC1 重点复查,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,TXNRD2,execution_induction,0.015540577384532739,0.17213865299626444,,-0.0990252133585098,0.0064566432722013,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,VDAC1,upstream_collapse,-1.1545184646631785,0.010162280818073622,,-0.2610233637603789,0.0131969970989649,TXN/VDAC1 重点复查,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,VDAC2,upstream_collapse,-0.07911411904877585,0.30740290151035604,,-0.1516510044069492,0.0015416614427969,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,VDAC3,upstream_collapse,-0.730978742043014,0.199224180304901,,-0.1012214716788708,-0.0138243852885926,,,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,MT-ATP6,upstream_collapse,,,,-0.2561299039000748,,GSE32707 平台缺席,GPL10558 官方注释无 MT 编码基因条目,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,MT-ATP8,upstream_collapse,,,,-0.6361678935199073,,GSE32707 平台缺席,GPL10558 官方注释无 MT 编码基因条目,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,MT-CO1,upstream_collapse,,,,-0.1293825968240116,,GSE32707 平台缺席,GPL10558 官方注释无 MT 编码基因条目,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,MT-CYB,upstream_collapse,,,,-0.2334023418336777,,GSE32707 平台缺席,GPL10558 官方注释无 MT 编码基因条目,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,MT-ND1,upstream_collapse,,,,-0.1720063608162627,,GSE32707 平台缺席,GPL10558 官方注释无 MT 编码基因条目,Mitoxy-80_v1.0,ssGSEA_v1
+B_gene,MT-ND2,upstream_collapse,,,,-0.2146665791626421,,GSE32707 平台缺席,GPL10558 官方注释无 MT 编码基因条目,Mitoxy-80_v1.0,ssGSEA_v1
+C_arm_mean_anchor,upstream_collapse_arm_mean_log2FC,upstream_collapse,-0.4079906240043773,,,-0.1966802672639506,0.004035401000934043,,n_genes GSE32707/GSE185263/GSE212865 = 24/9/7,Mitoxy-80_v1.0,ssGSEA_v1
+C_arm_mean_anchor,execution_induction_arm_mean_log2FC,execution_induction,-0.01859424655974841,,,0.020648904831936554,-0.01155369374631041,,n_genes GSE32707/GSE185263/GSE212865 = 33/15/10,Mitoxy-80_v1.0,ssGSEA_v1
+D_verdict,R1_i_上游臂3模块Δz全<0,,,,,,,TRUE,预注册规则（优先级 R1>R2>R3>R4），D1b 计划第 4 步,Mitoxy-80_v1.0,ssGSEA_v1
+D_verdict,R1_ii_执行臂≥2/3模块Δz>0,,,,,,,FALSE,预注册规则（优先级 R1>R2>R3>R4），D1b 计划第 4 步,Mitoxy-80_v1.0,ssGSEA_v1
+D_verdict,R1_iii_与GSE185263符号一致≥6/8,,,,,,,FALSE,预注册规则（优先级 R1>R2>R3>R4），D1b 计划第 4 步,Mitoxy-80_v1.0,ssGSEA_v1
+D_verdict,R1_iv_复合β0.25_Δz≤0,,,,,,,TRUE,预注册规则（优先级 R1>R2>R3>R4），D1b 计划第 4 步,Mitoxy-80_v1.0,ssGSEA_v1
+D_verdict,R1_成立,,,,,,,FALSE,预注册规则（优先级 R1>R2>R3>R4），D1b 计划第 4 步,Mitoxy-80_v1.0,ssGSEA_v1
+D_verdict,R2_与SDRA同向(ρ>0且一致率>50%),,,,,,,FALSE,预注册规则（优先级 R1>R2>R3>R4），D1b 计划第 4 步,Mitoxy-80_v1.0,ssGSEA_v1
+D_verdict,R2_与全血反向(一致率<50%或ρ≤0),,,,,,,FALSE,预注册规则（优先级 R1>R2>R3>R4），D1b 计划第 4 步,Mitoxy-80_v1.0,ssGSEA_v1
+D_verdict,R2_成立,,,,,,,FALSE,预注册规则（优先级 R1>R2>R3>R4），D1b 计划第 4 步,Mitoxy-80_v1.0,ssGSEA_v1
+D_verdict,R3_模块q全>0.05且臂级平均|d|<0.2,,,,,,,FALSE,预注册规则（优先级 R1>R2>R3>R4），D1b 计划第 4 步,Mitoxy-80_v1.0,ssGSEA_v1
+D_verdict,R3_成立,,,,,,,FALSE,预注册规则（优先级 R1>R2>R3>R4），D1b 计划第 4 步,Mitoxy-80_v1.0,ssGSEA_v1
+D_verdict,最终判定,,,,,,,R4_部分信号_中性报告,预注册规则（优先级 R1>R2>R3>R4），D1b 计划第 4 步,Mitoxy-80_v1.0,ssGSEA_v1

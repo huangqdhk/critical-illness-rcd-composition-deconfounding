@@ -54,6 +54,7 @@ MISSING_OK = {
 
 # 2026-08-27：M10–M15 新模块导出表/图数据（前瞻注册 osf.io/ETVMJ 与第二次独立注册批次），
 # 按 M15/M1x 导出设计无内嵌 gene_set_version/score_version 列，manifest 记 NA（设计内豁免）
+# 2026-09-06 图号重编（11→9 主图）键名同步：11A-C→9D-F、旧9A-C→8E-G、旧10A-C→9A-C、S9I→S6I、旧5A/B→5F/G（FDR_NULL_OK 键）；Figure_7/8A-D 不变
 M1X_NO_VERSION_STAMP = {
     "Table_S62_M14_IIAMD_Core_v1.0.csv",
     "Table_S63_M14_Gate2_Core_Rerun_ThreeLayers.csv",
@@ -91,15 +92,15 @@ M1X_NO_VERSION_STAMP = {
     "Table_S90_M16_GSE2411_Interaction.csv",
     "Table_S91_M16_Bridge_Correlations.csv",
     "Table_S92_M16_Ortholog_Coverage_Audit.csv",
-    "Figure_11A.csv",
-    "Figure_11B.csv",
-    "Figure_11C.csv",
+    "Figure_9D.csv",
+    "Figure_9E.csv",
+    "Figure_9F.csv",
     "Table_S87b_M10D_Pandisease_k20_Meta.csv",
     "Table_S87c_M10D_Pandisease_k20_LOSO.csv",
     "Figure_7A.csv", "Figure_7B.csv", "Figure_7C.csv", "Figure_7D.csv",
     "Figure_7E.csv", "Figure_7F.csv", "Figure_7G.csv",
     "Figure_8A.csv", "Figure_8B.csv", "Figure_8C.csv", "Figure_8D.csv",
-    "Figure_9A.csv", "Figure_9B.csv", "Figure_9C.csv",
+    "Figure_8E.csv", "Figure_8F.csv", "Figure_8G.csv",
     "Table_S86d_M15_Demo_GSE66099_Proportions.csv",
     "Table_S86c_M15_Demo_GSE66099_R2.csv",
     "Table_S86b_M15_Demo_GSE66099_Contrasts.csv",
@@ -110,9 +111,12 @@ M1X_NO_VERSION_STAMP = {
     "Table_S85_M15_Demo_GSE157103_PerSample.csv",
     "Table_S84b_M15_RegressionTest_CohortSummary.csv",
     "Table_S84_M15_RegressionTest_11Cohorts.csv",
-    "Figure_10C.csv",
-    "Figure_10B.csv",
-    "Figure_10A.csv",
+    "Figure_9C.csv",
+    "Figure_9B.csv",
+    "Figure_9A.csv",
+    # 2026-09-05 M17 蛋白组批次（PXD050432 审计入册，导出设计无内嵌版本列，manifest 记 NA）
+    "Table_S93_M17_PXD050432_AcuteLPS_LungProteome_WB_Targets.csv",
+    "Table_S93b_M17_PXD050432_PerSample_LFQ.csv",
 }
 
 _LOC = None
@@ -290,7 +294,7 @@ FDR_NULL_OK = {
     ("Table_S15a_MR_Sepsis_cisonly_Sensitivity.csv", "fdr_q"): "MR 敏感度异质性检验逐 IV 行，无 FDR 义务",
     ("Table_S47b_Circulating_Mitoxy_Immune_Correlations.csv", "FDR"):
         "6 个恒定比例细胞类型（如 NK activated）相关未定义 → NaN，FDR_note 列已逐行说明",
-    ("Figure_S9I.csv", "FDR"):
+    ("Figure_S6I.csv", "FDR"):
         "6 个恒定比例细胞类型（NK cells activated）相关未定义 → NaN，FDR_note 列已逐行说明（原 Figure_5I，任务8 降入补充 S9）",
     ("Table_S8_Consensus_Genes.csv", "GSE212865_padj"): "基因不在 GSE212865 平台时留空（数据集缺席 NA，非计算失败）",
     ("Table_S8_Meta_Analysis.csv", "GSE212865_padj"): "同上：数据集缺席 NA",
@@ -299,8 +303,8 @@ FDR_NULL_OK = {
         "6 个 MT 基因平台缺席登记行（GPL10558 注释层真实缺席，非计算失败）",
     # M4 蛋白层（2026-08-18 登记，2026-08-21 lint 白名单补登）：mmc4 论文官方统计仅覆盖 25/80 基因，
     # 缺官方 padj 的基因逐行留空并在正文 §4.21/Table S59 口径披露（px_padj/mmc4_padj 空值=无官方统计，非计算失败）
-    ("Figure_5A.csv", "px_padj"): "M4 蛋白层（原 Figure_10A，任务8 图号迁移）：无论文官方统计的基因留空（mmc4 仅 25/80 基因有官方 padj，正文已披露）",
-    ("Figure_5B.csv", "mmc4_padj"): "M4 蛋白层铁轴表（原 Figure_10B，任务8 图号迁移）：无官方统计基因留空（同上口径）",
+    ("Figure_5F.csv", "px_padj"): "M4 蛋白层（原 Figure_10A，任务8 图号迁移）：无论文官方统计的基因留空（mmc4 仅 25/80 基因有官方 padj，正文已披露）",
+    ("Figure_5G.csv", "mmc4_padj"): "M4 蛋白层铁轴表（原 Figure_10B，任务8 图号迁移）：无官方统计基因留空（同上口径）",
     ("Table_S59a_M4_Protein_Transcript_Consistency.csv", "px_padj"): "M4 蛋白层：无官方统计基因留空（同上口径）",
     ("Table_S59b_M4_Lung_Iron_Axis_Proteins.csv", "mmc4_padj"): "M4 蛋白层铁轴表：无官方统计基因留空（同上口径）",
     # M10–M15 新模块批次（2026-08-27 收口补登）：以下空值均为设计内缺席，非计算失败
@@ -432,6 +436,8 @@ def check_versions(man_canon):
         if fn in MISSING_OK:
             continue
         p = fp(fn)
+        if not p.exists():
+            continue
         if fn.lower().endswith(".csv"):
             if fn in ("GSE185263_groups.csv", "MR_bio_CRP_Sepsis.csv", "MR_bio_Ferritin_Sepsis.csv",
                       "Table_S50_D1b_GSE32707_Groups.csv"):
@@ -578,6 +584,8 @@ def check_p_and_fdr(man_canon):
         if fn in MISSING_OK:
             continue
         p = fp(fn)
+        if not p.exists():
+            continue
         raw = p.read_bytes()
         enc = "utf-8-sig" if raw.startswith(b"\xef\xbb\xbf") else "utf-8"
         fdr_cols = p_cols = []
@@ -988,12 +996,12 @@ def check_m2_mdi(man_canon):
     else:
         ok("[M2] S58 主分析 OR=1.063/p=0.218 与增量 ΔAUC=+0.0001 与冻结一致")
 
-    # Figure 4A–4E（原 Figure_9A–9E，任务8 图号迁移）存在且行数>0（figure_data 类，manifest 已登记）
-    fig_ok = all((FIG / f"Figure_4{c}.csv").exists() for c in "ABCDE")
+    # Figure 5A–5E（MDI 临床面板；原 11 图体系 Figure_4A–4E，2026-09-06 9 图重编号后迁移）存在且行数>0
+    fig_ok = all((FIG / f"Figure_5{c}.csv").exists() for c in "ABCDE")
     if not fig_ok:
-        fail("[M2] Figure_4A–4E 面板数据缺失")
+        fail("[M2] Figure_5A–5E 面板数据缺失")
     else:
-        ok("[M2] Figure_4A–4E 面板数据齐全")
+        ok("[M2] Figure_5A–5E 面板数据齐全")
 
     # 预注册判定复算（规则：M2_pre_registration_20260817.md §3；口径与 M2_step4 一致）
     repl = 0

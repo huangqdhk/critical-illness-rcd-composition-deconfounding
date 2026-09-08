@@ -1,14 +1,17 @@
-cohort,model,term,HR_or_OR,CI_lo,CI_hi,p,cindex,n,n_events,idi,nri,gene_set_version,score_version
-GSE310929,Logistic_unadj_28d,MDI_per_SD,1.0625660987039938,0.964834912865698,1.170196786061146,0.2176528686955734,0.5239989839199424,2436,534.0,,,Mitoxy-80_v1.0,mdi_v1.0
-GSE310929,Logistic_age_sex,MDI_per_SD,1.0629734023596855,0.9550543678935766,1.1830870493961598,0.2635369629857793,0.6019788813779348,1899,430.0,,,Mitoxy-80_v1.0,mdi_v1.0
-GSE310929,Cox_unadj,MDI_per_SD,0.932966342306756,0.7940319568976273,1.096210534495489,0.3989961867495767,0.5244888538114455,593,148.0,,,Mitoxy-80_v1.0,mdi_v1.0
-GSE310929,Cox_age_sex,MDI_per_SD,0.918724856962702,0.7824103255009518,1.0787886295604754,0.3009079315379677,0.5964886155495659,593,148.0,,,Mitoxy-80_v1.0,mdi_v1.0
-GSE310929,Increment,MDI_vs_base(age+sex+subtype),0.6370872142252328,0.637009903177116,7.731104811681266e-05,,,1526,345.0,-3.2158862581233016e-06,-0.0070021720723042,Mitoxy-80_v1.0,mdi_v1.0
-GSE310929_excl_internal,Logistic_unadj_28d,MDI_per_SD,1.0477200986441944,0.9460692723035476,1.160292842436591,0.3706394001714157,0.5222103881434565,2091,482.0,,,Mitoxy-80_v1.0,mdi_v1.0
-GSE310929,Logistic_unadj_28d_nomt,MDI_nomt_per_SD,1.0625660987039938,0.964834912865698,1.170196786061146,0.2176528686955734,0.5239989839199424,2436,534.0,,,Mitoxy-80_v1.0,mdi_v1.0
-GSE188309,Logistic_unadj,MDI_per_SD,1.0300957997366922,0.5851178659118986,1.8134762557309183,0.9181574859633286,0.5663201663201662,198,13.0,,,Mitoxy-80_v1.0,mdi_v1.0
-GSE310929,Q1_low,,1.0,,,,0.1937602627257799,609,,,,Mitoxy-80_v1.0,mdi_v1.0
-GSE310929,Q2,,1.1618769545301977,0.8798242961039426,1.5343496007626527,0.2902617661232747,0.2183908045977011,609,,,,Mitoxy-80_v1.0,mdi_v1.0
-GSE310929,Q3,,1.13084577240786,0.8553536812333108,1.4950682846525494,0.3880228942335595,0.2134646962233169,609,,,,Mitoxy-80_v1.0,mdi_v1.0
-GSE310929,Q4_high,,1.3972823049497751,1.064615817918572,1.833898958539696,0.0158944630227635,0.2512315270935961,609,,,,Mitoxy-80_v1.0,mdi_v1.0
-GSE310929,ordinal_trend,,1.1030169203659923,1.0120106134103826,1.2022070821112163,0.0256313708882165,,2436,,,,Mitoxy-80_v1.0,mdi_v1.0
+﻿Gene,Protein,Functional_Category,pLI,LOEUF,pLoF_o/e_(95%CI),Missense_Z,Constraint_Conclusion,gene_set_version,score_version
+BAX,BAX,Apoptosis Executioners,0.32,0.75,0.24 (0.10-0.75),0.30,Weakly constrained,Mitoxy-80_v1.0,NA
+BAK1,BAK,Apoptosis Executioners,0.00,1.37,0.79 (0.47-1.37),0.99,LoF tolerant,Mitoxy-80_v1.0,NA
+BID,BID,Apoptosis Executioners,0.00,1.92,1.46 (0.94-1.92),0.10,LoF tolerant,Mitoxy-80_v1.0,NA
+BCL2L11,BIM,BH3-only Activators,0.89,0.42,0.00 (0.00-0.42),0.12,Moderate constraint,Mitoxy-80_v1.0,NA
+BBC3,PUMA,BH3-only Activators,0.00,1.59,0.73 (0.36-1.59),0.15,LoF tolerant,Mitoxy-80_v1.0,NA
+BAD,BAD,BH3-only Activators,0.00,1.53,0.69 (0.34-1.53),-0.55,LoF tolerant,Mitoxy-80_v1.0,NA
+PMAIP1,NOXA,BH3-only Activators,0.00,1.03,0.69 (0.47-1.03),0.58,LoF tolerant,Mitoxy-80_v1.0,NA
+ITPR1,IP3R1,ER-Mitochondria Contact Sites,1.00,0.13,0.08 (0.05-0.13),5.60,Strongly LoF intolerant: essential gene; extreme missense constraint (Z=5.60),Mitoxy-80_v1.0,NA
+CANX,Calnexin,ER-Mitochondria Contact Sites,0.87,0.36,0.18 (0.10-0.36),1.58,Moderate constraint,Mitoxy-80_v1.0,NA
+VDAC1,VDAC1,ER-Mitochondria Contact Sites,0.97,0.31,0.06 (0.02-0.31),1.33,Strongly LoF intolerant: essential gene,Mitoxy-80_v1.0,NA
+HSPA9,GRP75/mtHsp70,ER-Mitochondria Contact Sites,0.97,0.32,0.16 (0.09-0.32),1.04,Strongly LoF intolerant: essential gene,Mitoxy-80_v1.0,NA
+MCU,MCU,ER-Mitochondria Contact Sites,0.83,0.41,0.16 (0.07-0.41),1.83,Moderate constraint,Mitoxy-80_v1.0,NA
+BCL2,BCL-2,Anti-apoptotic Guardians,0.56,0.71,0.15 (0.05-0.71),1.40,Moderate constraint,Mitoxy-80_v1.0,NA
+BCL2L1,BCL-xL,Anti-apoptotic Guardians,0.94,0.34,0.00 (0.00-0.34),1.62,Strongly LoF intolerant: essential gene,Mitoxy-80_v1.0,NA
+MCL1,MCL-1,Anti-apoptotic Guardians,0.96,0.29,0.00 (0.00-0.29),-0.36,Strongly LoF intolerant: essential gene,Mitoxy-80_v1.0,NA
+BCL2L2,BCL-W,Anti-apoptotic Guardians,0.47,0.83,0.17 (0.06-0.83),1.05,Weakly constrained,Mitoxy-80_v1.0,NA

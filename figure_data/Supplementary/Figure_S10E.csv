@@ -1,9 +1,8 @@
-cell_type,velocity_pt_mean,velocity_pt_median,velocity_pt_std,dpt_mean,dpt_median,n_cells,dataset,gene_set_version,score_version
-B_cell,0.2582606007822376,0.2585770931340623,0.011960529747551095,0.2543183,0.25480527,9840,Combined_GSE145926_GSE158055,NA,NA
-Club,0.18499995987842874,0.18420874731086134,0.010929982159131546,0.18269432,0.18256909,1154,Combined_GSE145926_GSE158055,NA,NA
-DC,0.03604055735567761,0.02321667722391013,0.035819434612345255,0.036740422,0.02426612,2664,Combined_GSE145926_GSE158055,NA,NA
-Epithelial,0.8209863091201153,0.8354795641413815,0.10459215065480999,0.8064149,0.8200458,2933,Combined_GSE145926_GSE158055,NA,NA
-Macrophage,0.0071427145434820784,0.006650402254786248,0.0018061200458819107,0.008356872,0.007694547,365,Combined_GSE145926_GSE158055,NA,NA
-Mono_c14,0.007092496405286958,0.004593528422403336,0.018886818601548585,0.008359601,0.005839197,79963,Combined_GSE145926_GSE158055,NA,NA
-NK,0.223069196395973,0.22273825902091182,0.00761884978943069,0.21982186,0.21980307,8972,Combined_GSE145926_GSE158055,NA,NA
-T_cell,0.20915905362070558,0.21032803033060257,0.015044249281091701,0.20617276,0.20729503,33050,Combined_GSE145926_GSE158055,NA,NA
+﻿Target_Protein,PDB_ID,UniProt,Resolution,Function,Is_Predicted_Structure,CoLigand,Binding_Site_Method,Box_Center_X,Box_Center_Y,Box_Center_Z,Box_Size_X,Box_Size_Y,Box_Size_Z,gene_set_version,score_version
+GPX4,5H5Q_GPX4,P36969,1.1A,Phospholipid hydroperoxide glutathione peroxidase (crystallization construct with Sec/Cys replacements; complex with GXpep-1),False,GXpep-1,grid-based cavity detection,10.455979441747637,15.796992959087179,-25.259864852298325,24.0,24.0,24.0,Mitoxy-80_v1.0,NA
+SOD2,1N0J_SOD2,P04179,2.2A,Mitochondrial superoxide dismutase [Mn],False,None,grid-based cavity detection,8.274298537613813,-3.3704075154815842,55.036684274586406,24.0,24.0,24.0,Mitoxy-80_v1.0,NA
+VDAC1,2JK4_VDAC1,P21796,4.1A,"Voltage-dependent anion-selective channel protein 1 (X-ray 4.1 A, Bayrhuber PNAS 2008; NMR structure of VDAC1 is PDB 2K1N not used here)",False,None,grid-based cavity detection,36.07808731454514,2.483645987134807,7.0141996046903685,24.0,24.0,24.0,Mitoxy-80_v1.0,NA
+CANX,1JHN_CANX,P27824,2.9A,"Calnexin (ER chaperone; canine Canis lupus familiaris luminal-domain fragment only, no TM/cytosolic segment)",False,None,grid-based cavity detection,1.7823593802628988,-5.538068043418833,12.349911579740791,24.0,24.0,24.0,Mitoxy-80_v1.0,NA
+FTL,2FHA_FTL,P02792,1.9A,Ferritin light chain (iron storage),False,None,grid-based cavity detection,37.74303138326873,-7.487446825839961,21.175379053185722,24.0,24.0,24.0,Mitoxy-80_v1.0,NA
+TFRC,1SUV_TFRC,P02786,EM 7.5A,Transferrin receptor protein 1 (cryo-EM 7.5 A human TfR-transferrin complex; low-resolution model),False,TFE,grid-based cavity detection,-12.690420517989557,13.162639186943853,-0.45142069649949035,24.0,24.0,24.0,Mitoxy-80_v1.0,NA
+SLC40A1,Q9NP59_SLC40A1_AlphaFold,Q9NP59,AlphaFold v6 (pLDDT=80.25),Ferroportin (iron exporter),True,None,grid-based cavity detection,-14.29698386168414,5.591122300355528,-2.8575735341247506,24.0,24.0,24.0,Mitoxy-80_v1.0,NA
