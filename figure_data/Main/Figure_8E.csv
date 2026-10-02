@@ -1,4 +1,0 @@
-test,n_hc,n_pl,u,z,p,q_bh,cliff_delta,n,stat,p_decline,p_two,median
-between_arm_MWU_one_sided_less,24.0,23.0,221.0,-1.1704777297932794,0.1230575836093652,0.1230575836093652,0.1992753623188405,,,,,
-within_arm_Wilcoxon_HC,,,,,0.0003249049186706,0.0006498098373413,,24.0,37.0,0.7916666666666666,,
-within_arm_Wilcoxon_PL_descriptive,,,,,,,,23.0,,,0.0001277923583984,-0.1645406556116952

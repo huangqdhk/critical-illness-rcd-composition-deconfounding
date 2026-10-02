@@ -1,0 +1,12 @@
+arm,variable,n,median,wilcoxon_p_two,kind,group,slope_obs_on_comp,intercept,r,mean_dMDI_comp,mean_dMDI_obs,adjudication
+hydrocortisone,d_Neut,24,-0.0036876629920687,0.899570107460022,composition_coreport,,,,,,,
+hydrocortisone,d_Mono,24,0.0,,composition_coreport,,,,,,,
+hydrocortisone,d_comp,24,-0.0036876629920687,0.899570107460022,composition_coreport,,,,,,,
+hydrocortisone,d_MDI_comp,24,0.399647720357549,0.2735753578226747,composition_coreport,,,,,,,
+placebo,d_Neut,23,-0.0091195250988814,0.019557237625122,composition_coreport,,,,,,,
+placebo,d_Mono,23,0.0,,composition_coreport,,,,,,,
+placebo,d_comp,23,-0.0091195250988814,0.019557237625122,composition_coreport,,,,,,,
+placebo,d_MDI_comp,23,-0.6336773560578616,0.0082621574401855,composition_coreport,,,,,,,
+,,47,,,H4_descriptive,all,0.1044499893236475,-0.2236129900286558,0.5615714819950791,-0.1668143934047421,-0.2410367516388119,未触发（确认性检验未显著）
+,,24,,,H4_descriptive,hydrocortisone,0.1078040947041875,-0.2331300378952243,0.5371218121182256,0.3707539104014387,-0.1931612482263596,未触发（确认性检验未显著）
+,,23,,,H4_descriptive,placebo,0.104595912169772,-0.2148735763338958,0.5580442258292996,-0.7277552321590176,-0.2909937986778926,未触发（确认性检验未显著）

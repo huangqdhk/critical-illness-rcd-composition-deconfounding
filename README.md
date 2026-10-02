@@ -2,7 +2,7 @@
 
 Analysis code, open tool, and governance artifacts for:
 
-> **Myeloid Cell Composition Confounds Cell-Death Transcriptomic Signatures in Critical Illness: Composition Deconfounding Reveals a Myeloid-Intrinsic Mitochondrial Suppression Axis** (manuscript under review)
+> **Deconfounding cell-death signatures in sepsis and ARDS reveals monocyte-intrinsic suppression of mitochondrial infrastructure** (manuscript under review)
 
 The study decomposes an 80-gene regulated-cell-death framework into an upstream-collapse arm
 (UCS, 30 genes) and an execution-induction arm (EIS, 33 genes), scores their dissociation
@@ -15,10 +15,10 @@ correction across 4 independent single-cell cohorts.
 
 | Directory | Contents |
 |---|---|
-| `analysis_scripts/` | 98 analysis/QC scripts (P0 frozen-plan core re-analysis, M1 spatial, M2 clinical MDI, M3 causal four-layer pQTL-MR/SMR/TWAS, M4 biochemical, composition-hub/temporal/intervention modules, package lint) |
+| `analysis_scripts/` | 105 analysis/QC scripts (P0 frozen-plan core re-analysis, M1 spatial, M2 clinical MDI, M3 causal four-layer pQTL-MR/SMR/TWAS, M4 biochemical, composition-hub/temporal/intervention modules, package lint) |
 | `mitoxdi_tool/` | **mitoxdi v1.0.0** — standalone MIT-licensed tool: dual-arm decomposition + `mdi_v1.0` scoring + composition-predicted / composition-residual MDI (own README, LICENSE, demos, 11-cohort regression tests, gate document `GATE.md`) |
 | `governance/` | RESULTS_MANIFEST v2.0 (SHA256-audited inventory), gene manifest v1.0 (single source of the 80-gene/arm definitions), sample manifest, frozen analysis plan, judgment-gate reports, audit reports, novelty-search logs, software snapshot |
-| `figure_data/` | Per-panel CSV data behind all main figures |
+| `01_FIGURE_DATA_CSV/` | Per-panel CSV data behind the main and supplementary figures (incl. the wet-lab Figure 8 panels, `Main/Figure_8w*`; see that folder's README for the ms/pkg numbering bridge) |
 
 ## Data availability
 

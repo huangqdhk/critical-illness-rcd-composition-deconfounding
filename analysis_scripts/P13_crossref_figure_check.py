@@ -17,8 +17,10 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 ROOT = os.path.dirname(os.path.abspath(__file__))
 EN = io.open(os.path.join(ROOT, "111文稿_v5_英文版.md"), encoding="utf-8").read()
 # 2026-09-05：中文稿已随 2026-09-04 归档批次移入 归档/（弃用只读），路径同步；输出加日期不覆盖 09-01 报告
-CN = io.open(os.path.join(ROOT, "归档", "111文稿_v5.md"), encoding="utf-8").read()
-OUT = os.path.join(ROOT, "03_LOGS", "P13_crossref_figure_check_20260905.md")
+# 2026-09-21：归档区分类整理，中文稿移入 归档/04_文稿与计划备份/，路径再同步。
+CN = io.open(os.path.join(ROOT, "归档", "04_文稿与计划备份", "111文稿_v5.md"),
+             encoding="utf-8").read()
+OUT = os.path.join(ROOT, "03_LOGS", "P13_crossref_figure_check_20260916.md")
 rep = []
 def log(s=""): rep.append(s); print(s)
 
@@ -51,31 +53,30 @@ for name, txt, pats in [
 log("")
 
 # ---------- 3 图注 Section 复核 ----------
-expect = {"Figure 6": "Section 10", "Figure 7": "Section 11", "Figure 8": "Section 12",
-          "Figure 9": "Section 13", "Figure 10": "Section 14", "Figure 11": "Section 15"}
-i = EN.index("# Figure Legends"); j = EN.index("# References")
-leg_en = EN[i:j]
+# 2026-09-16 A+B 压缩后：仅新 Figure 5（旧 6+7 合并）图注带 "(Sections 10–11)" 标签
+# 修复：本文档 # References 在 # Figure Legends 之前，原切片 EN[i:j] 得空串——改为切到文末
+expect = {"Figure 5": "Sections 10–11"}
+i = EN.index("# Figure Legends")
+leg_en = EN[i:]
 log("## EN 图注 (Section N) 复核")
 for fig, sec in expect.items():
-    m = re.search(re.escape(fig) + r"[. ].{0,400}?\((?:见 )?" + sec.replace("Section", "Section ") + r"\)", leg_en, re.S)
-    m2 = re.search(re.escape(fig) + r"[. ].{0,400}?\(Section (\d+)\)", leg_en, re.S)
+    m2 = re.search(re.escape(fig) + r"[. ].{0,400}?\((Sections? [\d–—-]+)\)", leg_en, re.S)
     found = m2.group(1) if m2 else None
-    ok = "OK" if found == sec.split()[-1] else "MISMATCH"
-    log(f"- {fig}: 图注 Section={found} 期望={sec.split()[-1]} -> {ok}")
-# CN 图注 第N节
-i = CN.index("# Figure Legends"); j = CN.index("# References")
-leg_cn = CN[i:j]
-expect_cn = {"Figure 6": "10", "Figure 7": "11", "Figure 8": "12",
-             "Figure 9": "13", "Figure 10": "14", "图 11": "15"}
-log("## CN 图注（第 N 节）复核")
+    ok = "OK" if found == sec else "MISMATCH"
+    log(f"- {fig}: 图注 Section={found} 期望={sec} -> {ok}")
+# CN 图注 第N节（CN 稿为归档只读旧图号快照——2026-09-16 A+B 压缩未同步中文归档版，仅复核其冻结状态的两条有效标签）
+i = CN.index("# Figure Legends")
+leg_cn = CN[i:]
+expect_cn = {"Figure 6": "10", "Figure 7": "11"}  # 归档 CN 稿（2026-09-06 九图体系）仅存此两条节标签
+log("## CN 图注（第 N 节）复核（归档旧编号，仅供参考）")
 for fig, sec in expect_cn.items():
     m2 = re.search(re.escape(fig) + r"[. ].{0,400}?第\s*(\d+)\s*节", leg_cn, re.S)
     found = m2.group(1) if m2 else None
     ok = "OK" if found == sec else "MISMATCH"
     log(f"- {fig}: 图注 第{found}节 期望={sec} -> {ok}")
-# S11/S12 由 §16 引用
-m = re.search(r"### 16\.[^\n]*S11", EN[EN.index("## Part VI"):EN.index("# Discussion")])
-log(f"- EN §16 标题引用 Figure S11: {'OK' if m else 'CHECK'}")
+# S12/S13 由 §16 引用（2026-09-16 A+B 附图级联：旧 S10→S12、旧 S11→S13）
+m = re.search(r"### 16\.[^\n]*S13", EN[EN.index("## Part VI"):EN.index("# Discussion")])
+log(f"- EN §16 标题引用 Figure S13: {'OK' if m else 'CHECK'}")
 log("")
 
 # ---------- 4 panel ↔ CSV ↔ manifest ----------
@@ -91,7 +92,8 @@ with io.open(os.path.join(figdir, "FIGURE_DATA_MANIFEST.csv"), encoding="utf-8-s
         man[row["panel"]] = row["package_file"]
 log("## panel ↔ CSV ↔ manifest")
 missing_file, missing_man = [], []
-for name, leg, pref in [("EN", leg_en, None), ("CN", leg_cn, None)]:
+# 2026-09-16：CN 稿为归档旧图号快照（弃用只读），其面板引用不再对照新编号 CSV——仅核查 EN 终稿
+for name, leg, pref in [("EN", leg_en, None)]:
     for m in re.finditer(r"\*\*(Figure |图 )(S?\d+)[. ]", leg):
         num = m.group(2)
         # 抓该图注行内的 panel 字母

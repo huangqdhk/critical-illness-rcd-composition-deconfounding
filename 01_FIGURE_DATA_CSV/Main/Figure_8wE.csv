@@ -1,0 +1,65 @@
+﻿子面板,样本,组,数值,指标说明
+W1_BALF_LDH,W1-01,Control,105.3,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-02,LPS+DFX,222.0,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-03,LPS,392.6,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-04,DFX,85.5,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-05,Control,92.5,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-06,LPS,393.7,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-07,DFX,81.4,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-08,LPS+DFX,264.9,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-09,LPS,394.2,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-10,Control,85.0,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-11,DFX,72.1,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-12,LPS+DFX,203.5,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-13,Control,90.1,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-14,LPS,433.5,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-15,LPS+DFX,328.2,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-16,DFX,125.5,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-17,LPS+DFX,180.5,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-18,DFX,100.6,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-19,Control,85.3,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-20,LPS,429.4,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-21,LPS+DFX,253.1,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-22,DFX,55.9,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-23,Control,93.3,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-24,LPS,272.5,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-25,DFX,96.9,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-26,LPS,444.0,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-27,LPS+DFX,323.0,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-28,Control,91.8,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-29,DFX,82.3,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-30,LPS,288.8,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-31,LPS+DFX,210.0,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_BALF_LDH,W1-32,Control,81.6,BALF LDH 活性 (U/L)；活性=(A样−A空)/(A标−A空)×450
+W1_W/D,W1-01,Control,4.690,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-02,LPS+DFX,5.313,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-03,LPS,5.903,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-04,DFX,4.588,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-05,Control,4.433,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-06,LPS,6.106,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-07,DFX,4.628,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-08,LPS+DFX,5.010,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-09,LPS,6.152,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-10,Control,4.349,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-11,DFX,4.387,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-12,LPS+DFX,5.271,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-13,Control,4.432,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-14,LPS,5.820,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-15,LPS+DFX,5.186,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-16,DFX,4.696,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-17,LPS+DFX,5.052,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-18,DFX,4.837,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-19,Control,4.287,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-20,LPS,6.341,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-21,LPS+DFX,4.771,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-22,DFX,4.463,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-23,Control,4.726,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-24,LPS,5.950,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-25,DFX,4.529,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-26,LPS,5.886,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-27,LPS+DFX,5.111,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-28,Control,4.426,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-29,DFX,4.580,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-30,LPS,5.916,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-31,LPS+DFX,5.209,肺湿/干重比 W/D（无量纲）
+W1_W/D,W1-32,Control,4.468,肺湿/干重比 W/D（无量纲）

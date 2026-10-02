@@ -14,8 +14,9 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # 2026-09-04 维护：ROOT 改为脚本自身所在目录（跨机可移植，消除 E:\ 绝对路径依赖）；
 # 中文稿 111文稿_v5.md 已移入 归档/（2026-09-04 起弃用，仅作冻结对照）。
+# 2026-09-21：归档区分类整理，中文稿移入 归档/04_文稿与计划备份/，路径同步。
 ROOT = os.path.dirname(os.path.abspath(__file__))
-MS = os.path.join(ROOT, "归档", "111文稿_v5.md")
+MS = os.path.join(ROOT, "归档", "04_文稿与计划备份", "111文稿_v5.md")
 INTER = os.path.join(ROOT, "_intermediate")
 OUT = os.path.join(ROOT, "04_AUDIT_GOVERNANCE", "P0_Manuscript_Source_Check_Report.md")
 

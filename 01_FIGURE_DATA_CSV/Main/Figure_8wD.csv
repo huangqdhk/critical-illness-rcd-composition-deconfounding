@@ -1,0 +1,129 @@
+﻿子面板,样本,组,数值,指标说明
+W1_miniMDI,BL-101,Control,-0.025,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-101,Control,0.072,上游臂 panel z 均值
+W1_z执行均值,BL-101,Control,0.047,执行臂 panel z 均值
+W1_miniMDI,BL-102,LPS+DFX,2.844,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-102,LPS+DFX,-1.400,上游臂 panel z 均值
+W1_z执行均值,BL-102,LPS+DFX,1.444,执行臂 panel z 均值
+W1_miniMDI,BL-103,LPS,3.736,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-103,LPS,-1.595,上游臂 panel z 均值
+W1_z执行均值,BL-103,LPS,2.140,执行臂 panel z 均值
+W1_miniMDI,BL-104,DFX,-0.178,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-104,DFX,0.366,上游臂 panel z 均值
+W1_z执行均值,BL-104,DFX,0.188,执行臂 panel z 均值
+W1_miniMDI,BL-105,Control,0.233,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-105,Control,-0.290,上游臂 panel z 均值
+W1_z执行均值,BL-105,Control,-0.056,执行臂 panel z 均值
+W1_miniMDI,BL-106,LPS,3.597,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-106,LPS,-1.808,上游臂 panel z 均值
+W1_z执行均值,BL-106,LPS,1.789,执行臂 panel z 均值
+W1_miniMDI,BL-107,DFX,0.352,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-107,DFX,-0.167,上游臂 panel z 均值
+W1_z执行均值,BL-107,DFX,0.184,执行臂 panel z 均值
+W1_miniMDI,BL-108,LPS+DFX,2.944,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-108,LPS+DFX,-1.508,上游臂 panel z 均值
+W1_z执行均值,BL-108,LPS+DFX,1.436,执行臂 panel z 均值
+W1_miniMDI,BL-109,LPS,3.303,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-109,LPS,-1.346,上游臂 panel z 均值
+W1_z执行均值,BL-109,LPS,1.957,执行臂 panel z 均值
+W1_miniMDI,BL-110,Control,-0.415,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-110,Control,0.453,上游臂 panel z 均值
+W1_z执行均值,BL-110,Control,0.038,执行臂 panel z 均值
+W1_miniMDI,BL-111,DFX,-0.128,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-111,DFX,0.491,上游臂 panel z 均值
+W1_z执行均值,BL-111,DFX,0.363,执行臂 panel z 均值
+W1_miniMDI,BL-112,LPS+DFX,2.073,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-112,LPS+DFX,-0.341,上游臂 panel z 均值
+W1_z执行均值,BL-112,LPS+DFX,1.732,执行臂 panel z 均值
+W1_miniMDI,BL-113,Control,0.467,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-113,Control,-0.075,上游臂 panel z 均值
+W1_z执行均值,BL-113,Control,0.392,执行臂 panel z 均值
+W1_miniMDI,BL-114,LPS,4.226,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-114,LPS,-2.470,上游臂 panel z 均值
+W1_z执行均值,BL-114,LPS,1.757,执行臂 panel z 均值
+W1_miniMDI,BL-115,LPS+DFX,2.324,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-115,LPS+DFX,-0.766,上游臂 panel z 均值
+W1_z执行均值,BL-115,LPS+DFX,1.558,执行臂 panel z 均值
+W1_miniMDI,BL-116,DFX,0.225,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-116,DFX,-0.054,上游臂 panel z 均值
+W1_z执行均值,BL-116,DFX,0.172,执行臂 panel z 均值
+W1_miniMDI,BL-117,LPS+DFX,2.156,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-117,LPS+DFX,-1.071,上游臂 panel z 均值
+W1_z执行均值,BL-117,LPS+DFX,1.084,执行臂 panel z 均值
+W1_miniMDI,BL-118,DFX,0.419,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-118,DFX,-0.175,上游臂 panel z 均值
+W1_z执行均值,BL-118,DFX,0.244,执行臂 panel z 均值
+W1_miniMDI,BL-119,Control,0.233,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-119,Control,-0.160,上游臂 panel z 均值
+W1_z执行均值,BL-119,Control,0.073,执行臂 panel z 均值
+W1_miniMDI,BL-120,LPS,4.589,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-120,LPS,-2.201,上游臂 panel z 均值
+W1_z执行均值,BL-120,LPS,2.387,执行臂 panel z 均值
+W1_miniMDI,BL-121,LPS+DFX,2.323,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-121,LPS+DFX,-0.835,上游臂 panel z 均值
+W1_z执行均值,BL-121,LPS+DFX,1.489,执行臂 panel z 均值
+W1_miniMDI,BL-122,DFX,0.111,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-122,DFX,-0.075,上游臂 panel z 均值
+W1_z执行均值,BL-122,DFX,0.035,执行臂 panel z 均值
+W1_miniMDI,BL-123,Control,-0.400,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-123,Control,0.298,上游臂 panel z 均值
+W1_z执行均值,BL-123,Control,-0.102,执行臂 panel z 均值
+W1_miniMDI,BL-124,LPS,3.741,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-124,LPS,-1.416,上游臂 panel z 均值
+W1_z执行均值,BL-124,LPS,2.325,执行臂 panel z 均值
+W1_miniMDI,BL-125,DFX,0.192,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-125,DFX,-0.513,上游臂 panel z 均值
+W1_z执行均值,BL-125,DFX,-0.321,执行臂 panel z 均值
+W1_miniMDI,BL-126,LPS,3.879,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-126,LPS,-1.781,上游臂 panel z 均值
+W1_z执行均值,BL-126,LPS,2.099,执行臂 panel z 均值
+W1_miniMDI,BL-127,LPS+DFX,2.591,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-127,LPS+DFX,-1.265,上游臂 panel z 均值
+W1_z执行均值,BL-127,LPS+DFX,1.326,执行臂 panel z 均值
+W1_miniMDI,BL-128,Control,0.012,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-128,Control,-0.346,上游臂 panel z 均值
+W1_z执行均值,BL-128,Control,-0.334,执行臂 panel z 均值
+W1_miniMDI,BL-129,DFX,0.601,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-129,DFX,-0.175,上游臂 panel z 均值
+W1_z执行均值,BL-129,DFX,0.426,执行臂 panel z 均值
+W1_miniMDI,BL-130,LPS,4.048,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-130,LPS,-1.636,上游臂 panel z 均值
+W1_z执行均值,BL-130,LPS,2.412,执行臂 panel z 均值
+W1_miniMDI,BL-131,LPS+DFX,3.063,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-131,LPS+DFX,-1.320,上游臂 panel z 均值
+W1_z执行均值,BL-131,LPS+DFX,1.743,执行臂 panel z 均值
+W1_miniMDI,BL-132,Control,-0.105,mini-MDI（z差 = z执行 − z上游）
+W1_z上游均值,BL-132,Control,0.047,上游臂 panel z 均值
+W1_z执行均值,BL-132,Control,-0.058,执行臂 panel z 均值
+W1_BALF_IL1B,W1-01,Control,16.3,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-02,LPS+DFX,538.5,BALF IL-1β 浓度 (pg/mL)；稀释2×
+W1_BALF_IL1B,W1-03,LPS,925.7,BALF IL-1β 浓度 (pg/mL)；稀释5×
+W1_BALF_IL1B,W1-04,DFX,21.1,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-05,Control,10.7,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-06,LPS,1254.2,BALF IL-1β 浓度 (pg/mL)；稀释5×
+W1_BALF_IL1B,W1-07,DFX,13.7,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-08,LPS+DFX,421.8,BALF IL-1β 浓度 (pg/mL)；稀释2×
+W1_BALF_IL1B,W1-09,LPS,1760.0,BALF IL-1β 浓度 (pg/mL)；漏稀释（原液直测）：OD 3.420 超标准曲线上限(S8=2.653)，外推定量，未重测
+W1_BALF_IL1B,W1-10,Control,12.7,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-11,DFX,19.7,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-12,LPS+DFX,358.0,BALF IL-1β 浓度 (pg/mL)；稀释2×
+W1_BALF_IL1B,W1-13,Control,13.0,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-14,LPS,1038.0,BALF IL-1β 浓度 (pg/mL)；稀释5×
+W1_BALF_IL1B,W1-15,LPS+DFX,367.8,BALF IL-1β 浓度 (pg/mL)；稀释2×
+W1_BALF_IL1B,W1-16,DFX,18.7,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-17,LPS+DFX,465.2,BALF IL-1β 浓度 (pg/mL)；稀释2×
+W1_BALF_IL1B,W1-18,DFX,16.0,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-19,Control,8.2,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-20,LPS,1323.7,BALF IL-1β 浓度 (pg/mL)；稀释5×
+W1_BALF_IL1B,W1-21,LPS+DFX,545.9,BALF IL-1β 浓度 (pg/mL)；稀释2×
+W1_BALF_IL1B,W1-22,DFX,12.9,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-23,Control,13.1,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-24,LPS,1507.4,BALF IL-1β 浓度 (pg/mL)；稀释5×
+W1_BALF_IL1B,W1-25,DFX,14.6,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-26,LPS,1258.1,BALF IL-1β 浓度 (pg/mL)；稀释5×
+W1_BALF_IL1B,W1-27,LPS+DFX,488.8,BALF IL-1β 浓度 (pg/mL)；稀释2×
+W1_BALF_IL1B,W1-28,Control,13.0,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-29,DFX,18.0,BALF IL-1β 浓度 (pg/mL)
+W1_BALF_IL1B,W1-30,LPS,1785.0,BALF IL-1β 浓度 (pg/mL)；稀释5×
+W1_BALF_IL1B,W1-31,LPS+DFX,554.4,BALF IL-1β 浓度 (pg/mL)；稀释2×
+W1_BALF_IL1B,W1-32,Control,15.4,BALF IL-1β 浓度 (pg/mL)

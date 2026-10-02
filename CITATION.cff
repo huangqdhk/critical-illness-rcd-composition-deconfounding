@@ -5,8 +5,8 @@ authors:
   - family: Huang
     given: Yurong
     affiliation: Hainan General Hospital; Hainan Affiliated Hospital of Hainan Medical University
-version: 1.0.0
-date-released: "2026-09-08"
+version: 1.0.1
+date-released: "2026-10-02"
 license: MIT
 keywords:
   - ARDS

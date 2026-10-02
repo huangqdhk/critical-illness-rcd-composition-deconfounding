@@ -1,0 +1,168 @@
+﻿ms_figure,ms_panel,pkg_panel,csv_relpath,role,ms_title,suggested_plot,panel_content,pkg_source_file
+Figure_1,1A,Figure_1A,Main/Figure_1A.csv,main,"Study design, cohort flow, and the 80-gene pathway framework",CONSORT式流程图/桑基图,924样本×8数据集逐行登记(GSM→样本→条件),SAMPLE_MANIFEST_v1.0.csv
+Figure_1,1B,Figure_1B,Main/Figure_1B.csv,main,"Study design, cohort flow, and the 80-gene pathway framework",堆叠条形图,GSE185263全血队列392例分组(44对照/266脓毒症/82 Sepsis_COVID),GSE185263_groups.csv
+Figure_1,1C,Figure_1C,Main/Figure_1C.csv,main,"Study design, cohort flow, and the 80-gene pathway framework",堆叠条形图,GSE32707外部验证队列144样本分组(d0/d7×对照/SIRS/脓毒症/ARDS),Table_S50_D1b_GSE32707_Groups.csv
+Figure_1,1D,Figure_1D,Main/Figure_1D.csv,main,"Study design, cohort flow, and the 80-gene pathway framework",通路框架示意图/旭日图,80基因×8模块×双臂(MAM 9/线粒体10/铁9/氧化11/死亡13/铜铁11/TF11/自噬6;上游30/执行33/调节17),Mitoxyperilysis_Gene_Manifest_v1.0.csv
+Figure_1,1E,Figure_1E,Main/Figure_1E.csv,main,"Study design, cohort flow, and the 80-gene pathway framework",堆叠条形图/旭日图,单细胞138941细胞×8主要类型组成(逐样本逐细胞类型计数),Table_S3_Cell_Type_Composition.csv
+Figure_1,1F,Figure_1F,Main/Figure_1F.csv,main,"Study design, cohort flow, and the 80-gene pathway framework",排序条形图/气泡热图,Mitoxyperilysis综合评分按细胞类型×状态(=正文表1数据源),Table_S1_Mitoxyperilysis_Score_by_CellType_Summary.csv
+Figure_2,2A,Figure_2A,Main/Figure_2A.csv,main,"Module-level dissociation, cross-platform reproducibility, and GSE32707 external validation",分臂箱线/脊线图,双臂bulk log2FC(上游30基因mean −0.83/仅10%上调;执行33基因+0.18/70%上调),Table_S2_DEGs_Analysis.csv
+Figure_2,2B,Figure_2B,Main/Figure_2B.csv,main,"Module-level dissociation, cross-platform reproducibility, and GSE32707 external validation",双向条形图(按arm着色),模块ssGSEA谱(上游3模块Δz全负:−0.90/−0.86/−0.84;执行3模块全正:+1.59/+0.56/+0.54),Table_S5b_Mitoxy_80gene_Module_ssGSEA.csv
+Figure_2,2C,Figure_2C,Main/Figure_2C.csv,main,"Module-level dissociation, cross-platform reproducibility, and GSE32707 external validation",分面散点/森林图(ρ+CI),单细胞解离检验(全体ρ=−0.116→mt回归+0.01→去MT* +0.079;分细胞类型|ρ|≤0.10),Table_S48_Dissociation_singlecell_correlation.csv
+Figure_2,2D,Figure_2D,Main/Figure_2D.csv,main,"Module-level dissociation, cross-platform reproducibility, and GSE32707 external validation",分组箱线/小提琴图,6种PCD逐样本z评分(Cuproptosis +0.95/Pyroptosis +0.77/Apoptosis −1.41;复合分Δz=−0.44 p=2.9e-3),Table_S5_PCD_Scores.csv
+Figure_2,2E,Figure_3A,Main/Figure_3A.csv,main,"Module-level dissociation, cross-platform reproducibility, and GSE32707 external validation",模块热图(基因×平台),单细胞80基因DEG(BALF/PBMC/合并三口径Δ与BH),Table_S2b_scRNA_DEG_80genes.csv
+Figure_2,2F,Figure_3B,Main/Figure_3B.csv,main,"Module-level dissociation, cross-platform reproducibility, and GSE32707 external validation",火山图,Bulk火山图底表(全基因+通路基因高亮;MT-ATP8 log2FC=−2.74全通路最甚),Table_S2_DEGs_Analysis.csv
+Figure_2,2G,Figure_3C,Main/Figure_3C.csv,main,"Module-level dissociation, cross-platform reproducibility, and GSE32707 external validation",方向一致性热图/UpSet,三平台Fisher Meta(33共识基因:20下调/13上调),Table_S8b_80gene_ThreePlatform_Meta.csv
+Figure_2,2H,Figure_3E,Main/Figure_3E.csv,main,"Module-level dissociation, cross-platform reproducibility, and GSE32707 external validation",森林图(Δz+bootstrap CI),D1b外部验证模块Δz(A1线粒体模块Δz=−1.00 q=0.021;8模块全负),Table_S51_D1b_GSE32707_Module_ssGSEA.csv
+Figure_3,3A,Figure_4A,Main/Figure_4A.csv,main,Five orthogonal lines of evidence converge on the MAM-iron node,分组条形图(按module聚合convergence),模块级五维收敛得分(铁0.473/MAM 0.443 vs 执行0.207),Bridge_Test_Result.csv
+Figure_3,3B,Figure_4B,Main/Figure_4B.csv,main,Five orthogonal lines of evidence converge on the MAM-iron node,棒棒糖图/点图,基因级收敛得分排序(CANX/SLC40A1 0.681居首),Bridge_Test_Result.csv
+Figure_3,3C,Figure_4C,Main/Figure_4C.csv,main,Five orthogonal lines of evidence converge on the MAM-iron node,散点(pLI×LOEUF)/热图,16基因pLI/LOEUF/Missense_Z逐基因约束(ITPR1 pLI=1.00),Table_S40_gnomAD_Constraint_Publication.csv
+Figure_3,3D,Figure_4D,Main/Figure_4D.csv,main,Five orthogonal lines of evidence converge on the MAM-iron node,分层条形图(pLI×LOEUF),gnomAD约束分层(Tier 3 MAM钙轴平均pLI=0.93/LOEUF=0.31;为凋亡执行者层级pLI=0.11的8.5倍),Table_S40_gnomAD_Constraint_Summary.csv
+Figure_3,3E,Figure_4E,Main/Figure_4E.csv,main,Five orthogonal lines of evidence converge on the MAM-iron node,2026-09-05 首排:Figure_2E→Figure_4E；分模块条形图/点图,AlphaMissense预测错义变体有害性逐基因(MAM模块居首;TOMM20均值0.7024为唯一过「可能致病」阈值基因;10 614个预测有害错义变异),Table_S18_AlphaMissense_Main.csv
+Figure_3,3F,Figure_4F,Main/Figure_4F.csv,main,Five orthogonal lines of evidence converge on the MAM-iron node,富集点图(-log10padj×Overlap),上游TF超几何富集(NFE2L2 padj=2.57e-7居首/BACH1第3),Table_S12b_Mitoxyperilysis_Upstream_TF.csv
+Figure_3,3G,Figure_4G,Main/Figure_4G.csv,main,Five orthogonal lines of evidence converge on the MAM-iron node,分级散点/条形图,FinnGen ARDS逐基因GWAS证据分级(PRDX3 Bonferroni通过/TFRC Suggestive),Table_S19c_Mitoxy_Gene_GWAS_Detail.csv
+Figure_3,3H,Figure_4H,Main/Figure_4H.csv,main,Five orthogonal lines of evidence converge on the MAM-iron node,双向条形图,GRN组合影响评分CIS(MYC +3.87/NFE2L2 −0.747),Table_S20c_TF_Perturbation_Impact.csv
+Figure_4,4A,Figure_5A,Main/Figure_5A.csv,main,Clinical and biochemical boundaries of the dissociated state,分面箱线/小提琴图(按cohort×group×score),六队列4888样本UCS/EIS/MDI逐组分布统计(n/mean/sd/median/q25/q75),Table_S56_M2_PerSample_Scores.csv
+Figure_4,4B,Figure_5B,Main/Figure_5B.csv,main,Clinical and biochemical boundaries of the dissociated state,森林图(g±1.96SE含合并行),跨队列meta森林图数据(MDI合并g=+1.85 p=0.005;UCS g=-0.96;EIS g=+0.85),Table_S57_M2_CrossDisease_Contrasts_Meta.csv
+Figure_4,4C,Figure_5C,Main/Figure_5C.csv,main,Clinical and biochemical boundaries of the dissociated state,森林图/柱状图(死亡率×四分位),结局关联(脓毒症28天OR=1.063 p=0.218;Cox HR=0.933;CAP OR=1.030 p=0.918;四分位Q4 OR=1.40 p=0.016),Table_S58_M2_Outcome_Association.csv
+Figure_4,4D,Figure_5D,Main/Figure_5D.csv,main,Clinical and biochemical boundaries of the dissociated state,点线图(模型×AUC),增量价值(基线AUC 0.6370→+MDI 0.6371;ΔAUC=+0.0001;IDI<0.001;NRI=-0.007),Table_S58_M2_Outcome_Association.csv
+Figure_4,4E,Figure_5E,Main/Figure_5E.csv,main,Clinical and biochemical boundaries of the dissociated state,象限散点+结局热图,UCS/EIS四象限内型(分布/IGP 0.81-0.96/结局梯度),Table_S56_M2_PerSample_Scores.csv
+Figure_4,4F,Figure_5F,Main/Figure_5F.csv,main,Clinical and biochemical boundaries of the dissociated state,双向散点/方向一致热图,蛋白-转录双口径方向一致(全血33%/BALF 49%;上游臂蛋白反向升高),Table_S59a_M4_Protein_Transcript_Consistency.csv
+Figure_4,4G,Figure_5G,Main/Figure_5G.csv,main,Clinical and biochemical boundaries of the dissociated state,C/N比值条形图(带显著性),"尸检肺铁轴蛋白定量(TFRC/HMOX1/FTH1/FTL/SLC40A1/SLC25A28↑,NQO1↓)",Table_S59b_M4_Lung_Iron_Axis_Proteins.csv
+Figure_4,4H,Figure_5H,Main/Figure_5H.csv,main,Clinical and biochemical boundaries of the dissociated state,类别偏移条形图,血清脂质类别占比 SEVERE vs MILD(无显著类别;CE名义p=0.043),Table_S59c_M4_Lipid_Class_Shift.csv
+Figure_4,4I,Figure_5I,Main/Figure_5I.csv,main,Clinical and biochemical boundaries of the dissociated state,火山图/森林图,GEM容量组间比较(38反应无一BH<0.05;铁失衡p=0.34),Table_S60_M4_GEM_Flux_Comparison.csv
+Figure_4,4J,Figure_5J,Main/Figure_5J.csv,main,Clinical and biochemical boundaries of the dissociated state,条形图(逐臂定位占比),80基因UniProt人源(organism_id:9606)亚细胞定位核验(上游臂26/30具线粒体/ER注释vs执行臂13/33;例外MTF1/NADK/NCOA4/SLC7A11),Table_S59e_M4_Subcellular_Annotation.csv
+Figure_5,5A,Figure_6A,Main/Figure_6A.csv,main,"Statistical-unit recomputation, composition audit, and perturbation triangulation",森林图(g±1.96SE含合并行),来源互斥meta k=16数据集层森林图数据(REML+Hartung-Knapp:UCS g=−0.94/EIS g=+1.02/MDI g=+1.50/MDI_nomt g=+1.49;LOSO全部方向稳定),_intermediate/P0_meta_pooled.csv
+Figure_5,5B,Figure_6D,Main/Figure_6D.csv,main,"Statistical-unit recomputation, composition audit, and perturbation triangulation",折线/条形图(逐次方向保持与FDR),实验锚定签名IIAMD v1.0稳定性(LORO 12次方向保持100%;FDR保持93.0-95.6%→STABLE)与随机匹配基因集检验(500次三项统计量单侧p=0.002),_intermediate/P1_loro_summary.csv
+Figure_5,5C,Figure_6E,Main/Figure_6E.csv,main,"Statistical-unit recomputation, composition audit, and perturbation triangulation",双面板条形图(7竞争面板×2层),人类迁移头对头bulk两层(GSE32707真ARDS:IIAMD_up g=−0.65未调整q=0.123/髓系组成调整OLS p=0.0128;GSE185263发现层g=−1.98调整后p=0.499),_intermediate/P2_gate2_scores_GSE32707.csv
+Figure_5,5D,Figure_6F,Main/Figure_6F.csv,main,"Statistical-unit recomputation, composition audit, and perturbation triangulation",热图(细胞类型×评分×q),scRNA供者级定位(7合格细胞类型×3评分全部q≥0.235;无髓系定位),_intermediate/P2_gate2_scRNA_localization.csv
+Figure_5,5E,Figure_7A,Main/Figure_7A.csv,main,"Statistical-unit recomputation, composition audit, and perturbation triangulation",条形图/散点,检验A 组成预测逐队列 R²（Monaco|NNLS 主口径+四套口径）,_intermediate/M10A_r2_comparison.csv
+Figure_5,5F,Figure_7B,Main/Figure_7B.csv,main,"Statistical-unit recomputation, composition audit, and perturbation triangulation",森林图,残差 MDI k=16 层效应+合并（观测锚点 g=+1.504 vs 残差 g=+0.588）,_intermediate/M10A_residual_layer_effects.csv
+Figure_5,5G,Figure_7C,Main/Figure_7C.csv,main,"Statistical-unit recomputation, composition audit, and perturbation triangulation",森林图,检验B 髓系 UCS 层效应（4 队列单核/巨噬+中性粒对照）+合并,_intermediate/M10B_myeloid_UCS_layers.csv
+Figure_5,5H,Figure_7D,Main/Figure_7D.csv,main,"Statistical-unit recomputation, composition audit, and perturbation triangulation",散点图,249 签名混淆度目录（g ~ 执行臂占比/髓系基因占比）,_intermediate/M13_catalog.csv
+Figure_5,5I,Figure_7F,Main/Figure_7F.csv,main,"Statistical-unit recomputation, composition audit, and perturbation triangulation",直方图+观测线,"Torin 方向逆转率 vs baseMean 匹配零分布（B=2,000）",_intermediate/M14_Torin_reversal_permutation.csv
+Figure_6,6A,Figure_8A,Main/Figure_8A.csv,main,Temporal ordering and intervention response,单侧β1<0；GSE215865 −0.344/GSE54514 −0.734/GSE148871 +0.019；合并−0.280[−1.159,H1 主检验1逐队列β1_std（基线UCS→随访EIS，患者随机截距混合模型）+REML/HK合并 森林图,_intermediate/M11M12_step2_h1_cohort.csv
+Figure_6,6B,Figure_8B,Main/Figure_8B.csv,main,Temporal ordering and intervention response,单侧βL<0；3/3负向；合并−0.137[−0.360,H2 主检验2 RI-CLPM滞后交叉路径β_L（UCS(t−1)→EIS(t)）逐队列+合并 森林图,_intermediate/M11M12_step2_h2_cohort.csv
+Figure_6,6C,Figure_8C,Main/Figure_8C.csv,main,Temporal ordering and intervention response,直方图/点图,零模型（表达量匹配随机集B=10000）与敏感性（GSE212865两波、GSE54514作者中性粒）,_intermediate/M11M12_step2_zero_h1.csv
+Figure_6,6D,Figure_8D,Main/Figure_8D.csv,main,Temporal ordering and intervention response,条形图,LOSO方向一致性（队列内leave-one-subject-out + meta leave-one-cohort-out）,_intermediate/M11M12_step2_h1_loso_subject.csv
+Figure_6,6E,Figure_8E,Main/Figure_8E.csv,main,Temporal ordering and intervention response,点图/条形图,GSE106878 d_res臂间MWU（单侧less）与组内Wilcoxon（单侧）+BH族,_intermediate/M11M12_step3_gse106878_arm_tests.csv
+Figure_6,6F,Figure_8F,Main/Figure_8F.csv,main,Temporal ordering and intervention response,双面板条形图,强制组成同报（ΔNeut/ΔMono逐臂）+H4描述（ΔMDI_obs vs ΔMDI_comp）,_intermediate/M11M12_step3_composition_coreport.csv
+Figure_6,6G,Figure_8G,Main/Figure_8G.csv,main,Temporal ordering and intervention response,点图/条形图,GSE148871 NEMI臂复现层：d_obs锚点（−0.489 p=0.0045）vs d_res（+0.031 2026-09-05 首排:Figure_9C→Figure_8G；p=0.707）与归因,_intermediate/M11M12_step3_gse148871_replication.csv
+Figure_7,7A,Figure_9A,Main/Figure_9A.csv,main,Generalization: the released mitoxdi instrument and the mechanical-force boundary,分族对比条形+散点(观测~预测),应用演示1 GSE157103(COVID全血126例):观测vs组成预测vs残差逐族对比;MDI R2=0.809;观测MDI g=-0.212无疾病升高,Table_S85_M15_Demo_GSE157103_PerSample.csv(+S85b/S85c/S85d)
+Figure_7,7B,Figure_9B,Main/Figure_9B.csv,main,Generalization: the released mitoxdi instrument and the mechanical-force boundary,分族对比条形+比例漂移,应用演示2 GSE66099(儿科276例):脓毒性休克MDI g=+2.172→组成预测+2.395→残差+0.261(88%衰减);R2=0.817;中性粒0.200→0.340,Table_S86_M15_Demo_GSE66099_PerSample.csv(+S86b/S86c/S86d)
+Figure_7,7C,Figure_9C,Main/Figure_9C.csv,main,Generalization: the released mitoxdi instrument and the mechanical-force boundary,逐队列通过矩阵/偏差条形,"mitoxdi 11队列内部回归:254/254族级检查通过,最大|Δ|=3.77e-13(机器精度)",Table_S84_M15_RegressionTest_11Cohorts.csv(+S84b)
+Figure_7,7D,Figure_9D,Main/Figure_9D.csv,main,Generalization: the released mitoxdi instrument and the mechanical-force boundary,分面森林图(数据集×评分),VILI同口径重算:四套小鼠全肺数据集通气vs对照UCS/EIS/MDI/mech的g±推断(BH=16)+REML/HK合并行(UCS g=+0.24反向;判据A阴性),Table_S89_M16_VILI_Contrasts.csv
+Figure_7,7E,Figure_9E,Main/Figure_9E.csv,main,Generalization: the released mitoxdi instrument and the mechanical-force boundary,四组箱线+互作系数图,"GSE2411 2x2析因:四组评分均值+互作beta3(MDI +0.219,p=0.090未达;mech -0.384,p=0.032)+直接对比(MV+LPS vs LPS EIS g=+1.80,p=0.008;rhPBEF单用MDI g=+14.17)",Table_S90_M16_GSE2411_Interaction.csv
+Figure_7,7F,Figure_9F,Main/Figure_9F.csv,main,Generalization: the released mitoxdi instrument and the mechanical-force boundary,相关热图/散点,人体桥接+空间:GSE185263/GSE212865 mech×UCS/EIS/MDI Spearman±组成调整;GSE158055单核供者级;23切片Visium mech×双臂双变量Moran(上游z=+5.27/执行z=-4.43),Table_S91_M16_Bridge_Correlations.csv
+Figure_S2,S2A,Figure_2E,Main/Figure_2E.csv,supplementary_demoted,Method-dependence and external-validation supplements,点线图(方法×Δz±boot95),复合评分方法依赖性(β=0.25/0.75/1.0:Δz=−0.44/−0.10/−0.01;均值锚点−0.98;gseapy +1.07弃用),Table_S5c_Mitoxyperilysis_sensitivity.csv
+Figure_S2,S2B,Figure_2F,Main/Figure_2F.csv,supplementary_demoted,Method-dependence and external-validation supplements,按arm分面条形图,D1b双臂判别(上游半签名复现;执行臂3模块Δz亦全负未复现),Table_S51_D1b_GSE32707_Module_ssGSEA.csv
+Figure_S2,S2C,Figure_3D,Main/Figure_3D.csv,supplementary_demoted,Method-dependence and external-validation supplements,森林图(log2FC±CI),"同队列独立口径t检验+FDR(Sepsis_vs_Control 25/30=83.3% FDR<0.05;COVID19_vs_Control 26/30=86.7% —— 两臂并列,图面印的是Sepsis臂)",Table_S46a_Circulating_Mitoxy_Genes_GSE185263.csv
+Figure_S2,S2D,Figure_3F,Main/Figure_3F.csv,supplementary_demoted,Method-dependence and external-validation supplements,火山图(log2FC×−log10 BH_q),GSE32707逐基因火山(A1;14基因BH q<0.05;IP3R1/VDAC1/TOMM20显著;GSDMB唯一显著上调),Table_S52_D1b_GSE32707_Gene_log2FC.csv
+Figure_S2,S2E,Figure_3G,Main/Figure_3G.csv,supplementary_demoted,Method-dependence and external-validation supplements,两两散点+符号一致率,三锚点一致性(GSE32707×GSE185263 ρ=+0.477;×GSE212865 ρ=−0.282),Table_S53_D1b_Three_Anchor_Consistency.csv
+Figure_S2,S2F,Figure_3H,Main/Figure_3H.csv,supplementary_demoted,Method-dependence and external-validation supplements,折线/点图(敏感性×Δz),D1b敏感性(β三档Δz=−0.90/−0.92/−0.93;对照塌陷34→22),Table_S54_D1b_GSE32707_Sensitivity.csv
+Figure_S10,S10A,Figure_6B,Main/Figure_6B.csv,supplementary_demoted,Statistical-unit and compartment supplements,逐患者点图(Moran's I×置换p),CosMx患者级统计(18 Case逐患者炎症小体模块Moran's I与置换p;Case均值+0.0228;Wilcoxon符号秩p=5.3e-5),_intermediate/P0_cosmx_patient_level_moran.csv
+Figure_S10,S10B,Figure_6C,Main/Figure_6C.csv,supplementary_demoted,Statistical-unit and compartment supplements,直方图(零分布+观测值),"CosMx患者阻断置换汇总(每Case内打乱999次;患者级p<0.002=2/(999+1),源表计数为0/999)与Wilcoxon符号秩检验(18例P=5.3e-05)",_intermediate/P0_cosmx_patient_level_permutation.csv
+Figure_S10,S10C,Figure_7G,Main/Figure_7G.csv,supplementary_demoted,Statistical-unit and compartment supplements,条形图/点图,区室对照（痰/血、TA/PBMC、BALF/PBMC）,_intermediate/M10C_sputum_blood.csv
+Figure_S10,S10D,Figure_7E,Main/Figure_7E.csv,supplementary_demoted,Statistical-unit and compartment supplements,森林图/条形图,IIAMD core Gate 2 三层头对头（GSE32707/GSE185263/scRNA 供者级）,_intermediate/M14_gate2_core_scores_GSE32707.csv
+Figure_S10,S10E,Figure_7E,Main/Figure_7E.csv,supplementary_demoted,Statistical-unit and compartment supplements,森林图/条形图,IIAMD core Gate 2 三层头对头（GSE32707/GSE185263/scRNA 供者级）,_intermediate/M14_gate2_core_scores_GSE32707.csv
+Figure_S1,S1A,Figure_S1A,Supplementary/Figure_S1A.csv,supplementary,,,,
+Figure_S1,S1B,Figure_S1B,Supplementary/Figure_S1B.csv,supplementary,,,,
+Figure_S1,S1C,Figure_S1C,Supplementary/Figure_S1C.csv,supplementary,,,,
+Figure_S1,S1D,Figure_S1D,Supplementary/Figure_S1D.csv,supplementary,,,,
+Figure_S1,S1E,Figure_S1E,Supplementary/Figure_S1E.csv,supplementary,,,,
+Figure_S3,S3A,Figure_S2A,Supplementary/Figure_S2A.csv,supplementary,,,,
+Figure_S3,S3B,Figure_S2B,Supplementary/Figure_S2B.csv,supplementary,,,,
+Figure_S3,S3C,Figure_S2C,Supplementary/Figure_S2C.csv,supplementary,,,,
+Figure_S3,S3D,Figure_S2D,Supplementary/Figure_S2D.csv,supplementary,,,,
+Figure_S3,S3E,Figure_S2E,Supplementary/Figure_S2E.csv,supplementary,,,,
+Figure_S3,S3F,Figure_S2F,Supplementary/Figure_S2F.csv,supplementary,,,,
+Figure_S3,S3G,Figure_S2G,Supplementary/Figure_S2G.csv,supplementary,,,,
+Figure_S4,S4A,Figure_S3A,Supplementary/Figure_S3A.csv,supplementary,,,,
+Figure_S4,S4B,Figure_S3B,Supplementary/Figure_S3B.csv,supplementary,,,,
+Figure_S4,S4C,Figure_S3C,Supplementary/Figure_S3C.csv,supplementary,,,,
+Figure_S4,S4D,Figure_S3D,Supplementary/Figure_S3D.csv,supplementary,,,,
+Figure_S4,S4E,Figure_S3E,Supplementary/Figure_S3E.csv,supplementary,,,,
+Figure_S4,S4F,Figure_S3F,Supplementary/Figure_S3F.csv,supplementary,,,,
+Figure_S4,S4G,Figure_S3G,Supplementary/Figure_S3G.csv,supplementary,,,,
+Figure_S4,S4H,Figure_S3H,Supplementary/Figure_S3H.csv,supplementary,,,,
+Figure_S4,S4I,Figure_S3I,Supplementary/Figure_S3I.csv,supplementary,,,,
+Figure_S4,S4J,Figure_S3J,Supplementary/Figure_S3J.csv,supplementary,,,,
+Figure_S5,S5A,Figure_S4A,Supplementary/Figure_S4A.csv,supplementary,,,,
+Figure_S5,S5B,Figure_S4B,Supplementary/Figure_S4B.csv,supplementary,,,,
+Figure_S5,S5C,Figure_S4C,Supplementary/Figure_S4C.csv,supplementary,,,,
+Figure_S5,S5D,Figure_S4D,Supplementary/Figure_S4D.csv,supplementary,,,,
+Figure_S5,S5E,Figure_S4E,Supplementary/Figure_S4E.csv,supplementary,,,,
+Figure_S6,S6A,Figure_S5A,Supplementary/Figure_S5A.csv,supplementary,,,,
+Figure_S6,S6B,Figure_S5B,Supplementary/Figure_S5B.csv,supplementary,,,,
+Figure_S6,S6C,Figure_S5C,Supplementary/Figure_S5C.csv,supplementary,,,,
+Figure_S6,S6D,Figure_S5D,Supplementary/Figure_S5D.csv,supplementary,,,,
+Figure_S6,S6E,Figure_S5E,Supplementary/Figure_S5E.csv,supplementary,,,,
+Figure_S6,S6F,Figure_S5F,Supplementary/Figure_S5F.csv,supplementary,,,,
+Figure_S6,S6G,Figure_S5G,Supplementary/Figure_S5G.csv,supplementary,,,,
+Figure_S6,S6H,Figure_S5H,Supplementary/Figure_S5H.csv,supplementary,,,,
+Figure_S6,S6I,Figure_S5I,Supplementary/Figure_S5I.csv,supplementary,,,,
+Figure_S7,S7A,Figure_S6A,Supplementary/Figure_S6A.csv,supplementary,,,,
+Figure_S7,S7B,Figure_S6B,Supplementary/Figure_S6B.csv,supplementary,,,,
+Figure_S7,S7C,Figure_S6C,Supplementary/Figure_S6C.csv,supplementary,,,,
+Figure_S7,S7D,Figure_S6D,Supplementary/Figure_S6D.csv,supplementary,,,,
+Figure_S7,S7E,Figure_S6E,Supplementary/Figure_S6E.csv,supplementary,,,,
+Figure_S7,S7F,Figure_S6F,Supplementary/Figure_S6F.csv,supplementary,,,,
+Figure_S7,S7G,Figure_S6G,Supplementary/Figure_S6G.csv,supplementary,,,,
+Figure_S7,S7H,Figure_S6H,Supplementary/Figure_S6H.csv,supplementary,,,,
+Figure_S7,S7I,Figure_S6I,Supplementary/Figure_S6I.csv,supplementary,,,,
+Figure_S8,S8A,Figure_S7A,Supplementary/Figure_S7A.csv,supplementary,,,,
+Figure_S8,S8B,Figure_S7B,Supplementary/Figure_S7B.csv,supplementary,,,,
+Figure_S8,S8C,Figure_S7C,Supplementary/Figure_S7C.csv,supplementary,,,,
+Figure_S8,S8D,Figure_S7D,Supplementary/Figure_S7D.csv,supplementary,,,,
+Figure_S8,S8E,Figure_S7E,Supplementary/Figure_S7E.csv,supplementary,,,,
+Figure_S8,S8F,Figure_S7F,Supplementary/Figure_S7F.csv,supplementary,,,,
+Figure_S8,S8G,Figure_S7G,Supplementary/Figure_S7G.csv,supplementary,,,,
+Figure_S9,S9A,Figure_S8A,Supplementary/Figure_S8A.csv,supplementary,,,,
+Figure_S9,S9B,Figure_S8B,Supplementary/Figure_S8B.csv,supplementary,,,,
+Figure_S9,S9C,Figure_S8C,Supplementary/Figure_S8C.csv,supplementary,,,,
+Figure_S9,S9D,Figure_S8D,Supplementary/Figure_S8D.csv,supplementary,,,,
+Figure_S9,S9E,Figure_S8E,Supplementary/Figure_S8E.csv,supplementary,,,,
+Figure_S9,S9F,Figure_S8F,Supplementary/Figure_S8F.csv,supplementary,,,,
+Figure_S11,S11A,Figure_S9A,Supplementary/Figure_S9A.csv,supplementary,,,,
+Figure_S11,S11B,Figure_S9B,Supplementary/Figure_S9B.csv,supplementary,,,,
+Figure_S11,S11C,Figure_S9C,Supplementary/Figure_S9C.csv,supplementary,,,,
+Figure_S11,S11D,Figure_S9D,Supplementary/Figure_S9D.csv,supplementary,,,,
+Figure_S11,S11E,Figure_S9E,Supplementary/Figure_S9E.csv,supplementary,,,,
+Figure_S11,S11F,Figure_S9F,Supplementary/Figure_S9F.csv,supplementary,,,,
+Figure_S11,S11G,Figure_S9H,Supplementary/Figure_S9H.csv,supplementary,,,,
+Figure_S12,S12A,Figure_S10A,Supplementary/Figure_S10A.csv,supplementary,,,,
+Figure_S12,S12B,Figure_S10B,Supplementary/Figure_S10B.csv,supplementary,,,,
+Figure_S12,S12C,Figure_S10C,Supplementary/Figure_S10C.csv,supplementary,,,,
+Figure_S12,S12D,Figure_S10D,Supplementary/Figure_S10D.csv,supplementary,,,,
+Figure_S12,S12E,Figure_S10E,Supplementary/Figure_S10E.csv,supplementary,,,,
+Figure_S13,S13A,Figure_S11A,Supplementary/Figure_S11A.csv,supplementary,,,,
+Figure_S13,S13B,Figure_S11B,Supplementary/Figure_S11B.csv,supplementary,,,,
+Figure_S13,S13C,Figure_S11C,Supplementary/Figure_S11C.csv,supplementary,,,,
+Figure_S13,S13D,Figure_S11D,Supplementary/Figure_S11D.csv,supplementary,,,,
+Figure_S13,S13E,Figure_S11E,Supplementary/Figure_S11E.csv,supplementary,,,,
+Figure_S14,S14A,Figure_S12A,Supplementary/Figure_S12A.csv,supplementary,,,,
+Figure_S14,S14B,Figure_S12B,Supplementary/Figure_S12B.csv,supplementary,,,,
+Figure_S14,S14C,Figure_S12C,Supplementary/Figure_S12C.csv,supplementary,,,,
+Figure_S14,S14D,Figure_S12D,Supplementary/Figure_S12D.csv,supplementary,,,,
+Figure_S14,S14E,Figure_S12E,Supplementary/Figure_S12E.csv,supplementary,,,,
+Figure_S14,S14F,Figure_S12F,Supplementary/Figure_S12F.csv,supplementary,,,,
+Figure_S14,S14G,Figure_S12G,Supplementary/Figure_S12G.csv,supplementary,,,,
+Figure_S14,S14H,Figure_S12H,Supplementary/Figure_S12H.csv,supplementary,,,,
+Figure_8,a,Figure_8wA,Main/Figure_8wA.csv,main,Wet-lab validation of the two-arm dissociation,分组点阵 + 组均值（无误差棒：N<10）,W1 小鼠 LPS-ALI 肺组织 上游臂 8 基因 qPCR（CANX/HSPA9/ITPR1/MT-ATP6/MT-CO1/MT-ND1/TOMM20/VDAC1），4 组 × n=8,Figure_8A.csv
+Figure_8,b,Figure_8wB,Main/Figure_8wB.csv,main,Wet-lab validation of the two-arm dissociation,分组点阵 + 组均值,W1 执行臂 6 基因 qPCR（CASP1/CASP4/GSDMD/IL1B/NLRP3/PYCARD），4 组 × n=8,Figure_8B.csv
+Figure_8,c,Figure_8wC,Main/Figure_8wC.csv,main,Wet-lab validation of the two-arm dissociation,图像版（2 膜块）+ 横向点阵定量,W1 Western blot：5 靶蛋白（GSDMD-NT/HMOX1/GSDMD-FL/FTH1/TOMM20）靶/内参灰度与归一化倍数，n=3 膜/组；膜图取自 FTH1-TOMM20组图_01.tif 与 GSDMD-FL-HMOX1组图.tif（另有 5 个 *-统计.csv 提供 Tukey 结果，仅用于内部一致性门禁）,"Figure_8C.csv(+FTH1-TOMM20组图_01.tif, GSDMD-FL-HMOX1组图.tif)"
+Figure_8,d,Figure_8wD,Main/Figure_8wD.csv,main,Wet-lab validation of the two-arm dissociation,二维解离平面（散点；x=上游 z，y=执行 z，含无解离对角线） + mini-MDI 点阵,W1 复合解离指数 mini-MDI（= z执行 − z上游）与两臂逐样本 z 分数，4 组 × n=8（HERO 面板）,Figure_8D.csv
+Figure_8,e,Figure_8wD,Main/Figure_8wD.csv,main,Wet-lab validation of the two-arm dissociation,点阵（IL-1β 用 log10 轴并在图内标注）,W1 损伤读数：BALF IL-1β（Figure_8D.csv）、BALF LDH 与肺湿/干重比（Figure_8E.csv），4 组 × n=8,Figure_8D.csv; Figure_8E.csv
+Figure_8,f,Figure_8wF,Main/Figure_8wF.csv,main,Wet-lab validation of the two-arm dissociation,2×2 交互图（IL1B）+ 四点阵（BALF LDH）,W2 机械通气 × LPS 2×2：IL1B qPCR（n=8/组）与 BALF LDH（MV+LPS 组 n=7，缺 1 个样本）,Figure_8F.csv
+Figure_8,g,Figure_8wG,Main/Figure_8wG.csv,main,Wet-lab validation of the two-arm dissociation,横向多特征点阵（22 特征 × 3 臂）,W3 rhPBEF 气道滴注：20 基因 qPCR + BALF LDH/BCA，3 组 × n=8,Figure_8G.csv
+Figure_8,h,Figure_8wH,Main/Figure_8wH.csv,main,Wet-lab validation of the two-arm dissociation,发散热图（9 特征 × 4 臂，格内叠批次点 + 色标）,C3 THP-1 rhPBEF ± DFX：8 基因 qPCR + 上清 IL-1β ELISA；4 组 × 9 技术孔，独立重复单元为 3 个批次（图上 n=3）,Figure_8H.csv
+Figure_S15,S15A,S15A,Supplementary/Figure_S15A.csv,supplementary,"W1 mouse lung: iron-axis, injury and dissociation readouts",箱线 + 个体点（箱 = IQR、线 = 中位、短横 = 均值）,W1 小鼠 BALF 总蛋白（BCA），4 组 × n=8,Figure_S15A.csv
+Figure_S15,S15B,S15B,Supplementary/Figure_S15B.csv,supplementary,"W1 mouse lung: iron-axis, injury and dissociation readouts",经验累积分布曲线（每组一条台阶曲线 + 中位数）,W1 血清铁蛋白（ELISA，ng/mL；16/32 样本 2× 稀释）,Figure_S15B.csv
+Figure_S15,S15C,S15C,Supplementary/Figure_S15C.csv,supplementary,"W1 mouse lung: iron-axis, injury and dissociation readouts",离散取值点直方图（读数只取 15 个档位，逐点堆叠）,W1 肺组织总铁（比色法，μmol/g 湿重；G3 缺 1 例，n=7）,Figure_S15C.csv
+Figure_S15,S15D,S15D,Supplementary/Figure_S15D.csv,supplementary,"W1 mouse lung: iron-axis, injury and dissociation readouts",双读数点阵条（IL-1β 用 log10 轴），共享组轴,W1 血清 IL-1β（pg/mL）与血清 LDH（U/L），同一批 32 只,Figure_S15D.csv
+Figure_S15,S15E,S15F,Supplementary/Figure_S15F.csv,supplementary,"W1 mouse lung: iron-axis, injury and dissociation readouts",基因 × 个体点阵（列 = 每只小鼠，色 = log2 倍数，右侧四组均值）,W1 肺 铁轴 6 基因 qPCR（HMOX1/FTH1/FTL/TFRC/SLC40A1/NQO1；样本号 BL-1xx，与 Figure 8 同一批动物）,Figure_S15F.csv
+Figure_S16,S16A,S16A,Supplementary/Figure_S16A.csv,supplementary,Cell-line validation of the two-arm dissociation,转置分组条形（条件为行、基因为列，两细胞型并排共用 y 轴）,C1 THP-1 与 BMDM 7 基因 qPCR（C0/L6/L24/L24D；T = THP-1、M = BMDM）,Figure_S16A.csv
+Figure_S16,S16B,S16B,Supplementary/Figure_S16B.csv,supplementary,Cell-line validation of the two-arm dissociation,平行坐标折线（细线 = 各批次，粗线 = 批次均值几何）,C1 批次配对 2^−ΔΔCq（3 批次 × 4 条件 × 7 基因）,Figure_S16B.csv
+Figure_S16,S16C,S16C,Supplementary/Figure_S16C.csv,supplementary,Cell-line validation of the two-arm dissociation,三读数点阵条（按批次的标记形状；IL-1β log10 轴）,C1 THP-1 上清 IL-1β / LDH / CCK-8（4 条件 × 9 孔）,Figure_S16C.csv
+Figure_S16,S16D,S16D,Supplementary/Figure_S16D.csv,supplementary,Cell-line validation of the two-arm dissociation,2×2 交互图（x = 牵张，两条线 = 有无 LPS）,C2 MLE-12 牵张 × LPS 上清 IL-1β / LDH / CCK-8（2×2 析因 × 9 孔）,Figure_S16D.csv
+Figure_S16,S16E,S16E,Supplementary/Figure_S16E.csv,supplementary,Cell-line validation of the two-arm dissociation,log2 倍数森林图 + 左侧臂色带（S2/S3/S4 三标记）,C2 MLE-12 20 基因 qPCR（8 上游 + 6 执行 + 6 力学转导；S1–S4）,Figure_S16E.csv
+Figure_S16,S16F,S16F,Supplementary/Figure_S16F.csv,supplementary,Cell-line validation of the two-arm dissociation,双读数散点（损伤-活力关系 + 组均值路径箭头）,C3 THP-1 LDH（倍数）与 CCK-8 活力（%，D1–D4）,Figure_S16F.csv

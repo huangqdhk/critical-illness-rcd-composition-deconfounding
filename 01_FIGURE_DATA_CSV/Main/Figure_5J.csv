@@ -1,0 +1,81 @@
+gene,arm,uniprot,subcellular,is_mito_er,subcellular_raw,gene_set_version,score_version
+CALR,upstream_collapse,P27797,内质网+胞质+核+分泌,是,"SUBCELLULAR LOCATION: Endoplasmic reticulum lumen {ECO:0000269|PubMed:10358038, ECO:0000269|PubMed:11149926}. Cytoplasm, cytosol {ECO:0000269|PubMed:1",Mitoxy-80_v1.0,m4hpa_v1.1_human
+CANX,upstream_collapse,P27824,线粒体+内质网,是,SUBCELLULAR LOCATION: Endoplasmic reticulum membrane {ECO:0000269|PubMed:22314232}; Single-pass type I membrane protein {ECO:0000255}. Mitochondrion m,Mitoxy-80_v1.0,m4hpa_v1.1_human
+HSPA9,upstream_collapse,P38646,线粒体+内质网+胞质+核,是,"SUBCELLULAR LOCATION: Mitochondrion {ECO:0000269|PubMed:22002106, ECO:0000269|PubMed:26702583}. Nucleus, nucleolus {ECO:0000269|PubMed:22002106, ECO:0",Mitoxy-80_v1.0,m4hpa_v1.1_human
+IP3R1,upstream_collapse,Q14643,内质网+胞质,是,"SUBCELLULAR LOCATION: Endoplasmic reticulum membrane {ECO:0000305|PubMed:27108798, ECO:0000305|PubMed:7852357}; Multi-pass membrane protein {ECO:00002",Mitoxy-80_v1.0,m4hpa_v1.1_human
+PACS2,upstream_collapse,Q86VP3,线粒体+内质网,是,SUBCELLULAR LOCATION: Endoplasmic reticulum {ECO:0000269|PubMed:15692567}. Mitochondrion {ECO:0000269|PubMed:15692567}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+SIGMAR1,upstream_collapse,Q99720,内质网+膜+胞质+核,是,SUBCELLULAR LOCATION: Nucleus inner membrane {ECO:0000269|PubMed:10406945}. Nucleus outer membrane {ECO:0000269|PubMed:10406945}. Nucleus envelope {EC,Mitoxy-80_v1.0,m4hpa_v1.1_human
+VDAC1,upstream_collapse,P21796,线粒体+内质网+膜,是,"SUBCELLULAR LOCATION: Mitochondrion outer membrane {ECO:0000269|PubMed:10661876, ECO:0000269|PubMed:31015432, ECO:0000269|PubMed:31206022, ECO:0000269",Mitoxy-80_v1.0,m4hpa_v1.1_human
+VDAC2,upstream_collapse,P45880,线粒体+膜,是,"SUBCELLULAR LOCATION: Mitochondrion outer membrane {ECO:0000269|PubMed:31015432, ECO:0000269|PubMed:7539795}; Multi-pass membrane protein {ECO:0000269",Mitoxy-80_v1.0,m4hpa_v1.1_human
+VDAC3,upstream_collapse,Q9Y277,线粒体+膜,是,SUBCELLULAR LOCATION: Mitochondrion outer membrane {ECO:0000250|UniProtKB:P21796}. Membrane {ECO:0000269|PubMed:27641616}. Note=May localize to non-mi,Mitoxy-80_v1.0,m4hpa_v1.1_human
+ATG5,not_in_dissociation_arms,Q9H1Y0,膜+胞质,否,SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:17709747}. Preautophagosomal structure membrane {ECO:0000269|PubMed:32960676}; Peripheral membrane,Mitoxy-80_v1.0,m4hpa_v1.1_human
+ATG7,not_in_dissociation_arms,O95352,胞质,否,SUBCELLULAR LOCATION: Cytoplasm {ECO:0000250}. Preautophagosomal structure {ECO:0000250}. Note=Also localizes to discrete punctae along the ciliary ax,Mitoxy-80_v1.0,m4hpa_v1.1_human
+BECN1,not_in_dissociation_arms,Q14457,线粒体+内质网+胞质+核,是,"SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:19713971, ECO:0000269|PubMed:21364619, ECO:0000269|PubMed:22498477, ECO:0000269|PubMed:25484083}. ",Mitoxy-80_v1.0,m4hpa_v1.1_human
+MAP1LC3A,not_in_dissociation_arms,Q9H492,膜+胞质,否,"SUBCELLULAR LOCATION: Cytoplasmic vesicle, autophagosome membrane {ECO:0000269|PubMed:12740394, ECO:0000269|PubMed:15187094, ECO:0000269|PubMed:190566",Mitoxy-80_v1.0,m4hpa_v1.1_human
+MAP1LC3B,not_in_dissociation_arms,Q9GZQ8,线粒体+膜+胞质,是,"SUBCELLULAR LOCATION: Cytoplasmic vesicle, autophagosome membrane {ECO:0000269|PubMed:17580304, ECO:0000269|PubMed:20529957, ECO:0000269|PubMed:223116",Mitoxy-80_v1.0,m4hpa_v1.1_human
+SQSTM1,not_in_dissociation_arms,Q13501,内质网+胞质+核,是,"SUBCELLULAR LOCATION: Cytoplasmic vesicle, autophagosome {ECO:0000269|PubMed:15953362, ECO:0000269|PubMed:16286508, ECO:0000269|PubMed:17580304, ECO:0",Mitoxy-80_v1.0,m4hpa_v1.1_human
+APAF1,execution_induction,O14727,胞质,否,SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:12804598}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+CASP1,execution_induction,P29466,膜+胞质,否,SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:20197547}. Cell membrane {ECO:0000269|PubMed:20197547}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+CASP4,execution_induction,P49662,线粒体+内质网+胞质+分泌,是,"SUBCELLULAR LOCATION: Cytoplasm, cytosol {ECO:0000269|PubMed:23661706}. Endoplasmic reticulum membrane {ECO:0000269|PubMed:15123740, ECO:0000269|PubMe",Mitoxy-80_v1.0,m4hpa_v1.1_human
+CASP5,execution_induction,P51878,其他,否,,Mitoxy-80_v1.0,m4hpa_v1.1_human
+GSDMA,execution_induction,Q96QA5,膜+胞质,否,"SUBCELLULAR LOCATION: [Gasdermin-A]: Cytoplasm, perinuclear region {ECO:0000269|PubMed:17471240}. Cytoplasm, cytosol {ECO:0000250|UniProtKB:Q5Y4Y6}.; ",Mitoxy-80_v1.0,m4hpa_v1.1_human
+GSDMB,execution_induction,Q8TAX9,膜+胞质,否,SUBCELLULAR LOCATION: [Gasdermin-B]: Cytoplasm {ECO:0000269|PubMed:18038310}. Note=Vesicular localization in the apical region of gastric chief cells ,Mitoxy-80_v1.0,m4hpa_v1.1_human
+GSDMC,execution_induction,Q9BYG8,膜+胞质,否,"SUBCELLULAR LOCATION: [Gasdermin-C]: Cytoplasm, cytosol {ECO:0000269|PubMed:11223543}.; SUBCELLULAR LOCATION: [Gasdermin-C, N-terminal]: Cell membrane",Mitoxy-80_v1.0,m4hpa_v1.1_human
+GSDMD,execution_induction,P57764,线粒体+膜+胞质+核+分泌,是,"SUBCELLULAR LOCATION: [Gasdermin-D]: Cytoplasm, cytosol {ECO:0000269|PubMed:27281216}. Inflammasome {ECO:0000250|UniProtKB:Q9D8T2}. Note=In response t",Mitoxy-80_v1.0,m4hpa_v1.1_human
+GSDME,execution_induction,O60443,膜+胞质,否,"SUBCELLULAR LOCATION: [Gasdermin-E, N-terminal]: Cell membrane {ECO:0000269|PubMed:28045099, ECO:0000269|PubMed:28459430}; Multi-pass membrane protein",Mitoxy-80_v1.0,m4hpa_v1.1_human
+IL18,execution_induction,Q14116,胞质+分泌,否,"SUBCELLULAR LOCATION: Cytoplasm, cytosol {ECO:0000269|PubMed:32272059, ECO:0000269|PubMed:33883744, ECO:0000269|PubMed:9334240}. Secreted {ECO:0000269",Mitoxy-80_v1.0,m4hpa_v1.1_human
+IL1B,execution_induction,P01584,胞质+分泌,否,"SUBCELLULAR LOCATION: Cytoplasm, cytosol {ECO:0000269|PubMed:15192144}. Secreted {ECO:0000269|PubMed:11728343, ECO:0000269|PubMed:15192144, ECO:000026",Mitoxy-80_v1.0,m4hpa_v1.1_human
+NLRP3,execution_induction,Q96P20,线粒体+内质网+胞质+核+分泌,是,"SUBCELLULAR LOCATION: Cytoplasm, cytosol {ECO:0000269|PubMed:11786556, ECO:0000269|PubMed:14662828, ECO:0000269|PubMed:17164409, ECO:0000269|PubMed:38",Mitoxy-80_v1.0,m4hpa_v1.1_human
+PYCARD,execution_induction,Q9ULZ3,线粒体+内质网+胞质+核,是,"SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:11103777, ECO:0000269|PubMed:15030775, ECO:0000269|PubMed:19234215, ECO:0000269|PubMed:25847972}. ",Mitoxy-80_v1.0,m4hpa_v1.1_human
+DLAT,upstream_collapse,P10515,线粒体,是,SUBCELLULAR LOCATION: Mitochondrion matrix {ECO:0000250|UniProtKB:P08461}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+DLD,upstream_collapse,P09622,线粒体+胞质+核,是,"SUBCELLULAR LOCATION: Mitochondrion matrix {ECO:0000305|PubMed:29211711, ECO:0000305|PubMed:3693355}. Nucleus {ECO:0000269|PubMed:29211711}. Cell proj",Mitoxy-80_v1.0,m4hpa_v1.1_human
+FDX1,upstream_collapse,P10109,线粒体,是,SUBCELLULAR LOCATION: Mitochondrion matrix {ECO:0000269|PubMed:20547883}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+LIAS,upstream_collapse,O43766,线粒体,是,SUBCELLULAR LOCATION: Mitochondrion {ECO:0000255|HAMAP-Rule:MF_03123}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+LIPT1,upstream_collapse,Q9Y234,线粒体,是,SUBCELLULAR LOCATION: Mitochondrion {ECO:0000250|UniProtKB:O46419}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+MTF1,upstream_collapse,Q14872,胞质+核,否,SUBCELLULAR LOCATION: Nucleus {ECO:0000269|PubMed:8065932}. Cytoplasm {ECO:0000250|UniProtKB:Q07243}. Note=Translocation to the nucleus is induced by ,Mitoxy-80_v1.0,m4hpa_v1.1_human
+NADK,upstream_collapse,O95544,其他,否,,Mitoxy-80_v1.0,m4hpa_v1.1_human
+NCOA4,upstream_collapse,Q13772,胞质+核,否,"SUBCELLULAR LOCATION: Cytoplasmic vesicle, autophagosome {ECO:0000269|PubMed:25327288}. Autolysosome {ECO:0000269|PubMed:25327288}. Nucleus {ECO:00002",Mitoxy-80_v1.0,m4hpa_v1.1_human
+PDHA1,upstream_collapse,P08559,线粒体,是,SUBCELLULAR LOCATION: Mitochondrion matrix {ECO:0000250|UniProtKB:P26284}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+PDHB,upstream_collapse,P11177,线粒体,是,SUBCELLULAR LOCATION: Mitochondrion matrix {ECO:0000250|UniProtKB:P26284}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+SLC7A11,upstream_collapse,Q9UPY5,膜,否,"SUBCELLULAR LOCATION: Cell membrane {ECO:0000269|PubMed:11417227, ECO:0000269|PubMed:15151999, ECO:0000269|PubMed:34880232, ECO:0000269|PubMed:4024698",Mitoxy-80_v1.0,m4hpa_v1.1_human
+ACO1,execution_induction,P21399,胞质,否,"SUBCELLULAR LOCATION: Cytoplasm, cytosol {ECO:0000269|PubMed:1281544}.",Mitoxy-80_v1.0,m4hpa_v1.1_human
+FTH1,execution_induction,P02794,胞质,否,"SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:26436293}. Lysosome {ECO:0000269|PubMed:26436293}. Cytoplasmic vesicle, autophagosome {ECO:0000269",Mitoxy-80_v1.0,m4hpa_v1.1_human
+FTL,execution_induction,P02792,胞质,否,"SUBCELLULAR LOCATION: Cytoplasmic vesicle, autophagosome {ECO:0000269|PubMed:24695223}. Cytoplasm {ECO:0000250|UniProtKB:P29391}. Autolysosome {ECO:00",Mitoxy-80_v1.0,m4hpa_v1.1_human
+IREB2,execution_induction,P48200,胞质,否,SUBCELLULAR LOCATION: Cytoplasm.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+SLC11A2,execution_induction,P49281,线粒体+膜,是,SUBCELLULAR LOCATION: [Isoform 1]: Early endosome membrane {ECO:0000269|PubMed:12475959}; Multi-pass membrane protein {ECO:0000255}. Apical cell membr,Mitoxy-80_v1.0,m4hpa_v1.1_human
+SLC25A28,execution_induction,Q96A46,线粒体+膜,是,SUBCELLULAR LOCATION: [Isoform 1]: Mitochondrion inner membrane {ECO:0000305|PubMed:11297739}; Multi-pass membrane protein {ECO:0000255}.; SUBCELLULAR,Mitoxy-80_v1.0,m4hpa_v1.1_human
+SLC25A37,execution_induction,Q9NYZ2,线粒体+膜,是,SUBCELLULAR LOCATION: Mitochondrion inner membrane {ECO:0000250|UniProtKB:Q287T7}; Multi-pass membrane protein {ECO:0000255}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+SLC40A1,execution_induction,Q9NP59,膜,否,"SUBCELLULAR LOCATION: Cell membrane {ECO:0000269|PubMed:10882071, ECO:0000269|PubMed:15692071, ECO:0000269|PubMed:23219802, ECO:0000269|PubMed:2430483",Mitoxy-80_v1.0,m4hpa_v1.1_human
+TFRC,execution_induction,P02786,膜+分泌,否,SUBCELLULAR LOCATION: Cell membrane {ECO:0000269|PubMed:17081065}; Single-pass type II membrane protein {ECO:0000269|PubMed:17081065}. Melanosome {ECO,Mitoxy-80_v1.0,m4hpa_v1.1_human
+CYCS,upstream_collapse,P99999,线粒体+膜,是,SUBCELLULAR LOCATION: Mitochondrion intermembrane space. Note=Loosely associated with the inner membrane.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+HSP60,upstream_collapse,P10809,线粒体,是,SUBCELLULAR LOCATION: Mitochondrion matrix.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+MT-ATP6,upstream_collapse,P00846,线粒体+膜,是,SUBCELLULAR LOCATION: Mitochondrion inner membrane; Multi-pass membrane protein.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+MT-ATP8,upstream_collapse,P03928,线粒体+膜,是,SUBCELLULAR LOCATION: Mitochondrion membrane; Single-pass membrane protein.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+MT-CO1,upstream_collapse,P00395,线粒体+膜,是,SUBCELLULAR LOCATION: Mitochondrion inner membrane {ECO:0000269|PubMed:30030519}; Multi-pass membrane protein {ECO:0000269|PubMed:30030519}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+MT-CYB,upstream_collapse,P00156,线粒体+膜,是,SUBCELLULAR LOCATION: Mitochondrion inner membrane {ECO:0000250|UniProtKB:P00157}; Multi-pass membrane protein {ECO:0000250|UniProtKB:P00157}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+MT-ND1,upstream_collapse,P03886,线粒体+膜,是,SUBCELLULAR LOCATION: Mitochondrion inner membrane {ECO:0000250|UniProtKB:P03887}; Multi-pass membrane protein {ECO:0000255}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+MT-ND2,upstream_collapse,P03891,线粒体+膜,是,SUBCELLULAR LOCATION: Mitochondrion inner membrane {ECO:0000250|UniProtKB:P03892}; Multi-pass membrane protein {ECO:0000255}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+TOMM20,upstream_collapse,Q15388,线粒体+膜,是,"SUBCELLULAR LOCATION: Mitochondrion outer membrane {ECO:0000269|PubMed:20628368, ECO:0000269|PubMed:25764979, ECO:0000269|PubMed:25997101, ECO:0000269",Mitoxy-80_v1.0,m4hpa_v1.1_human
+TOMM40,upstream_collapse,O96008,线粒体+膜,是,"SUBCELLULAR LOCATION: Mitochondrion outer membrane {ECO:0000269|PubMed:15644312, ECO:0000269|PubMed:31206022, ECO:0000269|PubMed:40080546}; Multi-pass",Mitoxy-80_v1.0,m4hpa_v1.1_human
+CAT,execution_induction,P04040,其他,否,"SUBCELLULAR LOCATION: Peroxisome matrix {ECO:0000269|PubMed:21976670, ECO:0000269|PubMed:8769411}.",Mitoxy-80_v1.0,m4hpa_v1.1_human
+GCLC,execution_induction,P48506,其他,否,,Mitoxy-80_v1.0,m4hpa_v1.1_human
+GCLM,execution_induction,P48507,其他,否,,Mitoxy-80_v1.0,m4hpa_v1.1_human
+GPX4,execution_induction,P36969,线粒体+胞质,是,SUBCELLULAR LOCATION: [Isoform Mitochondrial]: Mitochondrion {ECO:0000250|UniProtKB:O70325}.; SUBCELLULAR LOCATION: [Isoform Cytoplasmic]: Cytoplasm {,Mitoxy-80_v1.0,m4hpa_v1.1_human
+GSR,execution_induction,P00390,线粒体+胞质,是,SUBCELLULAR LOCATION: [Isoform Mitochondrial]: Mitochondrion.; SUBCELLULAR LOCATION: [Isoform Cytoplasmic]: Cytoplasm.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+HMOX1,execution_induction,P09601,内质网+胞质,是,"SUBCELLULAR LOCATION: Endoplasmic reticulum membrane {ECO:0000269|PubMed:19556236, ECO:0000269|PubMed:22419571, ECO:0000269|PubMed:27184847}; Single-p",Mitoxy-80_v1.0,m4hpa_v1.1_human
+NQO1,execution_induction,P15559,胞质,否,"SUBCELLULAR LOCATION: Cytoplasm, cytosol {ECO:0000250|UniProtKB:P05982}.",Mitoxy-80_v1.0,m4hpa_v1.1_human
+PRDX3,execution_induction,P30048,线粒体+胞质,是,SUBCELLULAR LOCATION: Mitochondrion {ECO:0000269|PubMed:33889951}. Cytoplasm {ECO:0000305|PubMed:12492477}. Early endosome {ECO:0000269|PubMed:1575033,Mitoxy-80_v1.0,m4hpa_v1.1_human
+SOD2,execution_induction,P04179,线粒体,是,SUBCELLULAR LOCATION: Mitochondrion matrix.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+TXN,execution_induction,P10599,胞质+核+分泌,否,"SUBCELLULAR LOCATION: Nucleus {ECO:0000269|PubMed:11118054, ECO:0000269|PubMed:9108029}. Cytoplasm {ECO:0000269|PubMed:11118054, ECO:0000269|PubMed:91",Mitoxy-80_v1.0,m4hpa_v1.1_human
+TXNRD2,execution_induction,Q9NNW7,线粒体,是,SUBCELLULAR LOCATION: Mitochondrion {ECO:0000269|PubMed:10215850}.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+ATF4,not_in_dissociation_arms,P18848,膜+胞质+核,否,"SUBCELLULAR LOCATION: Nucleus {ECO:0000269|PubMed:16682973, ECO:0000269|PubMed:22974638, ECO:0000269|PubMed:23123191, ECO:0000269|PubMed:31444471}. Nu",Mitoxy-80_v1.0,m4hpa_v1.1_human
+CEBPB,not_in_dissociation_arms,P17676,胞质+核,否,SUBCELLULAR LOCATION: Nucleus {ECO:0000269|PubMed:20829347}. Cytoplasm {ECO:0000269|PubMed:9374525}. Note=Translocates to the nucleus when phosphoryla,Mitoxy-80_v1.0,m4hpa_v1.1_human
+DDIT3,not_in_dissociation_arms,P35638,胞质+核,否,"SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:29083303}. Nucleus {ECO:0000269|PubMed:29083303, ECO:0000269|PubMed:33384352}. Note=Present in the",Mitoxy-80_v1.0,m4hpa_v1.1_human
+FOXO3,not_in_dissociation_arms,O43524,线粒体+膜+胞质+核,是,"SUBCELLULAR LOCATION: Cytoplasm, cytosol {ECO:0000269|PubMed:10102273, ECO:0000269|PubMed:15084260, ECO:0000269|PubMed:16751106, ECO:0000269|PubMed:17",Mitoxy-80_v1.0,m4hpa_v1.1_human
+HIF1A,not_in_dissociation_arms,Q16665,胞质+核,否,"SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:9822602}. Nucleus {ECO:0000269|PubMed:22009797, ECO:0000269|PubMed:9822602}. Nucleus speckle {ECO:",Mitoxy-80_v1.0,m4hpa_v1.1_human
+NFE2L2,not_in_dissociation_arms,Q16236,胞质+核,否,"SUBCELLULAR LOCATION: Cytoplasm, cytosol {ECO:0000269|PubMed:11035812, ECO:0000269|PubMed:15601839, ECO:0000269|PubMed:21196497}. Nucleus {ECO:0000255",Mitoxy-80_v1.0,m4hpa_v1.1_human
+NFKB1,not_in_dissociation_arms,P19838,胞质+核,否,SUBCELLULAR LOCATION: [Nuclear factor NF-kappa-B p105 subunit]: Cytoplasm {ECO:0000269|PubMed:1423592}.; SUBCELLULAR LOCATION: [Nuclear factor NF-kapp,Mitoxy-80_v1.0,m4hpa_v1.1_human
+NFKB2,not_in_dissociation_arms,Q00653,胞质+核,否,"SUBCELLULAR LOCATION: Nucleus. Cytoplasm. Note=Nuclear, but also found in the cytoplasm in an inactive form complexed to an inhibitor (I-kappa-B).",Mitoxy-80_v1.0,m4hpa_v1.1_human
+NRF1,not_in_dissociation_arms,Q16656,核,否,SUBCELLULAR LOCATION: Nucleus.,Mitoxy-80_v1.0,m4hpa_v1.1_human
+PPARG,not_in_dissociation_arms,P37231,胞质+核,否,"SUBCELLULAR LOCATION: Nucleus {ECO:0000269|PubMed:17101779, ECO:0000269|PubMed:23525231}. Cytoplasm {ECO:0000269|PubMed:17101779}. Note=Redistributed ",Mitoxy-80_v1.0,m4hpa_v1.1_human
+RELA,not_in_dissociation_arms,Q04206,胞质+核,否,"SUBCELLULAR LOCATION: Nucleus {ECO:0000269|PubMed:1493333, ECO:0000269|PubMed:15799966, ECO:0000269|PubMed:19058135, ECO:0000269|PubMed:20547752, ECO:",Mitoxy-80_v1.0,m4hpa_v1.1_human

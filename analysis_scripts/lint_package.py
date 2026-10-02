@@ -4,12 +4,27 @@ lint_package.py — D4 投稿前全包校验（只读，不改任何数据）
 ================================================================
 对应质控报告 D4：校验 符号合法性 / 版本一致性 / FDR 列非空 / p∈[0,1] /
 计数与组定义一致 + N22 编号唯一性 + 冻结 manifest 校验和。
-M1（2026-08-17）：新增 S55 空间模块校验（check_m1_spatial）——S55 表族、
+M1（2026-08-17）：新增 S28 空间模块校验（check_m1_spatial）——S28 表族（2026-10-02 编号迁移前为 S55）、
 预注册 R1-R3 判定复算（R3）、CosMx 面板覆盖、空间样本清单。
 
 用法:  python lint_package.py
 输出:  03_LOGS/lint_report.md + 控制台摘要；全绿退出码 0，否则 1。
 """
+# ---------------------------------------------------------------------------
+# 2026-10-02 附表编号迁移（执行：N7_renumber_supp_tables_20261002.py）：
+#   本文件中的附表文件名与运行期检查标签已更新为"最终投稿工作簿"编号
+#   （Supplementary_Tables_S1-S93.xlsx；与文稿 v5、Zenodo 大表记录一致）。
+#   逐文件旧→新对照：02_SUPPLEMENTARY_TABLES/附表最终编号对照表_20261002.csv。
+#   主要组号变化：S5→S3（PCD 评分）、S6→S4（Scissor）、S7→S5（通讯/伪时间）、
+#   S8→S6（跨数据集 meta）、S9→S7（风险模型）、S11→S8、S12→S9（SCENIC）、
+#   S15→S10（MR/coloc）、S16→S11（免疫浸润）、S17→S12、S18→S13（AlphaMissense）、
+#   S19→S14（GWAS）、S20→S15（GRN）、S22/S23→S16（药物）、S24→S17（EFA）、
+#   S26→S79（scATAC）、S27→S80（时钟）、S36→S18（对接）、S40→S19（gnomAD）、
+#   S46→S20、S47→S21、S48→S22（解离检验）、S49→S93（WGCNA v2）、
+#   S50–S54→S23–S27（GSE32707）、S55→S28（空间）、S56–S58→S29–S31（M2）、
+#   S59→S32（生化）、S76–S82→S49–S55（M11/M12）；其余见对照表。
+#   本文件 2026-10-02 之前书写的历史注释沿用当时编号，未逐一改写。
+# ---------------------------------------------------------------------------
 import csv
 import hashlib
 import math
@@ -41,6 +56,12 @@ MANAGED_DIRS = {
     "02_SUPPLEMENTARY_TABLES/SUPPLEMENTARY_Tables_CSV": TAB,
     "02_SUPPLEMENTARY_TABLES/Supplementary_Notes": NOTES,
     "归档": ARCH,
+    # 2026-09-20 补入：图源数据两棵树此前**完全不在受管目录内**，所有"顶层文件
+    # 必须登记"的规则对它们不生效 —— 这是 Figure_S2E.csv 末尾混入 3 行汇总行
+    # （P_value / Pearson_r / RMSE，量纲未定义）长期漏网的根本原因（审稿复核 m5）。
+    "01_FIGURE_DATA_CSV/Main": ROOT / "01_FIGURE_DATA_CSV" / "Main",
+    "01_FIGURE_DATA_CSV/Supplementary": (ROOT / "01_FIGURE_DATA_CSV"
+                                         / "Supplementary"),
 }
 # 2026-08-16 目录重组：登记在册但本地不随包的文件（附理由，逐项登记）
 MISSING_OK = {
@@ -55,68 +76,106 @@ MISSING_OK = {
 # 2026-08-27：M10–M15 新模块导出表/图数据（前瞻注册 osf.io/ETVMJ 与第二次独立注册批次），
 # 按 M15/M1x 导出设计无内嵌 gene_set_version/score_version 列，manifest 记 NA（设计内豁免）
 # 2026-09-06 图号重编（11→9 主图）键名同步：11A-C→9D-F、旧9A-C→8E-G、旧10A-C→9A-C、S9I→S6I、旧5A/B→5F/G（FDR_NULL_OK 键）；Figure_7/8A-D 不变
+# 2026-09-16 A+B 主图压缩（9→7，迎接湿实验 Figure 8）键名同步：F2+F3→新F2、F6+F7→新F5、F4→F3、F5→F4、F8→F6、F9→F7；
+# 降级面板 2E/2F/3D/3F/3G/3H→新 S2A-F、6B/6C/7G/7E→新 S10A-D；附图级联 S2→S3、S3→S4、S4→S5、S5→S6、S6→S7、S7→S8、S8→S9、S9→S11、S10→S12、S11→S13、S12→S14；
+# FDR_NULL_OK 键：S6I→S7I、5F→4F、5G→4G、7E→S10D；M2 守门 5A-E→4A-E（映射台账 01_FIGURE_DATA_CSV/FIGURE_RENUMBER_MAP_20260905.csv）
+# ↑ 2026-09-20 修正文件名：原写 ..._20260916.csv，该文件在库内**不存在**
+#   （实际只有 ..._20260905.csv，release 树同），指向不存在的台账等于把溯源链断在注释里。
 M1X_NO_VERSION_STAMP = {
-    "Table_S62_M14_IIAMD_Core_v1.0.csv",
-    "Table_S63_M14_Gate2_Core_Rerun_ThreeLayers.csv",
-    "Table_S64_M10A_Deconvolution_Proportions.csv",
-    "Table_S65_M10A_R2_AllMethods.csv",
-    "Table_S65b_M10A_R2_Merged.csv",
-    "Table_S65c_M10A_Proportion_CrossReference.csv",
-    "Table_S66_M10A_Residual_LayerEffects.csv",
-    "Table_S66b_M10A_Residual_Meta_LOSO.csv",
-    "Table_S67_M10B_Donor_Arm_Scores.csv",
-    "Table_S67b_M10B_Donor_Arm_Tests.csv",
-    "Table_S67c_M10B_Myeloid_UCS_Layers.csv",
-    "Table_S67d_M10B_Myeloid_UCS_Meta.csv",
-    "Table_S68_M13_Signature_Catalog.csv",
-    "Table_S69b_M13_NullModel_Summary.csv",
-    "Table_S69c_M13_ReverseAudit.csv",
-    "Table_S70_M10C_Compartment_Contrasts.csv",
-    "Table_S72_M14L3_GO_Audit.csv",
-    "Table_S73_M14L3_CellLevel_Perturbation_Effects.csv",
-    "Table_S74_M14L3_FRPerturb_Arm_Projections.csv",
-    "Table_S75_M14L3_NullCalibration_and_SetTests.csv",
-    "Table_S76_M11_PerSample_Longitudinal_Scores.csv",
-    "Table_S77_M11_H1_MixedModels.csv",
-    "Table_S78_M11_H2_RICLPM.csv",
-    "Table_S79_M11_NullModels_LOSO_Sensitivity.csv",
-    "Table_S80_M12_GSE106878_PerPatient.csv",
-    "Table_S81_M12_GSE106878_Tests_Comp_H4_Null.csv",
-    "Table_S82_M12_GSE148871_Replication.csv",
-    "Table_S83_M10D_CrossSpecies_Contrasts.csv",  # 2026-08-27 M10D 次终点执行批次
-    "Table_S83b_M10D_Pig_Ensembl_Sensitivity.csv",  # 2026-08-27 M10D 补做批次（猪同源敏感性）
-    "Table_S87_M10D_Pandisease_k20_LayerEffects.csv",  # 2026-08-27 M10D 补做批次（k≥20 泛疾病）
+    "Table_S35_M14_IIAMD_Core_v1.0.csv",
+    "Table_S36_M14_Gate2_Core_Rerun_ThreeLayers.csv",
+    "Table_S37_M10A_Deconvolution_Proportions.csv",
+    "Table_S38_M10A_R2_AllMethods.csv",
+    "Table_S38b_M10A_R2_Merged.csv",
+    "Table_S38c_M10A_Proportion_CrossReference.csv",
+    "Table_S39_M10A_Residual_LayerEffects.csv",
+    "Table_S39b_M10A_Residual_Meta_LOSO.csv",
+    "Table_S40_M10B_Donor_Arm_Scores.csv",
+    "Table_S40b_M10B_Donor_Arm_Tests.csv",
+    "Table_S40c_M10B_Myeloid_UCS_Layers.csv",
+    "Table_S40d_M10B_Myeloid_UCS_Meta.csv",
+    "Table_S41_M13_Signature_Catalog.csv",
+    "Table_S42b_M13_NullModel_Summary.csv",
+    "Table_S42c_M13_ReverseAudit.csv",
+    "Table_S43_M10C_Compartment_Contrasts.csv",
+    "Table_S45_M14L3_GO_Audit.csv",
+    "Table_S46_M14L3_CellLevel_Perturbation_Effects.csv",
+    "Table_S47_M14L3_FRPerturb_Arm_Projections.csv",
+    "Table_S48_M14L3_NullCalibration_and_SetTests.csv",
+    "Table_S49_M11_PerSample_Longitudinal_Scores.csv",
+    "Table_S50_M11_H1_MixedModels.csv",
+    "Table_S51_M11_H2_RICLPM.csv",
+    "Table_S52_M11_NullModels_LOSO_Sensitivity.csv",
+    "Table_S53_M12_GSE106878_PerPatient.csv",
+    "Table_S54_M12_GSE106878_Tests_Comp_H4_Null.csv",
+    "Table_S55_M12_GSE148871_Replication.csv",
+    "Table_S56_M10D_CrossSpecies_Contrasts.csv",  # 2026-08-27 M10D 次终点执行批次
+    "Table_S56b_M10D_Pig_Ensembl_Sensitivity.csv",  # 2026-08-27 M10D 补做批次（猪同源敏感性）
+    "Table_S60_M10D_Pandisease_k20_LayerEffects.csv",  # 2026-08-27 M10D 补做批次（k≥20 泛疾病）
     # 2026-08-31 M16 力学边界模块批次（导出设计无内嵌版本列，manifest 记 NA）
-    "Table_S88_M16_Mechanosensing_Module_v10.csv",
-    "Table_S89_M16_VILI_Contrasts.csv",
-    "Table_S90_M16_GSE2411_Interaction.csv",
-    "Table_S91_M16_Bridge_Correlations.csv",
-    "Table_S92_M16_Ortholog_Coverage_Audit.csv",
-    "Figure_9D.csv",
-    "Figure_9E.csv",
-    "Figure_9F.csv",
-    "Table_S87b_M10D_Pandisease_k20_Meta.csv",
-    "Table_S87c_M10D_Pandisease_k20_LOSO.csv",
-    "Figure_7A.csv", "Figure_7B.csv", "Figure_7C.csv", "Figure_7D.csv",
-    "Figure_7E.csv", "Figure_7F.csv", "Figure_7G.csv",
-    "Figure_8A.csv", "Figure_8B.csv", "Figure_8C.csv", "Figure_8D.csv",
-    "Figure_8E.csv", "Figure_8F.csv", "Figure_8G.csv",
-    "Table_S86d_M15_Demo_GSE66099_Proportions.csv",
-    "Table_S86c_M15_Demo_GSE66099_R2.csv",
-    "Table_S86b_M15_Demo_GSE66099_Contrasts.csv",
-    "Table_S86_M15_Demo_GSE66099_PerSample.csv",
-    "Table_S85d_M15_Demo_GSE157103_Proportions.csv",
-    "Table_S85c_M15_Demo_GSE157103_R2.csv",
-    "Table_S85b_M15_Demo_GSE157103_Contrasts.csv",
-    "Table_S85_M15_Demo_GSE157103_PerSample.csv",
-    "Table_S84b_M15_RegressionTest_CohortSummary.csv",
-    "Table_S84_M15_RegressionTest_11Cohorts.csv",
-    "Figure_9C.csv",
-    "Figure_9B.csv",
-    "Figure_9A.csv",
-    # 2026-09-05 M17 蛋白组批次（PXD050432 审计入册，导出设计无内嵌版本列，manifest 记 NA）
+    "Table_S61_M16_Mechanosensing_Module_v10.csv",
+    "Table_S62_M16_VILI_Contrasts.csv",
+    "Table_S63_M16_GSE2411_Interaction.csv",
+    "Table_S64_M16_Bridge_Correlations.csv",
+    "Table_S65_M16_Ortholog_Coverage_Audit.csv",
+    "Figure_7D.csv",
+    # 2026-10-02 N6 湿实验三图入包：源包 CSV 无 gene_set_version/score_version 列，
+    # manifest 记 NA（设计内豁免；同上 M10–M16 导出设计）
+    "Figure_8wA.csv",
+    "Figure_8wB.csv",
+    "Figure_8wC.csv",
+    "Figure_8wD.csv",
+    "Figure_8wE.csv",
+    "Figure_8wF.csv",
+    "Figure_8wG.csv",
+    "Figure_8wH.csv",
+    "Figure_S15A.csv",
+    "Figure_S15B.csv",
+    "Figure_S15C.csv",
+    "Figure_S15D.csv",
+    "Figure_S15E.csv",
+    "Figure_S15F.csv",
+    "Figure_S15G.csv",
+    "Figure_S16A.csv",
+    "Figure_S16B.csv",
+    "Figure_S16C.csv",
+    "Figure_S16D.csv",
+    "Figure_S16E.csv",
+    "Figure_S16F.csv",
+    "Figure_7E.csv",
+    "Figure_7F.csv",
+    "Table_S60b_M10D_Pandisease_k20_Meta.csv",
+    "Table_S60c_M10D_Pandisease_k20_LOSO.csv",
+    # 2026-09-05 M17 批次：PXD050432 外部蛋白组核验两表（导出设计无内嵌版本列，manifest 记 NA）；
+    # 2026-09-16 补登白名单（原变更记录称已入白名单，但当前 lint 缺条目，本机复跑发现后补齐）
     "Table_S93_M17_PXD050432_AcuteLPS_LungProteome_WB_Targets.csv",
     "Table_S93b_M17_PXD050432_PerSample_LFQ.csv",
+    # 2026-09-21 豁免体检（figure_data 段重登记后）：以下 14 个名字从豁免清单**移出**——
+    # Figure_5E–5I / Figure_6A–6F / Figure_S10C / Figure_S10D 这 13 个磁盘文件**自身带
+    # gene_set_version/score_version 列**，豁免等于把可校验文件排除在版本戳校验之外；
+    # Figure_6G.csv 在磁盘上根本不存在（死条目，正文对应文件是 Figure_8G.csv，已按下条豁免）。
+    "Table_S59d_M15_Demo_GSE66099_Proportions.csv",
+    "Table_S59c_M15_Demo_GSE66099_R2.csv",
+    "Table_S59b_M15_Demo_GSE66099_Contrasts.csv",
+    "Table_S59_M15_Demo_GSE66099_PerSample.csv",
+    "Table_S58d_M15_Demo_GSE157103_Proportions.csv",
+    "Table_S58c_M15_Demo_GSE157103_R2.csv",
+    "Table_S58b_M15_Demo_GSE157103_Contrasts.csv",
+    "Table_S58_M15_Demo_GSE157103_PerSample.csv",
+    "Table_S57b_M15_RegressionTest_CohortSummary.csv",
+    "Table_S57_M15_RegressionTest_11Cohorts.csv",
+    "Figure_7C.csv",
+    "Figure_7B.csv",
+    "Figure_7A.csv",
+    # 2026-09-21 figure_data 段重登记时补齐：以下图数据文件此前**从未被 lint 检查过**
+    # （登记名与磁盘名错位 → check_versions 直接跳过），重登记后就位，逐一取证后按同一
+    # 设计内豁免政策登记（M10–M16 模块导出脚本不写 gene_set_version/score_version 列）：
+    "Figure_7G.csv",          # 正文 Figure S10C：区室对照（痰/血、TA/PBMC、BALF/PBMC）
+    "Figure_8A.csv", "Figure_8B.csv",   # 正文 Figure 6A/6B：M11 H1 混合模型 / H2 RI-CLPM 逐队列
+    "Figure_8C.csv", "Figure_8D.csv",   # 正文 Figure 6C/6D：零模型匹配随机集 / LOSO 方向一致性
+    "Figure_8E.csv", "Figure_8F.csv",   # 正文 Figure 6E/6F：GSE106878 臂间 MWU / 组成同报
+    "Figure_8G.csv",          # 正文 Figure 6G：GSE148871 NEMI 臂复现层
+    "Figure_9A.csv", "Figure_9B.csv", "Figure_9C.csv",  # 正文 Figure 7A/7B/7C：mitoxdi 应用演示与回归自检
 }
 
 _LOC = None
@@ -161,6 +220,20 @@ def read_csv_stream(path):
             yield row
 
 
+def read_data_header(rd):
+    """跳过**全部**前导 '#' 注释行，返回真实表头。
+
+    原实现只跳 1 行；m5 从 Figure_S2E.csv 拆出的 Figure_S2E_fit_stats.csv
+    带 2 行溯源注释（2026-09-21 figure_data 重登记时发现），单跳会把第 2 行
+    注释当表头 → 误报"缺 gene_set_version/score_version 列"。
+    """
+    for row in rd:
+        if row and str(row[0]).startswith("#"):
+            continue
+        return row
+    return []
+
+
 def read_csv_all(path):
     return list(read_csv_stream(path))
 
@@ -185,15 +258,15 @@ HGNC = set(r["hgnc_symbol"] for r in _gm)
 ALIAS2CANON = {"ITPR1": "IP3R1", "HSPD1": "HSP60", "DMT1": "SLC11A2",
                "GRP75": "HSPA9", "CYTC": "CYCS",
                "DFNA5": "GSDME"}  # 包内出现过的外部别名/变体（DFNA5：GPL10558 注释层写法，D1b 2026-08-16 登记）
-# S40 凋亡/MAM 钙对照基因（正文 §1 Tier 比较，不在 80 清单内，属设计内扩展）
-S40_EXTRAS = {"BAD", "BAK1", "BAX", "BBC3", "BCL2", "BCL2L1", "BCL2L11",
+# S19 凋亡/MAM 钙对照基因（正文 §1 Tier 比较，不在 80 清单内，属设计内扩展）
+S19_EXTRAS = {"BAD", "BAK1", "BAX", "BBC3", "BCL2", "BCL2L1", "BCL2L11",
               "BCL2L2", "BID", "MCL1", "MCU", "PMAIP1"}
 # 层内扩展基因（TOMM70A：ATAC/GWAS/转录本层基因面板自带，非 80 清单成员）
 GLOBAL_EXTRAS = {"TOMM70A"}
 # 伪符号（R6 已登记：微阵列/转录层 "NADH" 非真实基因符号，源数据保留原样）
 PSEUDO_SYMBOLS = {"NADH"}
-# S18 = AlphaMissense 自选 55 基因面板（80 清单成员 + 历史扩展基因），不做子集校验
-CUSTOM_PANEL_TABLES = {"Table_S18_AlphaMissense_Main.csv", "Table_S18c_AlphaMissense_HighPriority.csv"}
+# S13 = AlphaMissense 自选 55 基因面板（80 清单成员 + 历史扩展基因），不做子集校验
+CUSTOM_PANEL_TABLES = {"Table_S13_AlphaMissense_Main.csv", "Table_S13c_AlphaMissense_HighPriority.csv"}
 
 EXPECTED_MODULE_SIZES = {
     "mitoxy_MAM_integrity": 9, "mitoxy_mitochondrial_function": 10,
@@ -209,80 +282,80 @@ STRICT_SYMBOL_COLS = {
     "Mitoxyperilysis_Gene_Manifest_v1.0.csv": ["gene_symbol"],
     "Bridge_Test_Result.csv": ["gene"],
     "Table_S2b_scRNA_DEG_80genes.csv": ["gene_symbol"],
-    "Table_S8b_80gene_ThreePlatform_Meta.csv": ["gene"],
-    "Table_S9_Risk_Model_Features.csv": ["gene_symbol"],
-    "Table_S13_ScTenifoldKnk_KO_Summary.csv": ["ko_gene"],
-    "Table_S15a_MR_Sepsis_cisonly_Instruments.csv": ["exposure"],
-    "Table_S15b_MR_FinnGenARDS_Instruments.csv": ["exposure"],
-    "Table_S15d_cis_trans_classification.csv": ["exposure"],
-    "Table_S18_AlphaMissense_Main.csv": ["Gene_Symbol"],
-    "Table_S19c_Mitoxy_Gene_GWAS_Detail.csv": ["gene"],
-    "Table_S26f_Mitoxyperilysis_Gene_Bin_Map.csv": ["gene"],
-    "Table_S26j_Mitoxyperilysis_PerGene_Accessibility.csv": ["gene"],
-    "Table_S32_TF_Binding_Predictions.csv": ["target_gene"],
-    "Table_S36c_Target_Protein_Info.csv": ["Target_Protein"],
-    "Table_S38_Geneformer_Perturbations.csv": ["Gene"],
-    "Table_S38b_Geneformer_Perturbations_Detail.csv": ["Gene"],
-    "Table_S40_gnomAD_Constraint.csv": ["Gene_Symbol_HGNC"],
-    "Table_S41a_Differential_Transcript_Usage.csv": ["Gene"],
-    "Table_S41b_DTU_Gene_Summary.csv": ["Gene"],
-    "Table_S41c_Alternative_Splicing_Events.csv": ["Gene"],
-    "Table_S41d_Differential_Exon_Usage.csv": ["gene"],
-    "Table_S41f_Transcript_Diversity_Index.csv": ["Gene"],
+    "Table_S6b_80gene_ThreePlatform_Meta.csv": ["gene"],
+    "Table_S7_Risk_Model_Features.csv": ["gene_symbol"],
+    "Table_S75_ScTenifoldKnk_KO_Summary.csv": ["ko_gene"],
+    "Table_S10a_MR_Sepsis_cisonly_Instruments.csv": ["exposure"],
+    "Table_S10b_MR_FinnGenARDS_Instruments.csv": ["exposure"],
+    "Table_S10d_cis_trans_classification.csv": ["exposure"],
+    "Table_S13_AlphaMissense_Main.csv": ["Gene_Symbol"],
+    "Table_S14c_Mitoxy_Gene_GWAS_Detail.csv": ["gene"],
+    "Table_S79f_Mitoxyperilysis_Gene_Bin_Map.csv": ["gene"],
+    "Table_S79j_Mitoxyperilysis_PerGene_Accessibility.csv": ["gene"],
+    "Table_S85_TF_Binding_Predictions.csv": ["target_gene"],
+    "Table_S18c_Target_Protein_Info.csv": ["Target_Protein"],
+    "Table_S88_Geneformer_Perturbations.csv": ["Gene"],
+    "Table_S88b_Geneformer_Perturbations_Detail.csv": ["Gene"],
+    "Table_S19_gnomAD_Constraint.csv": ["Gene_Symbol_HGNC"],
+    "Table_S90a_Differential_Transcript_Usage.csv": ["Gene"],
+    "Table_S90b_DTU_Gene_Summary.csv": ["Gene"],
+    "Table_S90c_Alternative_Splicing_Events.csv": ["Gene"],
+    "Table_S90d_Differential_Exon_Usage.csv": ["gene"],
+    "Table_S90f_Transcript_Diversity_Index.csv": ["Gene"],
     "Table_S2_DEGs_Analysis.csv": ["gene_symbol"],   # 仅 is_pathway_gene=True 行
-    "Table_S52_D1b_GSE32707_Gene_log2FC.csv": ["gene"],
+    "Table_S25_D1b_GSE32707_Gene_log2FC.csv": ["gene"],
 }
-LEGACY38_TABLES = {  # gene 列须 ⊆ 旧 38 基因清单（S46e 动态定义）
-    "Table_S46a_Circulating_Mitoxy_Genes_GSE185263.csv": "Gene",
-    "Table_S46b_Circulating_Mitoxy_Genes_GSE212865.csv": "Gene",
+LEGACY38_TABLES = {  # gene 列须 ⊆ 旧 38 基因清单（S20e 动态定义）
+    "Table_S20a_Circulating_Mitoxy_Genes_GSE185263.csv": "Gene",
+    "Table_S20b_Circulating_Mitoxy_Genes_GSE212865.csv": "Gene",
 }
 PSEUDO_OK_TABLES = {  # 允许出现 "NADH" 伪符号的表（R6 已登记，源数据保留）
-    "Table_S46b_Circulating_Mitoxy_Genes_GSE212865.csv",
-    "Table_S41a_Differential_Transcript_Usage.csv",
-    "Table_S41b_DTU_Gene_Summary.csv",
-    "Table_S41c_Alternative_Splicing_Events.csv",
-    "Table_S41d_Differential_Exon_Usage.csv",
-    "Table_S41f_Transcript_Diversity_Index.csv",
+    "Table_S20b_Circulating_Mitoxy_Genes_GSE212865.csv",
+    "Table_S90a_Differential_Transcript_Usage.csv",
+    "Table_S90b_DTU_Gene_Summary.csv",
+    "Table_S90c_Alternative_Splicing_Events.csv",
+    "Table_S90d_Differential_Exon_Usage.csv",
+    "Table_S90f_Transcript_Diversity_Index.csv",
 }
 VALID_ALIASES = {"ITPR1": "IP3R1", "HSPD1": "HSP60", "GRP75": "HSPA9", "CYTC": "CYCS", "DMT1": "SLC11A2",
                  "DFNA5": "GSDME"}
 MATRIX_HEADER_CHECK = {  # 表头基因列（矩阵）须 ⊆ 80
-    "Table_S20l_Causal_TF_MitoGene_Matrix.csv": {"Condition", "Tissue"},
-    "Table_S46c_Blood_Mitoxy_Expression_Matrix.csv": {"Condition", "Tissue"},
+    "Table_S15l_Causal_TF_MitoGene_Matrix.csv": {"Condition", "Tissue"},
+    "Table_S20c_Blood_Mitoxy_Expression_Matrix.csv": {"Condition", "Tissue"},
 }
 
 # ---------------------------------------------------------------- M1 空间模块（2026-08-17）
-# S55 表族（S55r 按设计留空：条件间 Kruskal-Wallis 全不显著，见 M1_README_分析流程.md）
-S55_FAMILY = {
-    "Table_S55a_M1_Visium_Section_Spatial_Stats.csv",
-    "Table_S55b_M1_Visium_Condition_Summary.csv",
-    "Table_S55c_M1_Visium_Domain_Stats.csv",
-    "Table_S55d_M1_Visium_SVG_Detail.csv",
-    "Table_S55e_M1_Visium_SVG_Meta.csv",
-    "Table_S55f_M1_Visium_SVG_Enrichment.csv",
-    "Table_S55g_M1_Visium_SVG_Top10_Hypergeom.csv",
-    "Table_S55h_M1_Visium_KeyGene_Moran_Perm.csv",
-    "Table_S55i_M1_CosMx_Gene_Detection.csv",
-    "Table_S55j_M1_CosMx_Moran.csv",
-    "Table_S55k_M1_CosMx_Myeloid_Coloc.csv",
-    "Table_S55l_M1_CosMx_Module_by_CellType.csv",
-    "Table_S55m_M1_CosMx_ViralRegion_Niche.csv",
-    "Table_S55n_M1_CosMx_TNFSF13B_Source.csv",
-    "Table_S55o_M1_CosMx_TNFSF13B_Neighborhood.csv",
-    "Table_S55p_M1_Visium_NNLS_CellType_by_Condition.csv",
-    "Table_S55q_M1_Visium_NNLS_MarkerScore_Correlation.csv",
-    "Table_S55s_M1_Visium_TNFSF13B_TFRC_Neighborhood.csv",
-    "Table_S55t_M1_Visium_TNFSF13B_TFRC_CellType_Attribution.csv",
-    "Table_S55u_M1_Visium_NNLS_CosMx_by_Condition.csv",
-    "Table_S55v_M1_Visium_Bivariate_Residualized.csv",
+# S28 表族（S28r 按设计留空：条件间 Kruskal-Wallis 全不显著，见 M1_README_分析流程.md）
+S28_FAMILY = {
+    "Table_S28a_M1_Visium_Section_Spatial_Stats.csv",
+    "Table_S28b_M1_Visium_Condition_Summary.csv",
+    "Table_S28c_M1_Visium_Domain_Stats.csv",
+    "Table_S28d_M1_Visium_SVG_Detail.csv",
+    "Table_S28e_M1_Visium_SVG_Meta.csv",
+    "Table_S28f_M1_Visium_SVG_Enrichment.csv",
+    "Table_S28g_M1_Visium_SVG_Top10_Hypergeom.csv",
+    "Table_S28h_M1_Visium_KeyGene_Moran_Perm.csv",
+    "Table_S28i_M1_CosMx_Gene_Detection.csv",
+    "Table_S28j_M1_CosMx_Moran.csv",
+    "Table_S28k_M1_CosMx_Myeloid_Coloc.csv",
+    "Table_S28l_M1_CosMx_Module_by_CellType.csv",
+    "Table_S28m_M1_CosMx_ViralRegion_Niche.csv",
+    "Table_S28n_M1_CosMx_TNFSF13B_Source.csv",
+    "Table_S28o_M1_CosMx_TNFSF13B_Neighborhood.csv",
+    "Table_S28p_M1_Visium_NNLS_CellType_by_Condition.csv",
+    "Table_S28q_M1_Visium_NNLS_MarkerScore_Correlation.csv",
+    "Table_S28s_M1_Visium_TNFSF13B_TFRC_Neighborhood.csv",
+    "Table_S28t_M1_Visium_TNFSF13B_TFRC_CellType_Attribution.csv",
+    "Table_S28u_M1_Visium_NNLS_CosMx_by_Condition.csv",
+    "Table_S28v_M1_Visium_Bivariate_Residualized.csv",
 }
-S55_N_SECTIONS = 23
-S55_SPOT_TOTAL = 93869
-S55_CONDITION_COUNTS = {"Control": 4, "AcuteDAD": 7, "ProliferativeDAD": 12}
+S28_N_SECTIONS = 23
+S28_SPOT_TOTAL = 93869
+S28_CONDITION_COUNTS = {"Control": 4, "AcuteDAD": 7, "ProliferativeDAD": 12}
 # 预注册可测上限（M1_pre_registration_20260817.md）：Visium FFPE 上游 24/30（缺 6 MT-*）、执行 32/33（缺 CASP1）
-S55_GENE_CAPS = {"n_up_genes": 24, "n_ex_genes": 32}
+S28_GENE_CAPS = {"n_up_genes": 24, "n_ex_genes": 32}
 # 预注册 CosMx 面板覆盖：执行臂仅 5/33 可测、上游 0/30（N4_资源核实报告.md §2）
-S55_COSMX_EXEC_EXPECTED = {"IL18", "IL1B", "NLRP3", "SLC40A1", "SOD2"}
+S28_COSMX_EXEC_EXPECTED = {"IL18", "IL1B", "NLRP3", "SLC40A1", "SOD2"}
 
 # FDR/p 列识别（值为数值的列才纳入；标记/注释/计数列排除）
 FDR_RE = re.compile(r"(?i)(fdr|padj|p_adj|q_value|qvalue|q-val|adj_p)")
@@ -291,31 +364,36 @@ P_RE = re.compile(r"(?i)(^p$|pvalue|p_value|p\.value|_p$|permutation_p|mw_p|p_li
 P_EXCLUDE_RE = re.compile(r"(?i)(neg_log10|n_sig|^pct|pct_|^pos$|position|protein|pathway|peak|pmaip|pdb)")
 # 个别表 FDR/p 列允许空值/NaN 的白名单（附理由，逐项登记）
 FDR_NULL_OK = {
-    ("Table_S15a_MR_Sepsis_cisonly_Sensitivity.csv", "fdr_q"): "MR 敏感度异质性检验逐 IV 行，无 FDR 义务",
-    ("Table_S47b_Circulating_Mitoxy_Immune_Correlations.csv", "FDR"):
+    ("Table_S10a_MR_Sepsis_cisonly_Sensitivity.csv", "fdr_q"): "MR 敏感度异质性检验逐 IV 行，无 FDR 义务",
+    ("Table_S21b_Circulating_Mitoxy_Immune_Correlations.csv", "FDR"):
         "6 个恒定比例细胞类型（如 NK activated）相关未定义 → NaN，FDR_note 列已逐行说明",
+    # 2026-09-21 figure_data 段重登记：本键从正文图号改为**磁盘真名**
+    # （正文 Figure S7 的数据文件是 Figure_S6I.csv；映射见 00_对照表/FIGURE_CROSSWALK.csv）
     ("Figure_S6I.csv", "FDR"):
-        "6 个恒定比例细胞类型（NK cells activated）相关未定义 → NaN，FDR_note 列已逐行说明（原 Figure_5I，任务8 降入补充 S9）",
-    ("Table_S8_Consensus_Genes.csv", "GSE212865_padj"): "基因不在 GSE212865 平台时留空（数据集缺席 NA，非计算失败）",
-    ("Table_S8_Meta_Analysis.csv", "GSE212865_padj"): "同上：数据集缺席 NA",
-    ("Table_S8_Meta_Analysis.csv", "meta_Fisher_padj"): "某数据集 p 缺失无法合并 Fisher 的 2 行（源数据缺席）",
-    ("Table_S52_D1b_GSE32707_Gene_log2FC.csv", "BH_q"):
+        "6 个恒定比例细胞类型（NK cells activated）相关未定义 → NaN，FDR_note 列已逐行说明（正文 Figure S7I；原 Figure_5I，任务8 降入补充 S9；2026-09-16 A+B 附图级联 S6I→S7I）",
+    ("Table_S6_Consensus_Genes.csv", "GSE212865_padj"): "基因不在 GSE212865 平台时留空（数据集缺席 NA，非计算失败）",
+    ("Table_S6_Meta_Analysis.csv", "GSE212865_padj"): "同上：数据集缺席 NA",
+    ("Table_S6_Meta_Analysis.csv", "meta_Fisher_padj"): "某数据集 p 缺失无法合并 Fisher 的 2 行（源数据缺席）",
+    ("Table_S25_D1b_GSE32707_Gene_log2FC.csv", "BH_q"):
         "6 个 MT 基因平台缺席登记行（GPL10558 注释层真实缺席，非计算失败）",
     # M4 蛋白层（2026-08-18 登记，2026-08-21 lint 白名单补登）：mmc4 论文官方统计仅覆盖 25/80 基因，
-    # 缺官方 padj 的基因逐行留空并在正文 §4.21/Table S59 口径披露（px_padj/mmc4_padj 空值=无官方统计，非计算失败）
-    ("Figure_5F.csv", "px_padj"): "M4 蛋白层（原 Figure_10A，任务8 图号迁移）：无论文官方统计的基因留空（mmc4 仅 25/80 基因有官方 padj，正文已披露）",
-    ("Figure_5G.csv", "mmc4_padj"): "M4 蛋白层铁轴表（原 Figure_10B，任务8 图号迁移）：无官方统计基因留空（同上口径）",
-    ("Table_S59a_M4_Protein_Transcript_Consistency.csv", "px_padj"): "M4 蛋白层：无官方统计基因留空（同上口径）",
-    ("Table_S59b_M4_Lung_Iron_Axis_Proteins.csv", "mmc4_padj"): "M4 蛋白层铁轴表：无官方统计基因留空（同上口径）",
+    # 缺官方 padj 的基因逐行留空并在正文 §4.21/Table S32 口径披露（px_padj/mmc4_padj 空值=无官方统计，非计算失败）
+    # 2026-09-21 figure_data 段重登记：键名从正文图号改为**磁盘真名**（图源树文件名沿用 pkg 世代，
+    # 正文 Figure 4F / 4G 的数据文件是 Figure_5F.csv / Figure_5G.csv；映射见 00_对照表/FIGURE_CROSSWALK.csv）
+    ("Figure_5F.csv", "px_padj"): "M4 蛋白层（正文 Figure 4F；原 Figure_10A，任务8 图号迁移；2026-09-16 A+B 压缩 5F→4F）：无论文官方统计的基因留空（mmc4 仅 25/80 基因有官方 padj，正文已披露）",
+    ("Figure_5G.csv", "mmc4_padj"): "M4 蛋白层铁轴表（正文 Figure 4G；原 Figure_10B，任务8 图号迁移；2026-09-16 A+B 压缩 5G→4G）：无官方统计基因留空（同上口径）",
+    ("Table_S32a_M4_Protein_Transcript_Consistency.csv", "px_padj"): "M4 蛋白层：无官方统计基因留空（同上口径）",
+    ("Table_S32b_M4_Lung_Iron_Axis_Proteins.csv", "mmc4_padj"): "M4 蛋白层铁轴表：无官方统计基因留空（同上口径）",
     # M10–M15 新模块批次（2026-08-27 收口补登）：以下空值均为设计内缺席，非计算失败
-    ("Table_S62_M14_IIAMD_Core_v1.0.csv", "b_cs_padj"):
+    ("Table_S35_M14_IIAMD_Core_v1.0.csv", "b_cs_padj"):
         "M14 冻结签名表：CS 主效应 padj 不在该签名的计算口径内（源中间表 M14_IIAMD_core_v1.0 同列全空），非计算失败",
-    ("Table_S62_M14_IIAMD_Core_v1.0.csv", "b_torin_padj"):
-        "M14 冻结签名表：1 基因在 Torin 宇宙效应表（S71）无测值（源数据缺席 NA）",
-    ("Table_S63_M14_Gate2_Core_Rerun_ThreeLayers.csv", "OLS_p_adj"):
+    ("Table_S35_M14_IIAMD_Core_v1.0.csv", "b_torin_padj"):
+        "M14 冻结签名表：1 基因在 Torin 宇宙效应表（S44）无测值（源数据缺席 NA）",
+    ("Table_S36_M14_Gate2_Core_Rerun_ThreeLayers.csv", "OLS_p_adj"):
         "M14 腿2 三层头对头：OLS 组成调整仅适用 bulk 两层，scRNA 供者级层无该口径（设计内 NA）",
+    # 2026-09-21 figure_data 段重登记：本键从正文图号改为**磁盘真名**（正文 Figure S10D 的数据文件是 Figure_7E.csv）
     ("Figure_7E.csv", "OLS_p_adj"):
-        "图7E 面板（同 Table_S63 口径）：scRNA 供者级层无 OLS 组成调整口径（设计内 NA）",
+        "图 S10D 面板（原 Figure_7E，2026-09-16 A+B 压缩降入附图；同 Table_S63 口径）：scRNA 供者级层无 OLS 组成调整口径（设计内 NA）",
 }
 
 
@@ -397,32 +475,32 @@ def check_n22_numbering(man_canon):
     low = [f for f in files if re.match(r"(?i)^table_s\d", f) and not f.startswith("Table_S")]
     if low:
         fail(f"[N22] 仍存在小写 s 编号文件: {low}")
-    # 各编号唯一族
-    s6 = [f for f in files if re.match(r"Table_S6([_.]|$)", f)]
-    if any("Dissociation" in f for f in s6):
-        fail(f"[N22] S6 仍含解离检验文件: {[f for f in s6 if 'Dissociation' in f]}")
-    if not any("Scissor" in f for f in s6):
-        fail("[N22] S6 缺少 Scissor 主表")
-    s3 = [f for f in files if re.match(r"Table_S3([_.]|$)", f)]
-    if any("WGCNA" in f for f in s3):
-        fail(f"[N22] S3 仍含 WGCNA 文件: {[f for f in s3 if 'WGCNA' in f]}")
-    if "Table_S49_WGCNA_Modules.csv" not in files:
-        fail("[N22] S49 WGCNA 模块表缺失")
-    s26b = [f for f in files if f.startswith("Table_S26b_")]
-    if len(s26b) != 1 or "Cluster_Statistics" not in s26b[0]:
-        fail(f"[N22] S26b 应唯一为 Cluster_Statistics，实际: {s26b}")
-    if "Table_S26a_HLCA_CellType_Annotations.csv" not in files:
-        fail("[N22] S26a HLCA 注释表缺失")
+    # 各编号唯一族（2026-10-02 编号迁移：Scissor 组 S6→S4、细胞组成组 S3→S73、scATAC 组 S26→S79）
+    s4 = [f for f in files if re.match(r"Table_S4([_.]|$)", f)]
+    if any("Dissociation" in f for f in s4):
+        fail(f"[N22] S4 仍含解离检验文件: {[f for f in s4 if 'Dissociation' in f]}")
+    if not any("Scissor" in f for f in s4):
+        fail("[N22] S4 缺少 Scissor 主表")
+    s73 = [f for f in files if re.match(r"Table_S73([_.]|$)", f)]
+    if any("WGCNA" in f for f in s73):
+        fail(f"[N22] S73 仍含 WGCNA 文件: {[f for f in s73 if 'WGCNA' in f]}")
+    if "Table_S93_WGCNA_Modules.csv" not in files:
+        fail("[N22] S93 WGCNA 模块表缺失")
+    s79b = [f for f in files if f.startswith("Table_S79b_")]
+    if len(s79b) != 1 or "Cluster_Statistics" not in s79b[0]:
+        fail(f"[N22] S79b 应唯一为 Cluster_Statistics，实际: {s79b}")
+    if "Table_S79a_HLCA_CellType_Annotations.csv" not in files:
+        fail("[N22] S79a HLCA 注释表缺失")
     # 版本并存 / 备份残留
     bad_pat = [f for f in files if re.search(r"(CORRECTED|_backup|_pre_|_superseded)", f)]
     if bad_pat:
         fail(f"[N22] 顶层仍存在版本并存/备份命名: {bad_pat}")
-    for need in ["Table_S18_AlphaMissense_Main.csv", "Table_S18b_AlphaMissense_Module_Summary.csv",
-                 "Table_S18c_AlphaMissense_HighPriority.csv", "Table_S12b_Mitoxyperilysis_Upstream_TF.csv",
-                 "Table_S48_Dissociation_singlecell_correlation.csv"]:
+    for need in ["Table_S13_AlphaMissense_Main.csv", "Table_S13b_AlphaMissense_Module_Summary.csv",
+                 "Table_S13c_AlphaMissense_HighPriority.csv", "Table_S9b_Mitoxyperilysis_Upstream_TF.csv",
+                 "Table_S22_Dissociation_singlecell_correlation.csv"]:
         if need not in files:
             fail(f"[N22] 缺少 canonical 文件: {need}")
-    ok("[N22] 编号唯一性：S3/S6/S12/S18/S26 冲突清除；无小写 s、无版本并存/备份残留")
+    ok("[N22] 编号唯一性：S4/S9/S13/S73/S79 冲突清除；无小写 s、无版本并存/备份残留")
     # S 编号解析一致性
     for fn, r in man_canon.items():
         m = re.match(r"[Tt]able_([Ss]\d+)[a-z]?[_.]", fn)
@@ -432,15 +510,22 @@ def check_n22_numbering(man_canon):
 
 def check_versions(man_canon):
     n_csv = n_txt = 0
+    n_absent = 0
     for fn, r in sorted(man_canon.items()):
         if fn in MISSING_OK:
             continue
         p = fp(fn)
+        # 2026-09-20 补存在性护栏：本函数原来直接 p.read_bytes()，只要有一份
+        # 登记在册但本地缺失的 CSV（图源数据里用正文图号登记、磁盘上是数据包
+        # 图号，两套世代并存），整个 lint 就以 FileNotFoundError 崩掉 ——
+        # 崩溃会让"缺失"这件事本身失去报告，比失败更糟。缺失项由
+        # check_manifest 的 absent 检查统一上报，这里跳过即可。
         if not p.exists():
+            n_absent += 1
             continue
         if fn.lower().endswith(".csv"):
             if fn in ("GSE185263_groups.csv", "MR_bio_CRP_Sepsis.csv", "MR_bio_Ferritin_Sepsis.csv",
-                      "Table_S50_D1b_GSE32707_Groups.csv"):
+                      "Table_S23_D1b_GSE32707_Groups.csv"):
                 continue  # 分组定义/探索性输出，manifest 记 NA，无版本列（设计内）
             if fn in M1X_NO_VERSION_STAMP:
                 continue  # 2026-08-27：M10–M15 新模块导出表/图数据，导出设计无内嵌版本列，manifest 记 NA
@@ -449,9 +534,7 @@ def check_versions(man_canon):
             bad = False
             with open(p, "r", encoding=enc, newline="") as f:
                 rd = csv.reader(f)
-                hdr = next(rd)
-                if hdr and str(hdr[0]).startswith("#"):
-                    hdr = next(rd)          # '#' 注释行后的真实表头
+                hdr = read_data_header(rd)
                 if "gene_set_version" not in hdr or "score_version" not in hdr:
                     fail(f"[版本] {fn} 缺 gene_set_version/score_version 列")
                     bad = True
@@ -519,7 +602,7 @@ def check_symbols():
     def allowed(sym, fname):
         s = ALIAS2CANON.get(sym, sym)
         return (s in SET80) or (sym in SET80) or (sym in GLOBAL_EXTRAS) or \
-               (fname == "Table_S40_gnomAD_Constraint.csv" and sym in S40_EXTRAS) or \
+               (fname == "Table_S19_gnomAD_Constraint.csv" and sym in S19_EXTRAS) or \
                (sym in PSEUDO_SYMBOLS and fname in PSEUDO_OK_TABLES)
 
     for fname, cols in STRICT_SYMBOL_COLS.items():
@@ -547,10 +630,10 @@ def check_symbols():
             ok(f"[符号] {fname}: {n} 行 {cols} 全部合法")
 
     # legacy-38 层
-    s46e = read_csv_all(fp("Table_S46e_Mitoxy_Gene_Blood_Summary.csv"))
+    s46e = read_csv_all(fp("Table_S20e_Mitoxy_Gene_Blood_Summary.csv"))
     legacy38 = {r["Gene"] for r in s46e}
     if len(legacy38) != 38:
-        fail(f"[符号] S46e 旧 38 基因清单行数 {len(legacy38)} != 38")
+        fail(f"[符号] S20e 旧 38 基因清单行数 {len(legacy38)} != 38")
     for fname, col in LEGACY38_TABLES.items():
         bad = defaultdict(int)
         for row in read_csv_stream(fp(fname)):
@@ -564,6 +647,8 @@ def check_symbols():
 
     # 矩阵表头基因列
     for fname, excl in MATRIX_HEADER_CHECK.items():
+        if not fp(fname).exists():
+            continue
         raw = fp(fname).read_bytes()
         enc = "utf-8-sig" if raw.startswith(b"\xef\xbb\xbf") else "utf-8"
         with open(fp(fname), "r", encoding=enc, newline="") as f:
@@ -584,16 +669,14 @@ def check_p_and_fdr(man_canon):
         if fn in MISSING_OK:
             continue
         p = fp(fn)
-        if not p.exists():
+        if not p.exists():          # 同 check_versions：缺失项由 check_manifest 上报
             continue
         raw = p.read_bytes()
         enc = "utf-8-sig" if raw.startswith(b"\xef\xbb\xbf") else "utf-8"
         fdr_cols = p_cols = []
         with open(p, "r", encoding=enc, newline="") as f:
             rd = csv.reader(f)
-            hdr = next(rd)
-            if hdr and str(hdr[0]).startswith("#"):
-                hdr = next(rd)          # '#' 注释行后的真实表头
+            hdr = read_data_header(rd)
             fdr_cols = [c for c in hdr if FDR_RE.search(c) and not FLAG_RE.search(c)
                         and not P_EXCLUDE_RE.search(c)]
             p_cols = [c for c in hdr if (P_RE.search(c) or c.lower() in ("pvalue", "pval"))
@@ -644,17 +727,17 @@ def check_counts():
     else:
         ok("[计数] GSE185263_groups = 266/82/44（共 392）")
 
-    e = Counter(r["Condition"] for r in read_csv_stream(fp("Table_S16e_Sample_Condition_Info.csv")))
+    e = Counter(r["Condition"] for r in read_csv_stream(fp("Table_S11e_Sample_Condition_Info.csv")))
     if dict(e) != {"Sepsis": 266, "Sepsis_COVID": 82, "Healthy_Control": 44}:
-        fail(f"[计数] S16e Condition 计数 {dict(e)} != 266/82/44（Healthy_Control）")
+        fail(f"[计数] S11e Condition 计数 {dict(e)} != 266/82/44（Healthy_Control）")
     else:
-        ok("[计数] S16e Condition = 266/82/44")
+        ok("[计数] S11e Condition = 266/82/44")
 
-    s5 = Counter(r["group"] for r in read_csv_stream(fp("Table_S5_PCD_Scores.csv")))
+    s5 = Counter(r["group"] for r in read_csv_stream(fp("Table_S3_PCD_Scores.csv")))
     if dict(s5) != {"Sepsis": 266, "Sepsis_COVID": 82, "Control": 44}:
-        fail(f"[计数] S5 group 计数 {dict(s5)} != 266/82/44")
+        fail(f"[计数] S3 group 计数 {dict(s5)} != 266/82/44")
     else:
-        ok("[计数] S5 group = 266/82/44")
+        ok("[计数] S3 group = 266/82/44")
 
     s5r = Counter(r["group"] for r in read_csv_stream(fp("Table_S5_PCD_Scores_RAW.csv")))
     if dict(s5r) != {"Sepsis": 266, "Sepsis_COVID": 82, "Control": 44}:
@@ -663,7 +746,7 @@ def check_counts():
         ok("[计数] S5_RAW group = 266/82/44")
 
     # D1b（2026-08-16）：GSE32707 组计数 + 表行数 + 74 可测/6 MT 缺席
-    d1b = Counter(r["group"] for r in read_csv_stream(fp("Table_S50_D1b_GSE32707_Groups.csv")))
+    d1b = Counter(r["group"] for r in read_csv_stream(fp("Table_S23_D1b_GSE32707_Groups.csv")))
     exp_d1b = {"Control": 34, "SIRS_d0": 21, "Sepsis_d0": 30, "Sepsis_d7": 28,
                "ARDS_d0": 18, "ARDS_d7": 13}
     if dict(d1b) != exp_d1b or sum(d1b.values()) != 144:
@@ -671,28 +754,28 @@ def check_counts():
     else:
         ok("[计数] D1b GSE32707 = 34/21/30/28/18/13（共 144）")
 
-    s51 = list(read_csv_stream(fp("Table_S51_D1b_GSE32707_Module_ssGSEA.csv")))
+    s51 = list(read_csv_stream(fp("Table_S24_D1b_GSE32707_Module_ssGSEA.csv")))
     if len(s51) != 54:
-        fail(f"[计数] S51 行数 {len(s51)} != 54（6 对比 × 9 特征）")
+        fail(f"[计数] S24 行数 {len(s51)} != 54（6 对比 × 9 特征）")
     else:
-        ok("[计数] S51 = 54 行（6 对比 × 9 特征）")
+        ok("[计数] S24 = 54 行（6 对比 × 9 特征）")
 
-    s52 = list(read_csv_stream(fp("Table_S52_D1b_GSE32707_Gene_log2FC.csv")))
+    s52 = list(read_csv_stream(fp("Table_S25_D1b_GSE32707_Gene_log2FC.csv")))
     n_meas = sum(1 for r in s52 if r["contrast"] == "A1_ARDS_d0_vs_Control")
     n_abs = sum(1 for r in s52 if r["contrast"] == "platform_absent_registration")
     if (n_meas, n_abs) != (74, 6) or len(s52) != 228:
-        fail(f"[计数] S52 可测 {n_meas}/缺席 {n_abs}/总行 {len(s52)} != 74/6/228（74×3+6）")
+        fail(f"[计数] S25 可测 {n_meas}/缺席 {n_abs}/总行 {len(s52)} != 74/6/228（74×3+6）")
     else:
         mt_abs = sorted(r["gene"] for r in s52 if r["contrast"] == "platform_absent_registration")
-        ok(f"[计数] S52 = 74 可测 ×3 对比 + 6 MT 缺席登记（{','.join(mt_abs)}）= 228 行")
+        ok(f"[计数] S25 = 74 可测 ×3 对比 + 6 MT 缺席登记（{','.join(mt_abs)}）= 228 行")
 
-    s53v = [r for r in read_csv_stream(fp("Table_S53_D1b_Three_Anchor_Consistency.csv"))
+    s53v = [r for r in read_csv_stream(fp("Table_S26_D1b_Three_Anchor_Consistency.csv"))
             if r["panel"] == "D_verdict" and r["row_id"] == "最终判定"]
     allowed_verdicts = {"R1_一致_加强ARDS主张", "R2_异质性叙事", "R3_全阴_回退D1a", "R4_部分信号_中性报告"}
     if len(s53v) != 1 or s53v[0]["flag"] not in allowed_verdicts:
-        fail(f"[计数] S53 D1b 预注册判定行异常: {[r['flag'] for r in s53v]}")
+        fail(f"[计数] S26 D1b 预注册判定行异常: {[r['flag'] for r in s53v]}")
     else:
-        ok(f"[计数] S53 预注册判定在册（{s53v[0]['flag']}）")
+        ok(f"[计数] S26 预注册判定在册（{s53v[0]['flag']}）")
 
     # 单细胞总数
     s1 = read_csv_all(fp("Table_S1_Mitoxyperilysis_Score_by_CellType_Summary.csv"))
@@ -705,30 +788,30 @@ def check_counts():
     else:
         ok("[计数] S1_Summary = 138,941（GSE145926 83,952 + GSE158055 54,989）")
 
-    pooled = [r for r in read_csv_stream(fp("Table_S48_Dissociation_singlecell_correlation.csv"))
+    pooled = [r for r in read_csv_stream(fp("Table_S22_Dissociation_singlecell_correlation.csv"))
               if r["stratum"] == "ALL_pooled"]
     if not pooled or int(pooled[0]["n"]) != 138941:
-        fail(f"[计数] S48 pooled n != 138,941（实际 {[r['n'] for r in pooled]}）")
+        fail(f"[计数] S22 pooled n != 138,941（实际 {[r['n'] for r in pooled]}）")
     else:
-        ok("[计数] S48 解离检验 pooled n = 138,941")
+        ok("[计数] S22 解离检验 pooled n = 138,941")
 
     # Scissor 比例合计
     sc = defaultdict(float)
-    for r in read_csv_stream(fp("Table_S6_Scissor_CellType_Composition.csv")):
+    for r in read_csv_stream(fp("Table_S4_Scissor_CellType_Composition.csv")):
         sc[(r["cell_type"], r["condition"])] += float(r["pct_within_celltype_condition"])
     badsc = {k: round(v, 2) for k, v in sc.items() if abs(v - 100) > 0.5}
     if badsc:
-        fail(f"[计数] S6 Scissor 组成比例合计 != 100%: {dict(list(badsc.items())[:5])}")
+        fail(f"[计数] S4 Scissor 组成比例合计 != 100%: {dict(list(badsc.items())[:5])}")
     else:
-        ok(f"[计数] S6 Scissor 组成比例：{len(sc)} 个 cell_type×condition 组均合计 100%")
+        ok(f"[计数] S4 Scissor 组成比例：{len(sc)} 个 cell_type×condition 组均合计 100%")
 
     # 固定行数
     for fn, col, exp in [
         ("Bridge_Test_Result.csv", "gene", 80),
-        ("Table_S12b_Mitoxyperilysis_Upstream_TF.csv", "TF", 23),
-        ("Table_S13_ScTenifoldKnk_KO_Summary.csv", "ko_gene", 12),
-        ("Table_S18_AlphaMissense_Main.csv", "Gene_Symbol", 55),
-        ("Table_S46e_Mitoxy_Gene_Blood_Summary.csv", "Gene", 38),
+        ("Table_S9b_Mitoxyperilysis_Upstream_TF.csv", "TF", 23),
+        ("Table_S75_ScTenifoldKnk_KO_Summary.csv", "ko_gene", 12),
+        ("Table_S13_AlphaMissense_Main.csv", "Gene_Symbol", 55),
+        ("Table_S20e_Mitoxy_Gene_Blood_Summary.csv", "Gene", 38),
     ]:
         vals = [r[col] for r in read_csv_stream(fp(fn))]
         if len(vals) != exp:
@@ -736,22 +819,22 @@ def check_counts():
         else:
             ok(f"[计数] {fn} 行数 = {exp}")
 
-    # S15d：15 基因、34 cis + 13 trans
-    d = list(read_csv_stream(fp("Table_S15d_cis_trans_classification.csv")))
+    # S10d：15 基因、34 cis + 13 trans
+    d = list(read_csv_stream(fp("Table_S10d_cis_trans_classification.csv")))
     genes = {r["exposure"] for r in d}
     cis = sum(1 for r in d if r["is_cis"] == "TRUE")
     trans = sum(1 for r in d if r["is_cis"] == "FALSE")
     if len(genes) != 15 or (cis, trans) != (34, 13):
-        fail(f"[计数] S15d: {len(genes)} 基因 / cis {cis} + trans {trans} != 15 / 34+13")
+        fail(f"[计数] S10d: {len(genes)} 基因 / cis {cis} + trans {trans} != 15 / 34+13")
     else:
-        ok("[计数] S15d = 15 基因、34 cis + 13 trans")
+        ok("[计数] S10d = 15 基因、34 cis + 13 trans")
 
-    # S26b 聚类数（登记值 16）
-    n26 = len(read_csv_all(fp("Table_S26b_Cluster_Statistics.csv")))
+    # S79b 聚类数（登记值 16）
+    n26 = len(read_csv_all(fp("Table_S79b_Cluster_Statistics.csv")))
     if n26 != 16:
-        warn(f"[计数] S26b 聚类数 {n26}（方案登记 16）")
+        warn(f"[计数] S79b 聚类数 {n26}（方案登记 16）")
     else:
-        ok("[计数] S26b = 16 clusters")
+        ok("[计数] S79b = 16 clusters")
 
 
 def check_sample_manifest():
@@ -833,39 +916,39 @@ def _norm_ppf(p):
 
 
 def check_m1_spatial(man_canon):
-    """M1 空间模块守门（2026-08-17）：S55 表族完整性与 manifest 冻结行数一致；
+    """M1 空间模块守门（2026-08-17）：S28 表族完整性与 manifest 冻结行数一致；
     预注册 R1-R3 判定复算（口径复刻 M1_step7_judgment.py，规则先于结果，
     见 M1_pre_registration_20260817.md）；CosMx 面板覆盖；空间样本清单。"""
-    s55_reg = {fn for fn, r in man_canon.items() if r["s_number"] == "S55"}
-    if s55_reg != S55_FAMILY:
-        fail(f"[M1] S55 登记族与期望不一致: 缺 {sorted(S55_FAMILY - s55_reg)}, 多 {sorted(s55_reg - S55_FAMILY)}")
+    s28_reg = {fn for fn, r in man_canon.items() if r["s_number"] == "S28"}
+    if s28_reg != S28_FAMILY:
+        fail(f"[M1] S28 登记族与期望不一致: 缺 {sorted(S28_FAMILY - s28_reg)}, 多 {sorted(s28_reg - S28_FAMILY)}")
         return
 
-    row_bad = [fn for fn in sorted(S55_FAMILY)
+    row_bad = [fn for fn in sorted(S28_FAMILY)
                if sum(1 for _ in read_csv_stream(fp(fn))) != int(float(man_canon[fn]["n_data_rows"]))]
     if row_bad:
-        fail(f"[M1] S55 行数与 manifest n_data_rows 不符: {row_bad}")
+        fail(f"[M1] S28 行数与 manifest n_data_rows 不符: {row_bad}")
     else:
-        ok(f"[M1] S55 表族 {len(S55_FAMILY)} 张齐全（S55r 按设计留空），行数全部与 manifest 冻结值一致")
+        ok(f"[M1] S28 表族 {len(S28_FAMILY)} 张齐全（S28r 按设计留空），行数全部与 manifest 冻结值一致")
 
-    # S55a：23 切片、条件计数、spots 总数、可测基因上限
-    a = list(read_csv_stream(fp("Table_S55a_M1_Visium_Section_Spatial_Stats.csv")))
+    # S28a：23 切片、条件计数、spots 总数、可测基因上限
+    a = list(read_csv_stream(fp("Table_S28a_M1_Visium_Section_Spatial_Stats.csv")))
     cond = Counter(r["condition"] for r in a)
     spots = sum(int(r["n_spots"]) for r in a)
     cap_bad = [r["section"] for r in a
-               if not (1 <= int(r["n_up_genes"]) <= S55_GENE_CAPS["n_up_genes"]
-                       and 1 <= int(r["n_ex_genes"]) <= S55_GENE_CAPS["n_ex_genes"])]
-    if len(a) != S55_N_SECTIONS or len({r["section"] for r in a}) != S55_N_SECTIONS \
-            or dict(cond) != S55_CONDITION_COUNTS or spots != S55_SPOT_TOTAL:
-        fail(f"[M1] S55a 不变量破坏: n={len(a)} 条件 {dict(cond)} spots={spots} "
-             f"!= {S55_N_SECTIONS}/{S55_CONDITION_COUNTS}/{S55_SPOT_TOTAL}")
+               if not (1 <= int(r["n_up_genes"]) <= S28_GENE_CAPS["n_up_genes"]
+                       and 1 <= int(r["n_ex_genes"]) <= S28_GENE_CAPS["n_ex_genes"])]
+    if len(a) != S28_N_SECTIONS or len({r["section"] for r in a}) != S28_N_SECTIONS \
+            or dict(cond) != S28_CONDITION_COUNTS or spots != S28_SPOT_TOTAL:
+        fail(f"[M1] S28a 不变量破坏: n={len(a)} 条件 {dict(cond)} spots={spots} "
+             f"!= {S28_N_SECTIONS}/{S28_CONDITION_COUNTS}/{S28_SPOT_TOTAL}")
     if cap_bad:
-        fail(f"[M1] S55a 可测基因数超出预注册上限（上游≤{S55_GENE_CAPS['n_up_genes']}/"
-             f"执行≤{S55_GENE_CAPS['n_ex_genes']}）: {cap_bad[:5]}")
-    if len(a) == S55_N_SECTIONS and dict(cond) == S55_CONDITION_COUNTS \
-            and spots == S55_SPOT_TOTAL and not cap_bad:
-        ok(f"[M1] S55a = {S55_N_SECTIONS} 切片（Control 4/AcuteDAD 7/ProliferativeDAD 12，"
-           f"spots 合计 {S55_SPOT_TOTAL}）；可测基因数均在预注册上限内")
+        fail(f"[M1] S28a 可测基因数超出预注册上限（上游≤{S28_GENE_CAPS['n_up_genes']}/"
+             f"执行≤{S28_GENE_CAPS['n_ex_genes']}）: {cap_bad[:5]}")
+    if len(a) == S28_N_SECTIONS and dict(cond) == S28_CONDITION_COUNTS \
+            and spots == S28_SPOT_TOTAL and not cap_bad:
+        ok(f"[M1] S28a = {S28_N_SECTIONS} 切片（Control 4/AcuteDAD 7/ProliferativeDAD 12，"
+           f"spots 合计 {S28_SPOT_TOTAL}）；可测基因数均在预注册上限内")
 
     # 预注册判定复算（复刻 M1_step7_judgment.py，期望 R3）
     n = len(a)
@@ -882,7 +965,7 @@ def check_m1_spatial(man_canon):
         verdict = "R2" if (n_up_sig >= n / 2) != (n_ex_sig >= n / 2) \
             and not (up_diffuse and ex_diffuse) else "R3"
     if verdict != "R3" or abs(z_st - 6.33) > 0.02 or (n_neg_sig, n_up_sig, n_ex_sig) != (3, 15, 21):
-        fail(f"[M1] S55a 判定复算偏离冻结结果: verdict={verdict} z_bv_st={z_st:+.3f} "
+        fail(f"[M1] S28a 判定复算偏离冻结结果: verdict={verdict} z_bv_st={z_st:+.3f} "
              f"n_neg_sig/n_up_sig/n_ex_sig={n_neg_sig}/{n_up_sig}/{n_ex_sig}（冻结 R3 / +6.33 / 3/15/21）")
     else:
         ok(f"[M1] 预注册判定复算 = R3（双变量 I 合并 z=+6.33 显著为正；负显著切片 {n_neg_sig}/23；"
@@ -902,43 +985,43 @@ def check_m1_spatial(man_canon):
         else:
             ok("[M1] 判定报告存在且与复算判定一致（R3）")
 
-    # S55b/S55c/S55f 结构不变量
-    b = list(read_csv_stream(fp("Table_S55b_M1_Visium_Condition_Summary.csv")))
+    # S28b/S28c/S28f 结构不变量
+    b = list(read_csv_stream(fp("Table_S28b_M1_Visium_Condition_Summary.csv")))
     b_sec = {r["condition"]: int(r["n_sections"]) for r in b}
-    c = list(read_csv_stream(fp("Table_S55c_M1_Visium_Domain_Stats.csv")))
+    c = list(read_csv_stream(fp("Table_S28c_M1_Visium_Domain_Stats.csv")))
     c_dom = Counter(r["section"] for r in c)
-    f = list(read_csv_stream(fp("Table_S55f_M1_Visium_SVG_Enrichment.csv")))
-    if len(b) != 3 or b_sec != S55_CONDITION_COUNTS:
-        fail(f"[M1] S55b 条件汇总异常: {b_sec}")
-    if len(c) != S55_N_SECTIONS * 5 or any(v != 5 for v in c_dom.values()):
-        fail(f"[M1] S55c 域统计异常: 行数 {len(c)}，逐切片域数 {dict(c_dom)}")
+    f = list(read_csv_stream(fp("Table_S28f_M1_Visium_SVG_Enrichment.csv")))
+    if len(b) != 3 or b_sec != S28_CONDITION_COUNTS:
+        fail(f"[M1] S28b 条件汇总异常: {b_sec}")
+    if len(c) != S28_N_SECTIONS * 5 or any(v != 5 for v in c_dom.values()):
+        fail(f"[M1] S28c 域统计异常: 行数 {len(c)}，逐切片域数 {dict(c_dom)}")
     if {r["arm"] for r in f} != {"upstream_collapse", "execution_induction", "not_in_dissociation_arms"} \
-            or any(int(r["n_sections"]) != S55_N_SECTIONS for r in f):
-        fail(f"[M1] S55f SVG 富集异常: arms={sorted({r['arm'] for r in f})}")
+            or any(int(r["n_sections"]) != S28_N_SECTIONS for r in f):
+        fail(f"[M1] S28f SVG 富集异常: arms={sorted({r['arm'] for r in f})}")
     else:
-        ok("[M1] S55b 条件 n_sections=4/7/12；S55c 23×5=115 域；S55f 双臂+背景各 23 切片")
+        ok("[M1] S28b 条件 n_sections=4/7/12；S28c 23×5=115 域；S28f 双臂+背景各 23 切片")
 
-    # S55v 残差化敏感性：Stouffer z≈+4.04（共定位非密度混杂，冻结值）
-    v = list(read_csv_stream(fp("Table_S55v_M1_Visium_Bivariate_Residualized.csv")))
-    if len(v) != S55_N_SECTIONS:
-        fail(f"[M1] S55v 行数 {len(v)} != {S55_N_SECTIONS}")
+    # S28v 残差化敏感性：Stouffer z≈+4.04（共定位非密度混杂，冻结值）
+    v = list(read_csv_stream(fp("Table_S28v_M1_Visium_Bivariate_Residualized.csv")))
+    if len(v) != S28_N_SECTIONS:
+        fail(f"[M1] S28v 行数 {len(v)} != {S28_N_SECTIONS}")
     else:
         z_res = sum(_norm_ppf(1 - min(max(float(r["p_resid"]), 1e-3), 1 - 1e-3) / 2)
-                    * math.copysign(1.0, float(r["I_bv_resid"])) for r in v) / math.sqrt(S55_N_SECTIONS)
+                    * math.copysign(1.0, float(r["I_bv_resid"])) for r in v) / math.sqrt(S28_N_SECTIONS)
         if abs(z_res - 4.04) > 0.05 or z_res <= 0:
-            fail(f"[M1] S55v 残差化 Stouffer z={z_res:+.3f} 偏离冻结 +4.04")
+            fail(f"[M1] S28v 残差化 Stouffer z={z_res:+.3f} 偏离冻结 +4.04")
         else:
-            ok(f"[M1] S55v 残差化敏感性 Stouffer z=+{z_res:.2f}（共定位非密度混杂，与冻结 +4.04 一致）")
+            ok(f"[M1] S28v 残差化敏感性 Stouffer z=+{z_res:.2f}（共定位非密度混杂，与冻结 +4.04 一致）")
 
     # CosMx 面板覆盖与预注册一致（上游 0/30、执行 5/33）
     up80 = {r["gene_symbol"] for r in _gm if r["arm"] == "upstream_collapse"}
     ex80 = {r["gene_symbol"] for r in _gm if r["arm"] == "execution_induction"}
-    panel = {r["gene"] for r in read_csv_stream(fp("Table_S55i_M1_CosMx_Gene_Detection.csv"))}
-    if panel & up80 or (panel & ex80) != S55_COSMX_EXEC_EXPECTED:
-        fail(f"[M1] S55i CosMx 面板覆盖偏离预注册: 上游交集 {sorted(panel & up80)}，"
-             f"执行交集 {sorted(panel & ex80)}（期望 ∅ / {sorted(S55_COSMX_EXEC_EXPECTED)}）")
+    panel = {r["gene"] for r in read_csv_stream(fp("Table_S28i_M1_CosMx_Gene_Detection.csv"))}
+    if panel & up80 or (panel & ex80) != S28_COSMX_EXEC_EXPECTED:
+        fail(f"[M1] S28i CosMx 面板覆盖偏离预注册: 上游交集 {sorted(panel & up80)}，"
+             f"执行交集 {sorted(panel & ex80)}（期望 ∅ / {sorted(S28_COSMX_EXEC_EXPECTED)}）")
     else:
-        ok(f"[M1] S55i CosMx 面板覆盖与预注册一致（上游 0 可测、执行 {sorted(S55_COSMX_EXEC_EXPECTED)}）")
+        ok(f"[M1] S28i CosMx 面板覆盖与预注册一致（上游 0 可测、执行 {sorted(S28_COSMX_EXEC_EXPECTED)}）")
 
     # M1 空间样本清单（139 = GSE271370 23 切片 + GSE253474 116 FOV）
     sp = list(read_csv_stream(fp("M1_spatial_sample_manifest.csv")))
@@ -951,57 +1034,57 @@ def check_m1_spatial(man_canon):
 
 
 def check_m2_mdi(man_canon):
-    """M2 MDI 临床化守门（2026-08-17）：S56–S58 表族不变量、Figure 9 面板、
+    """M2 MDI 临床化守门（2026-08-17）：S29–S31 表族不变量（2026-10-02 编号迁移前为 S56–S58）、Figure 4 面板、
     预注册判定 R2 复算（M2_pre_registration_20260817.md，规则先于结果）。"""
     FIG = ROOT / "01_FIGURE_DATA_CSV" / "Main"
-    s56 = {fn for fn, r in man_canon.items() if r["s_number"] == "S56"}
-    s57 = {fn for fn, r in man_canon.items() if r["s_number"] == "S57"}
-    s58 = {fn for fn, r in man_canon.items() if r["s_number"] == "S58"}
+    s56 = {fn for fn, r in man_canon.items() if r["s_number"] == "S29"}
+    s57 = {fn for fn, r in man_canon.items() if r["s_number"] == "S30"}
+    s58 = {fn for fn, r in man_canon.items() if r["s_number"] == "S31"}
     if not s56 or not s57 or not s58:
-        fail(f"[M2] S56–S58 登记缺失: S56={sorted(s56)} S57={sorted(s57)} S58={sorted(s58)}")
+        fail(f"[M2] S29–S31 登记缺失: S29={sorted(s56)} S30={sorted(s57)} S31={sorted(s58)}")
         return
 
-    # S56：4,888 行、六队列计数（与 M2_README 一致）
-    f56 = fp("Table_S56_M2_PerSample_Scores.csv")
+    # S29：4,888 行、六队列计数（与 M2_README 一致）
+    f56 = fp("Table_S29_M2_PerSample_Scores.csv")
     rows56 = list(read_csv_stream(f56))
     coh = Counter(r["cohort"] for r in rows56)
     exp56 = {"GSE148871": 304, "GSE185263": 392, "GSE188309": 198,
              "GSE212865": 137, "GSE310929": 3713, "GSE32707": 144}
     if len(rows56) != 4888 or dict(coh) != exp56:
-        fail(f"[M2] S56 行数/队列计数 {len(rows56)}/{dict(coh)} != 4888/{exp56}")
+        fail(f"[M2] S29 行数/队列计数 {len(rows56)}/{dict(coh)} != 4888/{exp56}")
     else:
-        ok("[M2] S56 = 4,888 行；六队列计数 304/392/198/137/3,713/144")
+        ok("[M2] S29 = 4,888 行；六队列计数 304/392/198/137/3,713/144")
 
-    # S57：含 meta 合并行（MDI 合并 g=+1.85 冻结值）
-    rows57 = list(read_csv_stream(fp("Table_S57_M2_CrossDisease_Contrasts_Meta.csv")))
+    # S30：含 meta 合并行（MDI 合并 g=+1.85 冻结值）
+    rows57 = list(read_csv_stream(fp("Table_S30_M2_CrossDisease_Contrasts_Meta.csv")))
     meta_rows = [r for r in rows57 if r.get("n_cohorts") and float(r["n_cohorts"]) == 3]
     if not meta_rows:
-        fail("[M2] S57 缺 3 队列 meta 合并行")
+        fail("[M2] S30 缺 3 队列 meta 合并行")
     else:
         mdi_meta = [r for r in meta_rows if r["score"] == "MDI"]
         if not mdi_meta or abs(float(mdi_meta[0]["pooled_g"]) - 1.846) > 0.02:
-            fail(f"[M2] S57 MDI meta 合并 g 偏离冻结 +1.85: {[r['pooled_g'] for r in mdi_meta]}")
+            fail(f"[M2] S30 MDI meta 合并 g 偏离冻结 +1.85: {[r['pooled_g'] for r in mdi_meta]}")
         else:
-            ok(f"[M2] S57 meta 合并（3 队列）与冻结一致（MDI g=+{float(mdi_meta[0]['pooled_g']):.2f}）")
+            ok(f"[M2] S30 meta 合并（3 队列）与冻结一致（MDI g=+{float(mdi_meta[0]['pooled_g']):.2f}）")
 
-    # S58：主分析行冻结值（脓毒症 28d logistic OR=1.063 p=0.218；增量 ΔAUC=+0.0001）
-    rows58 = list(read_csv_stream(fp("Table_S58_M2_Outcome_Association.csv")))
+    # S31：主分析行冻结值（脓毒症 28d logistic OR=1.063 p=0.218；增量 ΔAUC=+0.0001）
+    rows58 = list(read_csv_stream(fp("Table_S31_M2_Outcome_Association.csv")))
     main_row = [r for r in rows58 if r.get("cohort") == "GSE310929" and r.get("model") == "Logistic_unadj_28d"]
     inc_row = [r for r in rows58 if r.get("model") == "Increment"]
     if not main_row or abs(float(main_row[0]["HR_or_OR"]) - 1.063) > 0.01 \
             or abs(float(main_row[0]["p"]) - 0.218) > 0.01:
-        fail(f"[M2] S58 主分析行偏离冻结 OR=1.063/p=0.218: {[{k: r[k] for k in ('HR_or_OR','p')} for r in main_row]}")
+        fail(f"[M2] S31 主分析行偏离冻结 OR=1.063/p=0.218: {[{k: r[k] for k in ('HR_or_OR','p')} for r in main_row]}")
     if not inc_row or abs(float(inc_row[0]["CI_hi"]) - 0.0001) > 0.001:
-        fail(f"[M2] S58 增量行偏离冻结 ΔAUC=+0.0001: {[{k: r[k] for k in ('CI_hi',)} for r in inc_row]}")
+        fail(f"[M2] S31 增量行偏离冻结 ΔAUC=+0.0001: {[{k: r[k] for k in ('CI_hi',)} for r in inc_row]}")
     else:
-        ok("[M2] S58 主分析 OR=1.063/p=0.218 与增量 ΔAUC=+0.0001 与冻结一致")
+        ok("[M2] S31 主分析 OR=1.063/p=0.218 与增量 ΔAUC=+0.0001 与冻结一致")
 
-    # Figure 5A–5E（MDI 临床面板；原 11 图体系 Figure_4A–4E，2026-09-06 9 图重编号后迁移）存在且行数>0
-    fig_ok = all((FIG / f"Figure_5{c}.csv").exists() for c in "ABCDE")
+    # Figure 4A–4E（MDI 临床面板；原 11 图体系 Figure_4A–4E，2026-09-06 九图体系为 Figure_5A–5E，2026-09-16 A+B 压缩迁移为 Figure_4A–4E）存在且行数>0
+    fig_ok = all((FIG / f"Figure_4{c}.csv").exists() for c in "ABCDE")
     if not fig_ok:
-        fail("[M2] Figure_5A–5E 面板数据缺失")
+        fail("[M2] Figure_4A–4E 面板数据缺失")
     else:
-        ok("[M2] Figure_5A–5E 面板数据齐全")
+        ok("[M2] Figure_4A–4E 面板数据齐全")
 
     # 预注册判定复算（规则：M2_pre_registration_20260817.md §3；口径与 M2_step4 一致）
     repl = 0

@@ -15,8 +15,9 @@ from scipy.stats import norm
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # 2026-09-04 维护：ROOT 改为脚本自身所在目录（跨机可移植）；中文稿已移 归档/（弃用，冻结对照）。
+# 2026-09-21：归档区分类整理，中文稿移入 归档/04_文稿与计划备份/，路径同步。
 ROOT = os.path.dirname(os.path.abspath(__file__))
-MS = os.path.join(ROOT, "归档", "111文稿_v5.md")
+MS = os.path.join(ROOT, "归档", "04_文稿与计划备份", "111文稿_v5.md")
 MSE = os.path.join(ROOT, "111文稿_v5_英文版.md")
 INTER = os.path.join(ROOT, "_intermediate")
 ST = os.path.join(ROOT, "02_SUPPLEMENTARY_TABLES", "SUPPLEMENTARY_Tables_CSV")
