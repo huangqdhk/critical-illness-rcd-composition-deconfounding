@@ -1,16 +1,69 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite it as below."
-title: "Composition deconfounding of cell-death transcriptomic signatures in critical illness: analysis code and mitoxdi"
+message: "If you use this code or the mitoxdi tool, please cite it as below."
+type: software
+title: "Cell composition and cell-death signatures in sepsis and acute respiratory distress syndrome: analysis code and mitoxdi"
+abstract: >-
+  Analysis code, governance artifacts and the standalone mitoxdi tool accompanying a study of
+  composition deconfounding in critical illness. Bulk cell-death transcriptomic signatures in
+  sepsis and acute respiratory distress syndrome are largely explained by leukocyte composition;
+  suppression of monocyte and macrophage mitochondrial and ER-mitochondria contact transcripts
+  survives composition control. mitoxdi re-scores any published signature against its own
+  composition-only null.
 authors:
-  - family: Huang
-    given: Yurong
-    affiliation: Hainan General Hospital; Hainan Affiliated Hospital of Hainan Medical University
+  - family-names: Huang
+    given-names: Yurong
+    affiliation: "Hainan General Hospital; Hainan Affiliated Hospital of Hainan Medical University"
+  - family-names: Li
+    given-names: Huamei
+    affiliation: "Hainan General Hospital; Hainan Affiliated Hospital of Hainan Medical University"
+  - family-names: Lin
+    given-names: Huangwei
+    affiliation: "Hainan General Hospital; Hainan Affiliated Hospital of Hainan Medical University"
+  - family-names: Wang
+    given-names: Xiang
+    affiliation: "Hainan General Hospital; Hainan Affiliated Hospital of Hainan Medical University"
+  - family-names: Liu
+    given-names: Yuanshui
+    affiliation: "Hainan General Hospital; Hainan Affiliated Hospital of Hainan Medical University"
+    email: yuanshuiliu@muhn.edu.cn
+contact:
+  - family-names: Liu
+    given-names: Yuanshui
+    email: yuanshuiliu@muhn.edu.cn
 version: 1.0.1
 date-released: "2026-10-02"
 license: MIT
+repository-code: "https://github.com/huangqdhk/critical-illness-rcd-composition-deconfounding"
 keywords:
-  - ARDS
+  - sepsis
+  - acute respiratory distress syndrome
   - regulated cell death
   - cellular composition
   - deconvolution
   - mitochondria
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22655285
+    description: "Concept DOI for the analysis code and mitoxdi releases"
+  - type: doi
+    value: 10.5281/zenodo.23018056
+    description: "Large supplementary matrices"
+  - type: doi
+    value: 10.17605/OSF.IO/C7RYD
+    description: "Pre-registered frozen analysis plan"
+preferred-citation:
+  type: article
+  title: "Cell composition and cell-death signatures in sepsis and acute respiratory distress syndrome"
+  authors:
+    - family-names: Huang
+      given-names: Yurong
+    - family-names: Li
+      given-names: Huamei
+    - family-names: Lin
+      given-names: Huangwei
+    - family-names: Wang
+      given-names: Xiang
+    - family-names: Liu
+      given-names: Yuanshui
+  journal: "American Journal of Respiratory and Critical Care Medicine"
+  year: 2026
